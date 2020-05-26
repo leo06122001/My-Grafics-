@@ -1,13 +1,13 @@
 \hypertarget{group___dialogs}{}\doxysection{Диалоговые окна}
 \label{group___dialogs}\index{Диалоговые окна@{Диалоговые окна}}
-\doxysubsection*{Classes}
+\doxysubsection*{РљР»Р°СЃСЃС‹}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structtx_dialog}{tx\+Dialog}}
 \begin{DoxyCompactList}\small\item\em Базовый класс для диалоговых окон. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}
 \begin{DoxyCompactList}\small\item\em Класс для описания элемента диалогового окна (контрола) \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Enumerations}
+\doxysubsection*{РџРµСЂРµС‡РёСЃР»РµРЅРёСЏ}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}{tx\+Dialog\+::\+C\+O\+N\+T\+R\+OL}} \{ \newline
@@ -29,10 +29,10 @@ const char $\ast$ \mbox{\hyperlink{group___dialogs_gaf1f2c033b7edc26174a28771a70
 \begin{DoxyCompactList}\small\item\em Ввод строки в отдельном окне. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
 
 
-\doxysubsection{Enumeration Type Documentation}
+\doxysubsection{РџРµСЂРµС‡РёСЃР»РµРЅРёСЏ}
 \mbox{\Hypertarget{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}\label{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}} 
 \index{Диалоговые окна@{Диалоговые окна}!CONTROL@{CONTROL}}
 \index{CONTROL@{CONTROL}!Диалоговые окна@{Диалоговые окна}}
@@ -47,14 +47,14 @@ const char $\ast$ \mbox{\hyperlink{group___dialogs_gaf1f2c033b7edc26174a28771a70
 \end{DoxyVerb}
 
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}, \mbox{\hyperlink{structtx_dialog_a971fb450a33205168aff3a7b186e04a3}{tx\+Dialog\+::set\+Layout()}}
 \end{DoxySeeAlso}
 @usage 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Cм. реализацию функции \mbox{\hyperlink{group___dialogs_gaf1f2c033b7edc26174a28771a708ee7c}{txInputBox}}().}
 \end{DoxyCode}
- \begin{DoxyEnumFields}{Enumerator}
+ \begin{DoxyEnumFields}{Р­Р»РµРјРµРЅС‚С‹ РїРµСЂРµС‡РёСЃР»РµРЅРёР№}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{DIALOG@{DIALOG}!Диалоговые окна@{Диалоговые окна}}\index{Диалоговые окна@{Диалоговые окна}!DIALOG@{DIALOG}}}\mbox{\Hypertarget{group___dialogs_gga5b47575087d696b5fddf972ce4d83657a1988e748c6846b398b020c0cb6f057ab}\label{group___dialogs_gga5b47575087d696b5fddf972ce4d83657a1988e748c6846b398b020c0cb6f057ab}} 
 D\+I\+A\+L\+OG&Начало описания диалога \\
 \hline
@@ -90,7 +90,7 @@ E\+ND&Конец описания диалога \\
 \end{DoxyEnumFields}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Р¤СѓРЅРєС†РёРё}
 \mbox{\Hypertarget{group___dialogs_gaf1f2c033b7edc26174a28771a708ee7c}\label{group___dialogs_gaf1f2c033b7edc26174a28771a708ee7c}} 
 \index{Диалоговые окна@{Диалоговые окна}!txInputBox@{txInputBox}}
 \index{txInputBox@{txInputBox}!Диалоговые окна@{Диалоговые окна}}
@@ -102,7 +102,7 @@ E\+ND&Конец описания диалога \\
 Ввод строки в отдельном окне. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em text} & {\itshape Текст с вопросом. Необязательно.} \\
 \hline
 {\em caption} & {\itshape Заголовок окна. Необязательно.} \\
@@ -110,13 +110,13 @@ E\+ND&Конец описания диалога \\
 {\em input} & {\itshape Значение строки по умолчанию. Необязательно.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Введенная строка (статическая переменная функции).
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Возвращаемая строка -- статическая, и обновляется при каждом вызове функции. Если \mbox{\hyperlink{group___dialogs_gaf1f2c033b7edc26174a28771a708ee7c}{tx\+Input\+Box()}} будет вызываться несколько раз, то для сохранения строки ее необходимо копировать в другую строку при помощи {\itshape strcpy()}.
 \end{DoxyWarning}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog}{tx\+Dialog}}, \mbox{\hyperlink{group___misc_gaf6ea524e3c76ba5c8a0d1fa6b81d55b8}{T\+X\+\_\+\+B\+E\+G\+I\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+AP}}, T\+X\+\_\+\+B\+E\+G\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+AP, \mbox{\hyperlink{group___misc_gadbe2f17002d8d41056e9770066ef558b}{T\+X\+\_\+\+H\+A\+N\+D\+LE}}, \mbox{\hyperlink{group___misc_ga3f4a70a0e5076cb4f4addcab0ca760cd}{T\+X\+\_\+\+E\+N\+D\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+AP}}
 \end{DoxySeeAlso}
 @usage 

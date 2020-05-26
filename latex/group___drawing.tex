@@ -198,18 +198,18 @@ bool \mbox{\hyperlink{group___drawing_ga93cecf6b117fc403c0488f388b78a6d1}{tx\+I\
 Ловит Мышь!
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em should\+Eat} & To eat, or not to eat\+: that is the question.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Пойманная Мышь!
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Эту функцию можно применять, только если Вы -- Кот. \href{http://sisinmaru.com}{\texttt{ {\ttfamily  =$^\wedge$..$^\wedge$= }}} ~\newline
  Поэтому в текущей версии она не реализована \+:)
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___mouse_ga2e6de35bffaf8217d577ed21a9ea6150}{tx\+Mouse\+X()}}, \mbox{\hyperlink{group___mouse_ga47faa907390ccd05b350112bcb9fc79a}{tx\+Mouse\+Y()}}, \mbox{\hyperlink{group___mouse_ga44606f3b7f5f345d15bb20d46fcf78b6}{tx\+Mouse\+Pos()}}, \mbox{\hyperlink{group___mouse_ga3317e38b22d8e6f116c29503144c2cc2}{tx\+Mouse\+Buttons()}}
 \end{DoxySeeAlso}
 @usage 
@@ -252,10 +252,10 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 \begin{DoxyCompactList}\small\item\em Запрещает или разрешает рисование мигающего курсора в окне. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Р¤СѓРЅРєС†РёРё}
 \mbox{\Hypertarget{group___drawing_gaa0af478a9b959bb096a8a686d2e685b5}\label{group___drawing_gaa0af478a9b959bb096a8a686d2e685b5}} 
 \index{Рисование@{Рисование}!txAlphaBlend@{txAlphaBlend}}
 \index{txAlphaBlend@{txAlphaBlend}!Рисование@{Рисование}}
@@ -267,7 +267,7 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 Копирует изображение на экран с учетом полупрозрачности. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x\+Dest} & X-\/координата верхнего левого угла копируемого изображения. \\
 \hline
 {\em y\+Dest} & Y-\/координата верхнего левого угла копируемого изображения. \\
@@ -281,7 +281,7 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 {\em alpha} & {\itshape Общая прозрачность изображения, в дополнение к альфа-\/каналу (0 -- все прозрачно, 1 -- использовать только альфа-\/канал). Необязательна. Если не указана, то 1.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
 См. описание в функции \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}} выше. \mbox{\Hypertarget{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}\label{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}} 
@@ -295,7 +295,7 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 Копирует изображение с одного холста (контекста рисования, DC) на другой с учетом полупрозрачности. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dest\+Image} & Контекст назначения (куда копировать). Для копирования в окно T\+X\+Lib укажите \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}. \\
 \hline
 {\em x\+Dest} & X-\/координата верхнего левого угла копируемого изображения. \\
@@ -315,22 +315,22 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 {\em alpha} & {\itshape Общая прозрачность изображения, в дополнение к альфа-\/каналу (0 -- все прозрачно, 1 -- использовать только альфа-\/канал). Необязательна. Если не указана, то 1.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если контекст источника равен N\+U\+LL, то он не существует и копирование вызовет ошибку. Наиболее частая причина -- ошибка при загрузке файла изображения и отсутствие проверки на эту ошибку. Пример с проверкой на правильность загрузки см. ниже. @nn
 
 Изображение-\/источник и изображение-\/приемник не могут налагаться друг на друга. @nn
 
 Если прямоугольник копируемой области не полностью лежит внутри изображения-\/источника, то функция работать не будет. Такое бывает, если x\+Source или y\+Source отрицательны, или величина (x\+Source + width) больше ширины изображения-\/источника, или величина (y\+Source + height) больше высоты изображения-\/источника.
 \end{DoxyWarning}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Изображение-\/источник должно быть загружено с помощью \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}} и иметь {\bfseries{32-\/битовый R\+G\+B\+A-\/формат.}} Дополнительный канал {\bfseries{(A\+: альфа-\/канал)}} 32-\/битового формата отвечает за попиксельную прозрачность участков изображения\+: для каждого пикселя в этом канале значение 0 означает его полную прозрачность, значение 255 -- полную непрозрачность, промежуточные значения -- полупрозрачность. @nn
 \end{DoxyNote}
 Пустое 32-\/битовое изображение-\/источник также может быть создано с помощью функции \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}, а 24-\/битовое -- функцией \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}. После создания на этом изображении можно рисовать, как на основном окне T\+X\+Lib, используя параметр {\ttfamily dc} функций рисования.
 
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если изображение имеет 32-\/битовый R\+G\+B\+A-\/формат файла, то его альфа-\/канал не должен быть полностью черным, иначе \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}} посчитает изображение полностью прозрачным и не выведет на экран ничего. @nn
 \end{DoxyWarning}
 Если изображение-\/источник создано с помощью \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}} или \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, то \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}} может использовать как общую прозрачность, задачаемую параметром {\ttfamily alpha}, так и попиксельную прозрачность, задаваемую альфа-\/каналом.
@@ -357,10 +357,10 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 
 \end{DoxyItemize}
 
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Стандартная функция Alpha\+Blend из Win32 A\+PI {\bfseries{может}} масштабировать изображение. В tx\+Alpha\+Blend это {\bfseries{убрано}} для упрощения использования. If you still need image scaling, use original function Alpha\+Blend and don\textquotesingle{}t mess with stupid T\+X-\/based tools. (See implementation of tx\+Alpha\+Blend in \mbox{\hyperlink{_t_x_lib_8h}{T\+X\+Lib.\+h}}\+: open this file in your editor and search for tx\+Alpha\+Blend function definition.)
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}{tx\+Bit\+Blt()}}, \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}, \mbox{\hyperlink{group___drawing_ga6280d640bb3b08dc82c8dd29caf5ff47}{tx\+Use\+Alpha()}}
 \end{DoxySeeAlso}
 @usage Пример использования см. в файле T\+X\textbackslash{}\+Examples\textbackslash{}\+Tennis\textbackslash{}\+Tennis.\+cpp. 
@@ -393,7 +393,7 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 Рисует дугу эллипса. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата верхнего левого угла прямоугольника, описанного вокруг эллипса, содержащего дугу (см. tx\+Ellipse). \\
 \hline
 {\em y0} & Y-\/координата верхнего левого угла прямоугольника. \\
@@ -409,12 +409,12 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -443,16 +443,16 @@ bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Te
 \end{DoxyVerb}
 
 
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Избегайте блокирования на долгое время. Это может привести к дефектам изображения в окне.
 \end{DoxyWarning}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Если нажата клавиша Alt+\+Print\+Screen, то блокировка временно отменяется.
 \end{DoxyNote}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Значение счетчика блокировки (если 0, то рисование разблокировано).
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}, \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}
 \end{DoxySeeAlso}
 @usage 
@@ -664,7 +664,7 @@ while (!GetAsyncKeyState (VK\_ESCAPE))
 Копирует изображение на экран. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x\+Dest} & X-\/координата верхнего левого угла копируемого изображения. \\
 \hline
 {\em y\+Dest} & Y-\/координата верхнего левого угла копируемого изображения. \\
@@ -676,7 +676,7 @@ while (!GetAsyncKeyState (VK\_ESCAPE))
 {\em y\+Source} & {\itshape Y-\/координата верхнего левого угла копируемой области внутри изображения-\/источника. Необязательна. Если не указана, то 0.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
 См. описание в функции \mbox{\hyperlink{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}{tx\+Bit\+Blt()}} выше. \mbox{\Hypertarget{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}\label{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}} 
@@ -690,7 +690,7 @@ while (!GetAsyncKeyState (VK\_ESCAPE))
 Копирует изображение с одного холста (контекста рисования, DC) на другой. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dest\+Image} & Контекст назначения (куда копировать). Для копирования в окно T\+X\+Lib укажите \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}. \\
 \hline
 {\em x\+Dest} & X-\/координата верхнего левого угла копируемого изображения. \\
@@ -710,13 +710,13 @@ while (!GetAsyncKeyState (VK\_ESCAPE))
 {\em operation} & {\itshape Вид операции копирования. Список видов гуглите по запросу \char`\"{}\+Bit\+Blt function M\+S\+D\+N\char`\"{}. Необязательен. Если не указан, то {\ttfamily S\+R\+C\+C\+O\+PY} (обычное копирование изображения).}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если контексты источника равен N\+U\+LL, то он не существует и копирование вызовет ошибку. Наиболее частая причина -- ошибка при загрузке файла изображения и отсутствие проверки на эту ошибку. Пример с проверкой на правильность загрузки см. ниже.
 \end{DoxyWarning}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}}, \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}
 \end{DoxySeeAlso}
 @usage Пример использования см. в файле T\+X\textbackslash{}\+Examples\textbackslash{}\+Tennis\textbackslash{}\+Tennis.\+cpp. 
@@ -751,7 +751,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 Рисует хорду эллипса. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата верхнего левого угла прямоугольника, описанного вокруг эллипса, содержащего дугу (см. tx\+Ellipse). \\
 \hline
 {\em y0} & Y-\/координата верхнего левого угла прямоугольника. \\
@@ -767,12 +767,12 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -790,7 +790,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 Рисует окружность или круг. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата центра. \\
 \hline
 {\em y} & Y-\/координата центра. \\
@@ -798,12 +798,12 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 {\em r} & Радиус.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -821,14 +821,14 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 Стирает холст текущим цветом заполнения. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для стирания. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B()
 \end{DoxySeeAlso}
 @usage 
@@ -846,12 +846,12 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 
 Стирает текст консоли. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     При стирании используются текущие атрибуты (цвета текста и фона) консоли.
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_ga3227242c57eef33049cdaee655f4faee}{tx\+Get\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -869,7 +869,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 Создает дополнительный холст (контекст рисования, Device Context, DC) в памяти. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em sizeX} & Ширина холста. \\
 \hline
 {\em sizeY} & Высота холста. \\
@@ -877,7 +877,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 {\em bitmap} & {\itshape Bitmap to be associated with DC (optional). If omitted, color bitmap will be created automatically via Win32\+::\+Create\+D\+I\+B\+Section.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Дескриптор (системный номер, выданный Windows) созданного холста (контекста рисования). \begin{DoxyVerb}     После создания на этом холсте можно рисовать, как и на основном окне TXLib, используя параметр @c dc
      функций рисования. Созданный холст имеет свои собственные настройки цветов, шрифтов и т.д., отличные
      от настроек основного окна TXLib. Чтобы увидеть результат рисования, скопируйте изображение холста
@@ -885,13 +885,13 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Once agai
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Созданный контекст затем будет нужно {\bfseries{обязательно}} удалить при помощи \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}. ~\newline
  
 \footnotesize When the program will be shutting down, T\+X\+Lib will try to delete D\+Cs which were not deleted, but this is not guaranteed.
 \normalsize  При этом удаляется и {\ttfamily bitmap}, будьте внимательны.
 \end{DoxyWarning}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}, \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}
 \end{DoxySeeAlso}
 @usage 
@@ -925,7 +925,7 @@ txDeleteDC (save);}}
 Создает аппаратно-\/независимый дополнительный холст (контекст рисования, Device Context, DC) в памяти с возможностью прямого доступа к нему как к массиву. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em sizeX} & Ширина холста. \\
 \hline
 {\em sizeY} & Высота холста. \\
@@ -933,7 +933,7 @@ txDeleteDC (save);}}
 {\em pixels} & {\itshape Указатель на переменную, которая будет использоваться для доступа к пикселям изображения. Необязателен. Эта переменная должна быть указателем на массив структур R\+G\+B\+Q\+U\+AD, каждая из которых описывает цвет одного пикселя. {\bfseries{Не}} надо создавать самому этот массив! Его создаст \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}} и вернет через этот указательный параметр. Объявите только указатель и занулите его, потом его адрес передайте в функцию.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Дескриптор созданного аппаратно-\/независимого холста (контекста рисования). \begin{DoxyVerb}     После создания на этом холсте можно рисовать, как и на основном окне TXLib, используя параметр @c dc
      функций рисования. Созданный холст имеет свои собственные настройки цветов, шрифтов и т.д., отличные
      от настроек основного окна TXLib. Чтобы увидеть результат рисования, скопируйте изображение холста
@@ -957,7 +957,7 @@ txDeleteDC (save);}}
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Будьте осторожны, не выходите за границы массива, последствия будут непредсказуемыми. @nn
 
 Созданный контекст затем будет нужно {\bfseries{обязательно}} удалить при помощи \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}. ~\newline
@@ -965,12 +965,12 @@ txDeleteDC (save);}}
 \footnotesize When the program will be shutting down, T\+X\+Lib will try to delete D\+Cs which were not deleted, but this is not guaranteed.
 \normalsize 
 \end{DoxyWarning}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Память под массив R\+G\+B\+Q\+U\+AD выделять {\bfseries{не}} надо и освобождать его {\bfseries{не}} надо, этим занимается сама \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}} вместе с \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}. @nn
 
 Аппаратно-\/независимые холсты -- это контексты устройств, связанные с аппаратно-\/независимыми растрами (Device Independent Bitmaps, D\+IB) Windows.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1038,7 +1038,7 @@ txDeleteDC (save);}}
 Создание окна рисования 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em sizeX} & Размер окна по горизонтали (в пикселях). \\
 \hline
 {\em sizeY} & Размер окна по вертикали (в пикселях). \\
@@ -1046,23 +1046,23 @@ txDeleteDC (save);}}
 {\em centered} & {\itshape Центрирование окна на дисплее. Необязательно. Если не указано, то окно центрируется.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Дескриптор (системный номер) окна T\+X\+Lib. Если окно не создано, возвращается N\+U\+LL.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Устанавливаются параметры рисования по умолчанию, см. функцию \mbox{\hyperlink{group___drawing_gaa72c4849ac0c9bf6f95893f4265b9843}{tx\+Set\+Defaults()}}.
 \end{DoxyNote}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если используется многофайловый проект (с раздельной компиляцией), то графические функции T\+X\+Lib, вызванные из файла проекта, будут работать только с тем окном, которое создано {\bfseries{в этом же файле}} проекта. Если проект состоит, скажем, из файлов {\ttfamily main.\+cpp} и {\ttfamily game.\+cpp}, и в файле {\ttfamily main.\+cpp} создается графическое окно, то функции из {\ttfamily game.\+cpp} не смогут рисовать в нем. (Однако {\ttfamily game.\+cpp} сможет создать свое собственное окно.) ~\newline
  Если такой программе нужно одно окно, то в проект следует включить файл, ответственный за рисование, скажем, {\ttfamily graphics.\+cpp}, и выводить графику только через функции этого файла. Такой файл (или библиотеку) в больших проектах часто называют графическим движком. @nn То же касается и использования T\+X\+Lib в {\bfseries{D\+LL}}.
 \end{DoxyWarning}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Вспомогательные окна могут создаваться по одному на каждый файл многофайлового проекта или загруженную D\+LL. Для закрытия вспомогательных окон используется \mbox{\hyperlink{group___drawing_ga0a3cf3a018cea9d5889d2626e9a37136}{tx\+Destroy\+Window()}}. Для закрытия главного надо выйти из \mbox{\hyperlink{_my_01_graphik_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
 \end{DoxyNote}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Одновременное создание нескольких окон не потокобезопасно (not thread-\/safe). @nn Многооконная программа на T\+X\+Lib тормозит, да и однооконная тоже не отличается высокой скоростью. Чтобы избавиться от этого, бросьте T\+X\+Lib и используйте другие оконные библиотеки\+: \href{http://qt-project.org}{\texttt{ Qt}}, \href{http://wxwidgets.org}{\texttt{ wx\+Widgets}}, \href{http://gtk.org}{\texttt{ G\+T\+K+}} и т.\+д., или библиотеки, специально разработанные для создания игр\+: \href{http://sfml-dev.org}{\texttt{ S\+F\+ML}} (она простая), \href{http://libsdl.org}{\texttt{ S\+DL}} и другие. Вы можете написать и свою собственную оконную библиотеку, основанную на \href{http://opengl.org}{\texttt{ Open\+GL}} @strike и получится S\+F\+ML или S\+DL\+:), @endstrike или DirectX. Помните, что цель T\+X\+Lib -- облегчить первые шаги, но потом стать ненужной.
 \end{DoxyWarning}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga3291ffa23a348c25985d780ab8f7088b}{tx\+O\+K()}}, \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window()}}, \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}, \mbox{\hyperlink{group___technical_ga4ddb32d7a8a676537014da7aea7bf273}{\+\_\+tx\+Window\+Style}}, \mbox{\hyperlink{group___technical_ga8a148ac2f04e1f9c7414af69362e0668}{\+\_\+tx\+Console\+Mode}}, \mbox{\hyperlink{group___technical_ga61836072e0c3887ed70841ff2d12c0d9}{\+\_\+tx\+Console\+Font}}, \mbox{\hyperlink{group___technical_gacc95bfbcf7a0f9124e8cd5e80d0b3cd3}{\+\_\+tx\+Cursor\+Blink\+Interval}}, \mbox{\hyperlink{group___technical_gaf2070fcdbd473d328f17f130623db80a}{\+\_\+tx\+Window\+Update\+Interval}}, \mbox{\hyperlink{group___technical_gaab281ee20ea6be5eae34d0e15bf03dcf}{\+\_\+\+T\+X\+\_\+\+N\+O\+I\+N\+IT}}, \+\_\+\+T\+X\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+R\+A\+CE, \mbox{\hyperlink{group___technical_ga2aa2550a5302deb4d46b3759b26f4b41}{T\+X\+\_\+\+T\+R\+A\+CE}}
 \end{DoxySeeAlso}
 @usage 
@@ -1165,15 +1165,15 @@ txCreateWindow (1024, 768, false);  // Окно 1024х768, не центрировано  txBegin()
 
 Возвращает холст (дескриптор контекста рисования, H\+DC) окна рисования T\+X\+Lib. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Дескриптор (системный номер, handler) контекста рисования (device context, DC) холста T\+X\+Lib (T\+X\+Lib H\+DC).
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Возвращаемый дескриптор -- {\bfseries{не}} оконный контекст рисования окна T\+X\+Lib. T\+X\+Lib реализует двойную буферизацию. Все рисовательные действия происходят со скрытым H\+DC, находящемся в памяти, и его содержимое периодически автоматически копируется на экран. Это иногда приводит к мерцанию. Автоматическое копирование можно выключить функцией \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}} и обратно включить функцией \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, в этом случае содержимое окна можно перерисовать функциями \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window()}} или \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}. @nn Дополнительную информацию об автоматическом обновлении см. в функциях \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window()}} и \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}.
 
 Этот H\+DC возвращается в виде ссылки, что позволяет подменить его. Тогда T\+X\+Lib будет периодически копировать на экран изображение уже из вашего буфера. Перед подменой надо сохранить старый дескриптор или освободить его с помощью \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}. Во время подмены рисование должно быть заблокировано с помощью \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}} и после разблокировано с помощью \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window()}}, \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1194,15 +1194,15 @@ txCreateWindow (1024, 768, false);  // Окно 1024х768, не центрировано  txBegin()
 Уничтожает холст (контекст рисования, DC) в памяти. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & Контекст рисования для уничтожения. ~\newline
  {\itshape Если передан указатель на контекст, то после уничтожения по указателю записывается N\+U\+LL.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}
 \end{DoxySeeAlso}
 @usage Пример использования см. в файле T\+X\textbackslash{}\+Examples\textbackslash{}\+Tennis\textbackslash{}\+Tennis.\+cpp. 
@@ -1237,17 +1237,17 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Уничтожает окно. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em wnd} & {\itshape Дескриптор окна для уничтожения. Необязательно. Если не указан, уничтожается окно T\+X\+Lib.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если уничтожается окно T\+X\+Lib, функция \mbox{\hyperlink{_my_01_graphik_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} принудительно прерывается и программа завершается. При этом {\bfseries{не}} гарантируется правильное завершение программы, поэтому так делать {\bfseries{не}} рекомендуется.
 \end{DoxyWarning}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1267,7 +1267,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Это пример функции, которую Вы могли бы написать и сами.
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата человечка. \\
 \hline
 {\em y} & Y-\/координата человечка. \\
@@ -1299,7 +1299,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 {\em wind} & Ветер, развевающий волосы (относительно размера головы).\\
 \hline
 \end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1331,7 +1331,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Рисует текст, размещенный в прямоугольной области. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата верхнего левого угла области. \\
 \hline
 {\em y0} & Y-\/координата верхнего левого угла области. \\
@@ -1347,12 +1347,12 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет текста задается функцией txSetColor(), выравнивание (влево/вправо/по центру) -- txSetTextAlign().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Не выводит ничего, если координаты идут в неверном порядке (если x0 $>$ x1 или y0 $>$ y1). \begin{DoxyVerb}     Флаги форматирования текста см. в MSDN (http://msdn.com), искать "DrawText Function (Windows)":
      http://msdn.microsoft.com/en-us/library/dd162498%28VS.85%29.aspx.
 
@@ -1368,7 +1368,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 
 Вертикальное центрирование работает только для надписей, в которых нет символа новой строки {\ttfamily \textbackslash{}n}.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}, \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent()}}, \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1392,7 +1392,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Рисует эллипс. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата верхнего левого угла прямоугольника, описанного вокруг эллипса. \\
 \hline
 {\em y0} & Y-\/координата верхнего левого угла описанного прямоугольника. \\
@@ -1404,12 +1404,12 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1426,19 +1426,19 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 
 Разблокирует обновление окна, заблокированное функцией \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}. 
 
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}} вызывалась несколько раз, то для снятия блокировки требуется столько же раз вызвать \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}.
 \end{DoxyWarning}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Значение счетчика блокировки (если 0, то рисование разблокировано). \begin{DoxyVerb}     Более полную информацию об автоматическом обновлении см. в функции txBegin(). См. также txRedrawWindow(),
      txUpdateWindow(), txSleep().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Если нажата клавиша Alt+\+Print\+Screen, то блокировка временно отменяется.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}, \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1461,16 +1461,16 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Извлекает цветовую компоненту (цветовой канал) из смешанного цвета. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em color} & Смешанный цвет. \\
 \hline
 {\em component} & Извлекаемая компонента, см. tx\+Colors.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Цветовая компонента, см. tx\+Colors.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gac2b196b6826392229fa209e01817f941}{tx\+Extract\+Color()}}, \mbox{\hyperlink{group___drawing_ga1350174ec2a2c83182437f04c88c2d95}{tx\+R\+G\+B2\+H\+S\+L()}}, \mbox{\hyperlink{group___drawing_ga6d5e95c1f234d32b8859826859127244}{tx\+H\+S\+L2\+R\+G\+B()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1491,7 +1491,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Заливает произвольный контур текущим цветом заполнения. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата точки начала заливки. \\
 \hline
 {\em y} & Y-\/координата точки начала заливки. \\
@@ -1503,7 +1503,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет заполнения задается функцией txSetFillColor(). Не рекомендуется для применения, так как работает
      довольно медленно. Лучше Используйте txPolygon().
 \end{DoxyVerb}
@@ -1511,7 +1511,7 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 \end{DoxyReturn}
 @title Режимы заливки\+: @table @tr F\+L\+O\+O\+D\+F\+I\+L\+L\+S\+U\+R\+F\+A\+CE @td -- Заливать область, указанную цветом color. @tr F\+L\+O\+O\+D\+F\+I\+L\+L\+B\+O\+R\+D\+ER @td -- Заливать до границы, указанной цветом color. @endtable
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1533,14 +1533,14 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Ищет шрифт по его названию. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em name} & Название шрифта.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Информация о шрифте в структуре L\+O\+G\+F\+O\+NT. Если шрифт не найден, возвращает N\+U\+LL.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1561,14 +1561,14 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Возвращает текущий цвет линий и текста. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для возврата цвета. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Текущий цвет линий и текста, см. tx\+Colors, R\+G\+B().
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B()
 \end{DoxySeeAlso}
 @usage 
@@ -1585,10 +1585,10 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 
 Возвращает текущие цветовые атрибуты консоли. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Текущие цветовые атрибуты консоли. См. \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_ga3227242c57eef33049cdaee655f4faee}{tx\+Get\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1605,10 +1605,10 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 
 Возвращает позицию мигающего курсора консоли. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Положение мигающего курсора в пикселях, в \href{http://www.google.com/search?q=POINT+structure+MSDN}{\texttt{ структуре P\+O\+I\+NT.}}
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1625,10 +1625,10 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 
 Возвращает размер консоли. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Положение мигающего курсора в {\bfseries{символах}}, в \href{http://www.google.com/search?q=POINT+structure+MSDN}{\texttt{ структуре P\+O\+I\+NT.}}
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1645,10 +1645,10 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 
 Возвращает размеры шрифта консоли. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Размеры шрифта консоли в пикселях, в структуре P\+O\+I\+NT.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1667,17 +1667,17 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Возвращает размер окна, картинки или холста в виде структуры P\+O\+I\+NT. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) с загруженной или созданной картинкой, размеры которого нужно определить. Необязателен. Если не указан или равен \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, возвращаются размеры окна T\+X\+Lib.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Размер окна, картинки или холста в виде структуры P\+O\+I\+NT, содержащей компоненты {\ttfamily x} и {\ttfamily y}.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Если окно не создано, возвращается размер экрана.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gab79782d80f6c61587d02f0633aa2f198}{tx\+Get\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gaa9bb7fd84e0b9f59c96be89d70c74321}{tx\+Get\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1711,17 +1711,17 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Возвращает ширину окна или холста. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста), ширина которого возвращается. Необязателен. Если не указан или равен \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, возвращаются ширина окна T\+X\+Lib.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Ширина окна рисования.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Если окно не создано, возвращается ширина экрана.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_gaa9bb7fd84e0b9f59c96be89d70c74321}{tx\+Get\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1740,17 +1740,17 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Возвращает высоту окна или холста. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста), высота которого возвращается. Необязателен. Если не указан или равен \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, возвращается высота окна T\+X\+Lib.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Высота окна рисования.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Если окно не создано, возвращается высота экрана.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_gab79782d80f6c61587d02f0633aa2f198}{tx\+Get\+Extent\+X()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1770,14 +1770,14 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Возвращает текущий цвет заполнения фигур. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для возврата цвета. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Текущий цвет заполнения фигур, см. tx\+Colors, R\+G\+B().
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, tx\+Colors, R\+G\+B()
 \end{DoxySeeAlso}
 @usage 
@@ -1795,17 +1795,17 @@ txDeleteDC (background\_CopiedFromHelp);"}, \textcolor{stringliteral}{"Oh, not n
 Выдает количество кадров (вызовов этой функции) в секунду. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em min\+Frames} & {\itshape Количество вызовов, после которых F\+PS начинает усредняться по последним {\ttfamily tx\+Frames\+To\+Average} кадрам. Необязательно. Если не указано, используется tx\+Frames\+To\+Average.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 F\+PS (Frames per Second), т.\+е. количество кадров (вызовов этой функции) в секунду.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Когда количество вызовов этой функции превысит {\ttfamily min\+Frames}, F\+PS начинает усредняться по последним {\ttfamily tx\+Frames\+To\+Average} кадрам. Максимальный интервал усреднения -- {\ttfamily tx\+Frames\+To\+Average} кадров.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}, \mbox{\hyperlink{group___drawing_ga49983bddca35d531c521cf04c6c2449f}{tx\+Query\+Performance()}}
 \end{DoxySeeAlso}
 @usage См. в функции \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}. \mbox{\Hypertarget{group___drawing_ga12ffceef73c1a081c073f4d7c2914618}\label{group___drawing_ga12ffceef73c1a081c073f4d7c2914618}} 
@@ -1819,18 +1819,18 @@ F\+PS (Frames per Second), т.\+е. количество кадров (вызовов этой функции) в сек
 Возвращает имя исполняемого файла или изначальный заголовок окна T\+X\+Lib. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em file\+Name\+Only} & {\itshape Возвратить только полное имя исполняемого файла, полученного через Win32 функцию Get\+File\+Module\+Name (N\+U\+LL, ...). Необязательно. Если не указано, то возвращается полное имя исполняемого файла.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 file\+Name\+Only = true\+: Имя исполняемого файла. ~\newline
  file\+Name\+Only = false\+: Изначальный заголовок окна T\+X\+Lib.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Возвращается {\bfseries{статическая}} строка.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window()}}, \mbox{\hyperlink{group___drawing_gaf382eed71ecf8229882fe544035d66dc}{tx\+Version()}}, \mbox{\hyperlink{group___drawing_gab2c5f0eff263a7297997281c3d451b91}{tx\+Version\+Number()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1872,7 +1872,7 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Возвращает текущий цвет точки (пикселя) на экране. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата точки. \\
 \hline
 {\em y} & Y-\/координата точки. \\
@@ -1880,10 +1880,10 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для возврата цвета. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Текущий цвет пикселя, см. tx\+Colors, R\+G\+B().
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafafd861ab7dc599b2e68b258b6727c85}{tx\+Set\+Pixel()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1904,16 +1904,16 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Вычисляет размеры текстовой надписи. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em text} & Текстовая строка. \\
 \hline
 {\em dc} & {\itshape Дескриптор контекста рисования (холста), где планируется разместить надпись. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Размеры надписи в структуре S\+I\+ZE.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}, \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent()}}, \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1932,16 +1932,16 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Вычисляет ширину текстовой надписи. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em text} & Текстовая строка. \\
 \hline
 {\em dc} & {\itshape Дескриптор контекста рисования (холста), где планируется разместить надпись. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Ширина надписи.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}, \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent()}}, \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1959,16 +1959,16 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Вычисляет высоту текстовой надписи. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em text} & Текстовая строка. \\
 \hline
 {\em dc} & {\itshape Дескриптор контекста рисования (холста), где планируется разместить надпись. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Высота надписи.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}, \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent()}}, \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -1986,11 +1986,11 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Преобразует цвет из формата H\+SL в формат R\+GB. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em hsl\+Color} & Преобразуемый цвет в формате H\+SL.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Созданный цвет в виде C\+O\+L\+O\+R\+R\+EF. \begin{DoxyVerb}     Формат @b RGB определяется как
 
      - Красная компонента цвета (Red),   от 0 до 255.
@@ -2005,7 +2005,7 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gac2b196b6826392229fa209e01817f941}{tx\+Extract\+Color()}}, \mbox{\hyperlink{group___drawing_ga1350174ec2a2c83182437f04c88c2d95}{tx\+R\+G\+B2\+H\+S\+L()}}, \mbox{\hyperlink{group___drawing_ga6d5e95c1f234d32b8859826859127244}{tx\+H\+S\+L2\+R\+G\+B()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2024,14 +2024,14 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 
 Делает нечто иногда удобное. См. название функции. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     У этой функции есть синоним с простым понятным названием, поищите его в файле библиотеки, около
      @a определения этой функции. Или можно @strike скопировать @endstrike набрать это километровое имя
      и посмотреть, что получится.
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}, \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2060,7 +2060,7 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Рисует линию. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата начальной точки. \\
 \hline
 {\em y0} & Y-\/координата начальной точки. \\
@@ -2072,12 +2072,12 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования линии. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линии задается функцией txSetColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2095,7 +2095,7 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 Загружает из файла изображение в формате B\+MP. Делает это довольно медленно. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em filename} & Имя файла с изображением в формате B\+MP. \\
 \hline
 {\em image\+Flags} & {\itshape Тип загружаемого изображения, см. ниже. Необязателен. Если не указаны, загружается рисунок в формате B\+MP.} \\
@@ -2103,15 +2103,15 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 {\em load\+Flags} & {\itshape Флаги загрузки изображения, см. ниже. Необязательны. Если не указаны, загрузка идет из файла.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Дескриптор созданного контекста рисования в памяти, с загруженным изображением. Если изображение не загружено (не найден файл, неверный формат файла и т.\+д.), то N\+U\+LL.
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Изображение загружается в автоматически создаваемый контекст рисования в памяти (\char`\"{}виртуальный холст\char`\"{}), который затем будет нужно {\bfseries{обязательно удалить}} при помощи \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}. @nn 
 \footnotesize When the program will be shutting down, T\+X\+Lib will try to delete D\+Cs which were not deleted, but this is not guaranteed.
 \normalsize 
 \end{DoxyWarning}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Изображения поддерживаются {\bfseries{только в формате B\+MP.}} Если взять файл другого формата, например J\+PG, и переименовать его со сменой расширения на B\+MP, то от этого формат не изменится. Такое изображение загружено не будет.
 \end{DoxyNote}
 Если функция вернула N\+U\+LL, то надо прежде всего {\bfseries{проверить наличие файла изображения}} по указанному в программе пути и формат файла. Если путь к файлу не указан (или указан как неполный), то путь отсчитывается от текущей папки программы, которая может не совпадать текущей папкой среды программирования. Текущую папку программы можно посмотреть по команде About в системном меню (она указана там как \char`\"{}\+Run from\char`\"{}).
@@ -2120,7 +2120,7 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 
 Если изображение в файле с альфа-\/каналом {\bfseries{не}} находится в формате {\bfseries{Premultiplied Alpha}}, то после вызова \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}} нужно вызвать функцию \mbox{\hyperlink{group___drawing_ga6280d640bb3b08dc82c8dd29caf5ff47}{tx\+Use\+Alpha()}}. Однако не надо этого делать, если цвета в файле {\bfseries{уже}} находятся в формате Premultiplied Alpha, иначе картинка станет темнее. Также не надо вызывать \mbox{\hyperlink{group___drawing_ga6280d640bb3b08dc82c8dd29caf5ff47}{tx\+Use\+Alpha()}} несколько раз для одного и того же изображения.
 
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 {\bfseries{Не надо часто загружать}} одно и то же изображение, особенно в цикле. От этого программа начинает тормозить! ~\newline
 
 
@@ -2130,7 +2130,7 @@ txMessageBox ("Вот такой вот progress bar", "TXLib forever)");"});}
 
 @title Флаги загрузки\+: @table @tr L\+R\+\_\+\+C\+R\+E\+A\+T\+E\+D\+I\+B\+S\+E\+C\+T\+I\+ON @td Создает D\+IB (device-\/indepandent bitmap), удобную для прямого доступа к данным @tr L\+R\+\_\+\+L\+O\+A\+D\+F\+R\+O\+M\+F\+I\+LE @td Загружает из файла (если этот флаг не указан, то загружает из ресурса E\+X\+E-\/файла) @tr Остальные флаги загрузки @td см. на M\+S\+D\+N.\+com, поиск \char`\"{}\+Load\+Image function\char`\"{}. @endtable
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}{tx\+Bit\+Blt()}}, \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}}, \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}
 \end{DoxySeeAlso}
 @usage Пример использования см. в файле T\+X\textbackslash{}\+Examples\textbackslash{}\+Tennis\textbackslash{}\+Tennis.\+cpp. 
@@ -2174,13 +2174,13 @@ txDeleteDC (background\_CopiedFromHelp);}}
 
 Проверка правильности работы библиотеки 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Состояние библиотеки\+: true -- библиотека в порядке, false -- не в порядке. \begin{DoxyVerb}     "Библиотека не в порядке" означает, что ее внутренние данные неверны. Самая простая причина -
      не открыто окно, однако могут быть и другие проблемы.
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2205,7 +2205,7 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Рисует сектор эллипса. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата верхнего левого угла прямоугольника, описанного вокруг эллипса, содержащего дугу (см. tx\+Ellipse). \\
 \hline
 {\em y0} & Y-\/координата верхнего левого угла прямоугольника. \\
@@ -2221,12 +2221,12 @@ txDeleteDC (background\_CopiedFromHelp);}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2244,7 +2244,7 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Рисует ломаную линию или многоугольник. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em points} & Массив структур P\+O\+I\+NT с координатами точек. \\
 \hline
 {\em num\+Points} & Количество точек в массиве. \\
@@ -2252,13 +2252,13 @@ txDeleteDC (background\_CopiedFromHelp);}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
      Если нужно нарисовать ломаную линию, а не многоугольник, используйте прозрачный цвет заполнения (TX_TRANSPARENT).
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2276,10 +2276,10 @@ txDeleteDC (background\_CopiedFromHelp);}}
 
 Оценивает скорость работы компьютера. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Скорость работы (графических операций) в условных единицах.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}, \mbox{\hyperlink{group___drawing_ga1aca71127c9986f995b2372903d65964}{tx\+Get\+F\+P\+S()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2297,7 +2297,7 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Рисует прямоугольник. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x0} & X-\/координата верхнего левого угла. \\
 \hline
 {\em y0} & Y-\/координата верхнего левого угла. \\
@@ -2309,12 +2309,12 @@ txDeleteDC (background\_CopiedFromHelp);}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования прямоугольника. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет и толщина линий задается функцией txSetColor(), цвет заполнения -- txSetFillColor().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2338,10 +2338,10 @@ txDeleteDC (background\_CopiedFromHelp);}}
 \end{DoxyVerb}
 
 
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Реализация этой функции неэффективна\+: она вызывает tx\+Sleep (0), что вызывает задержку. Чтобы сделать более эффективную реализацию, посмотрите исходный текст функций \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window()}} и \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}} и сделайте лучше. Либо напишите свою, более быструю библиотеку на основе Win32 G\+DI, G\+DI Plus, Open\+GL, DirectX, S\+DL или S\+F\+ML.
 \end{DoxyWarning}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window()}}, \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2403,11 +2403,11 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Преобразует цвет из формата R\+GB в формат H\+SL. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em rgb\+Color} & Преобразуемый цвет в формате @strike ЕГЭ @endstrike R\+GB.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Созданный цвет в виде C\+O\+L\+O\+R\+R\+EF. \begin{DoxyVerb}     Формат @b RGB определяется как
 
      - Красная компонента цвета (Red),   от 0 до 255.
@@ -2422,7 +2422,7 @@ txDeleteDC (background\_CopiedFromHelp);}}
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gac2b196b6826392229fa209e01817f941}{tx\+Extract\+Color()}}, \mbox{\hyperlink{group___drawing_ga1350174ec2a2c83182437f04c88c2d95}{tx\+R\+G\+B2\+H\+S\+L()}}, \mbox{\hyperlink{group___drawing_ga6d5e95c1f234d32b8859826859127244}{tx\+H\+S\+L2\+R\+G\+B()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2440,16 +2440,16 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Сохраняет в файл изображение в формате B\+MP. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em filename} & Имя файла с расширением \char`\"{}\+B\+M\+P\char`\"{}, куда будет записано изображение в формате B\+MP. \\
 \hline
 {\em dc} & {\itshape Дескриптор холста, изображение которого сохраняется в файл. Необязателен. Если \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, сохраняется изображение окна T\+X\+Lib.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}{tx\+Bit\+Blt()}}, \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}}, \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2478,7 +2478,7 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Выбирает текущий шрифт, его размер и другие атрибуты. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em name} & Название шрифта. \\
 \hline
 {\em sizeY} & Высота букв (размер по {\ttfamily Y}). \\
@@ -2498,10 +2498,10 @@ txDeleteDC (background\_CopiedFromHelp);}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для выбора шрифта. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Выбранный шрифт. Если он не был найден, то устанавливается системный шрифт Windows {\ttfamily }(S\+Y\+S\+T\+E\+M\+\_\+\+F\+I\+X\+E\+D\+\_\+\+F\+O\+NT, см. M\+S\+DN). Существование шрифта можно проверить функцией \mbox{\hyperlink{group___drawing_ga794901725b6c4a96f585742b70c0ea05}{tx\+Font\+Exist()}}.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_gaf6a9b31e58b6a0523ce1636a97053606}{tx\+Draw\+Text()}}, \mbox{\hyperlink{group___drawing_ga794901725b6c4a96f585742b70c0ea05}{tx\+Font\+Exist()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2522,19 +2522,19 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Устанавливает текущий активный объект G\+DI. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em obj} & Дескриптор объекта G\+DI. \\
 \hline
 {\em dc} & {\itshape Холст (контекст рисования), в котором устанавливается текущий активный объект G\+DI. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Предыдущий выбранный объект того же типа (P\+E\+N/\+B\+R\+U\+S\+H/\+B\+I\+T\+M\+AP и т.п.), как и {\ttfamily obj}, {\bfseries{уничтожается}}.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2553,7 +2553,7 @@ txDeleteDC (background\_CopiedFromHelp);}}
 Создает (смешивает) цвет из трех базовых цветов (компонент). 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em red} & Количество красного цвета в интервале \mbox{[}0; 255\mbox{]}. \\
 \hline
 {\em green} & Количество зеленого цвета в интервале \mbox{[}0; 255\mbox{]}. \\
@@ -2561,10 +2561,10 @@ txDeleteDC (background\_CopiedFromHelp);}}
 {\em blue} & Количество синего цвета в интервале \mbox{[}0; 255\mbox{]}.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Созданный цвет в формате C\+O\+L\+O\+R\+R\+EF.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gac2b196b6826392229fa209e01817f941}{tx\+Extract\+Color()}}, \mbox{\hyperlink{group___drawing_ga1350174ec2a2c83182437f04c88c2d95}{tx\+R\+G\+B2\+H\+S\+L()}}, \mbox{\hyperlink{group___drawing_ga6d5e95c1f234d32b8859826859127244}{tx\+H\+S\+L2\+R\+G\+B()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2601,7 +2601,7 @@ txSaveImage ("ScreenShot.bmp");}}
 Устанавливает текущий цвет и толщину линий, цвет текста.
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em color} & Цвет линий и текста, см. tx\+Colors, R\+G\+B(). \\
 \hline
 {\em thickness} & {\itshape Толщина линий. Необязательна. Если не указана, то 1 пиксель.} \\
@@ -2609,10 +2609,10 @@ txSaveImage ("ScreenShot.bmp");}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для установки цвета. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Перо, созданное при установке цвета. При ошибке возвращается N\+U\+LL.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B()
 \end{DoxySeeAlso}
 @usage 
@@ -2638,11 +2638,11 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Устанавливает цветовые атрибуты консоли. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em colors} & {\itshape Цветовые атрибуты консоли. Необязательны. Если не указаны, то цвет -- светло-\/серый.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Предыдущие цветовые атрибуты консоли. \begin{DoxyVerb}     @b Атрибуты -- это цвет текста (colorText) и цвет фона (colorBackground), объединенные вместе: @nn
      <tt>colors = colorText + colorBackground * 16</tt> @nn
      либо @nn
@@ -2661,7 +2661,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 \end{DoxyVerb}
 
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_ga3227242c57eef33049cdaee655f4faee}{tx\+Get\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2680,19 +2680,19 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Устанавливает позицию мигающего курсора консоли. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата курсора в пикселях. \\
 \hline
 {\em y} & Y-\/координата курсора в пикселях.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Предыдущее положение мигающего курсора в пикселях, в \href{http://www.google.com/search?q=POINT+structure+MSDN}{\texttt{ структуре P\+O\+I\+NT.}}
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Нельзя установить совсем любую позицию. Текст в консоли расположен по прямоугольной сетке, размер которой зависит от размеров шрифта консоли. Устанавливаемая позиция округляется, чтобы курсор попал в ячейку сетки. См. пример к функции \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size()}}.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_ga3227242c57eef33049cdaee655f4faee}{tx\+Get\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2710,11 +2710,11 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Установка параметров рисования по умолчанию. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для установки параметров. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
 \begin{DoxyParagraph}{Параметры по умолчанию\+:}
@@ -2726,7 +2726,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 \item Растровая операция -- копирование цвета (R2\+\_\+\+C\+O\+P\+Y\+P\+EN)
 \end{DoxyItemize}
 \end{DoxyParagraph}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2744,16 +2744,16 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Устанавливает текущий цвет заполнения фигур. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em color} & Цвет заполнения, см. tx\+Colors, R\+G\+B(). \\
 \hline
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для установки цвета. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Кисть, созданная при установке цвета. При ошибке возвращается N\+U\+LL.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, tx\+Colors, R\+G\+B()
 \end{DoxySeeAlso}
 @usage 
@@ -2772,7 +2772,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Рисует пиксель (точку на экране). 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата точки. \\
 \hline
 {\em y} & Y-\/координата точки. \\
@@ -2782,10 +2782,10 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga90daedc95ac28938003edb5b50479542}{tx\+Get\+Pixel()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2805,18 +2805,18 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Устанавливает текущее выравнивание текста (влево/вправо/по центру). 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em align} & {\itshape Флаги выравнивания. Необязательны. Если не указаны, то используются центрирование по горизонтали.} \\
 \hline
 {\em dc} & {\itshape Дескриптор контекста рисования (холста), где планируется разместить надпись. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Предыдущее состояние выравнивания текста.
 \end{DoxyReturn}
 @title Флаги выравнивания\+: @table @tr T\+A\+\_\+\+L\+E\+FT @td Текст выравнивается влево. Точка {\ttfamily }(X,Y) определяет левую границу текста. @tr T\+A\+\_\+\+R\+I\+G\+HT @td Текст выравнивается вправо. Точка {\ttfamily }(X,Y) определяет правую границу текста. @tr T\+A\+\_\+\+C\+E\+N\+T\+ER @td Текст центрируется по горизонтали относительно точки @ (X,Y). @tbr @tr T\+A\+\_\+\+B\+A\+S\+E\+L\+I\+NE @td Точка {\ttfamily }(X,Y) определяет базовую линию текста. @tr T\+A\+\_\+\+B\+O\+T\+T\+OM @td Точка {\ttfamily }(X,Y) определяет нижнюю границу текста. @tr T\+A\+\_\+\+T\+OP @td Точка {\ttfamily }(X,Y) определяет верхнюю границу текста. @endtable
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out()}}, \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}, \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent()}}, \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2837,17 +2837,17 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Задерживает выполнение программы на определенное время. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em time} & {\itshape Задержка в миллисекундах. Необязательна. Если не указана, то используется минимальная возможная задержка.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Реальное время задержки в миллисекундах.
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 {\bfseries{Перед началом задержки изображение в окне обязательно обновится,}} даже если рисование заблокировано через \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}. @nn Более полную информацию об обновлении изображения окна см. в функции \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}. См. также \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2865,14 +2865,14 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Запрещает или разрешает рисование мигающего курсора в окне. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em blink} & {\itshape false -- запретить мигающий курсор. Если не указано, то мигание разрешается.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Предыдущее значение состояния курсора.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr()}}, \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_ga3227242c57eef33049cdaee655f4faee}{tx\+Get\+Console\+Cursor\+Pos()}}, \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size()}}, \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console()}}, \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2892,7 +2892,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Рисует текст. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x} & X-\/координата начальной точки текста. \\
 \hline
 {\em y} & Y-\/координата начальной точки текста. \\
@@ -2902,12 +2902,12 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 {\em dc} & {\itshape Дескриптор контекста рисования (холста) для рисования. Необязателен.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false. \begin{DoxyVerb}     Цвет текста задается функцией txSetColor(), выравнивание (влево/вправо/по центру) -- txSetTextAlign().
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font()}}, \mbox{\hyperlink{group___drawing_ga09938df8859ae8b62638a3af76ee6735}{tx\+Set\+Text\+Align()}}, \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent()}}, \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+Extent\+X()}}, \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+Extent\+Y()}}
 \end{DoxySeeAlso}
 @usage 
@@ -2925,7 +2925,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Копирует изображение на экран с учетом прозрачности. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x\+Dest} & X-\/координата верхнего левого угла копируемого изображения. \\
 \hline
 {\em y\+Dest} & Y-\/координата верхнего левого угла копируемого изображения. \\
@@ -2939,7 +2939,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 {\em y\+Source} & {\itshape Y-\/координата верхнего левого угла копируемой области внутри изображения-\/источника. Необязательна. Если не указана, то 0.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
 См. описание в функции \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt()}} выше. \mbox{\Hypertarget{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}\label{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}} 
@@ -2953,7 +2953,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Копирует изображение с одного холста (контекста рисования, DC) на другой с учетом прозрачности. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em dest\+Image} & Контекст назначения (куда копировать). Для копирования в окно T\+X\+Lib укажите \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}. \\
 \hline
 {\em x\+Dest} & X-\/координата верхнего левого угла копируемого изображения. \\
@@ -2973,10 +2973,10 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 {\em trans\+Color} & {\itshape Цвет, который будет считаться прозрачным. Необязателен. Если не указан, то T\+X\+\_\+\+B\+L\+A\+CK.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Если контекст источника равен N\+U\+LL, то он не существует и копирование вызовет ошибку. Наиболее частая причина -- ошибка при загрузке файла изображения и отсутствие проверки на эту ошибку. Пример с проверкой на правильность загрузки см. ниже. @nn
 
 Изображение-\/источник и изображение-\/приемник не могут налагаться друг на друга. @nn
@@ -2985,10 +2985,10 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 \end{DoxyWarning}
 Стандартная функция Transparent\+Blt из Win32 A\+PI может масштабировать изображение. В tx\+Transparent\+Blt это убрано для упрощения использования. If you need image scaling, use original function Transparent\+Blt and don\textquotesingle{}t mess with stupid T\+X-\/based tools. (See implementation of tx\+Transparent\+Blt in \mbox{\hyperlink{_t_x_lib_8h}{T\+X\+Lib.\+h}}).
 
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Если Transparent\+Blt не работает, используйте функцию Alpha\+Blend, она вообще лучше.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}{tx\+Bit\+Blt()}}, \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image()}}, \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent()}}, \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}
 \end{DoxySeeAlso}
 @usage Пример использования см. в файле T\+X\textbackslash{}\+Examples\textbackslash{}\+Tennis\textbackslash{}\+Tennis.\+cpp. 
@@ -3020,7 +3020,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Функция, которая {\itshape должна бы} рисовать треугольник. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em x1} & X-\/координата 1-\/й точки. \\
 \hline
 {\em y1} & Y-\/координата 1-\/й точки. \\
@@ -3034,10 +3034,10 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 {\em y3} & Y-\/координата 3-\/й точки.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была бы успешна -- true, иначе -- false.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, tx\+Colors, R\+G\+B(), \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line()}}, \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle()}}, \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon()}}, \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse()}}, \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle()}}, \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc()}}, \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie()}}, \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord()}}
 \end{DoxySeeAlso}
 \begin{DoxyParagraph}{См. также\+:}
@@ -3054,11 +3054,11 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Разрешает или запрещает автоматическое обновление изображения в окне. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em update} & {\itshape Режим обновления (true -- разрешить, false -- запретить). Необязателен. Если не указан, то \char`\"{}разрешить\char`\"{}.}\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Предыдущее состояние режима обновления. \begin{DoxyVerb}     В отличие от txBegin() и txEnd(), которые поддерживают вложенные вызовы и работают как "скобки для
      замерзания картинки", txUpdateWindow() позволяет явно установить или снять блокировку автоматического
      обновления экрана.
@@ -3068,7 +3068,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}, \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor()}}, \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}}
 \end{DoxySeeAlso}
 @usage 
@@ -3088,11 +3088,11 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 Пересчитывает цвета пикселей с учетом прозрачности (переводит цвета в формат Premultiplied Alpha). 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em image} & Дескриптор холста, изображение которого пересчитывается.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Если операция была успешна, возвращается исходный H\+DC, иначе -- N\+U\+LL. \begin{DoxyVerb}     Пересчет цветов в каналах R,G,B в формат <b>Premultiplied Alpha</b> с учетом значения в альфа-канале
      @c A идет по формуле <tt>R,G,B *= A / 255.0</tt>. Получается вот что:
 
@@ -3113,7 +3113,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}, \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image()}}, \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend()}}
 \end{DoxySeeAlso}
 @usage См. в функции \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}. \mbox{\Hypertarget{group___drawing_gaf382eed71ecf8229882fe544035d66dc}\label{group___drawing_gaf382eed71ecf8229882fe544035d66dc}} 
@@ -3126,7 +3126,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 
 Возвращает строку с информацией о текущей версии библиотеки. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Строка с информацией о текущей версии библиотеки.
 \end{DoxyReturn}
 @usage 
@@ -3143,7 +3143,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 
 Возвращает номер версии библиотеки. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Номер версии библиотеки.
 \end{DoxyReturn}
 @usage 
@@ -3160,7 +3160,7 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 
 Возвращает буфер памяти, связанный с холстом (H\+DC) T\+X\+Lib. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Указатель на массив структур R\+G\+B\+Q\+U\+AD, -- буфера памяти, связанного с H\+DC холста T\+X\+Lib. \begin{DoxyVerb}     Прямой доступ к буферу памяти HDC позволяет работать с ним с очень высокой скоростью. Правда, рисовать
      можно только отдельные пиксели. Это полезно, в основном, если вы пишете собственный графический рендер
      <i>(так напишите же его!).</i>
@@ -3172,15 +3172,15 @@ txSetColor (RGB (255, 128, 64));    // Нечто оранжевое}}
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxyWarning}{Warning}
+\begin{DoxyWarning}{РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ}
 Будьте осторожны, не выходите за границы массива, последствия будут непредсказуемыми.
 \end{DoxyWarning}
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Во время работы с буфером автоматическое обновление окна T\+X\+Lib должно быть заблокировано с помощью \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}} и после разблокировано с помощью \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}. @nn
 
 H\+DC T\+X\+Lib -- {\bfseries{не}} оконный контекст рисования окна T\+X\+Lib. T\+X\+Lib реализует двойную буферизацию. Все рисовательные действия происходят со скрытым H\+DC, находящемся в памяти (его возвращает tx\+Get\+D\+C()), и его содержимое периодически автоматически копируется на экран. Это иногда приводит к мерцанию. Автоматическое копирование можно выключить функцией \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}} и обратно включить функцией \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, в этом случае содержимое окна можно перерисовать функциями \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window()}} или \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}. @nn Дополнительную информацию об автоматическом обновлении см. в функциях \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window()}}, \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window()}} и \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep()}}.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section()}}, \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window()}}, \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}, \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End()}}, \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}}
 \end{DoxySeeAlso}
 @usage 
@@ -3204,10 +3204,10 @@ H\+DC T\+X\+Lib -- {\bfseries{не}} оконный контекст рисования окна T\+X\+Lib. T\
 
 Возвращает дескриптор окна рисования 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Дескриптор (системный номер, handler) окна холста.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+D\+C()}}, \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory()}}, \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}}
 \end{DoxySeeAlso}
 @usage 
@@ -3217,7 +3217,7 @@ H\+DC T\+X\+Lib -- {\bfseries{не}} оконный контекст рисования окна T\+X\+Lib. T\
 \end{DoxyCode}
  
 
-\doxysubsection{Variable Documentation}
+\doxysubsection{РџРµСЂРµРјРµРЅРЅС‹Рµ}
 \mbox{\Hypertarget{group___drawing_gacc1ae8a3821354abc2d3f8f42ee75706}\label{group___drawing_gacc1ae8a3821354abc2d3f8f42ee75706}} 
 \index{Рисование@{Рисование}!TX\_BLACK@{TX\_BLACK}}
 \index{TX\_BLACK@{TX\_BLACK}!Рисование@{Рисование}}
@@ -3235,7 +3235,7 @@ H\+DC T\+X\+Lib -- {\bfseries{не}} оконный контекст рисования окна T\+X\+Lib. T\
 \end{DoxyVerb}
 
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color()}}, \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color()}}, \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color()}}, \mbox{\hyperlink{group___drawing_ga90daedc95ac28938003edb5b50479542}{tx\+Get\+Pixel()}}, R\+G\+B()
 \end{DoxySeeAlso}
 @usage 

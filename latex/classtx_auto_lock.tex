@@ -1,4 +1,4 @@
-\hypertarget{classtx_auto_lock}{}\doxysection{tx\+Auto\+Lock Class Reference}
+\hypertarget{classtx_auto_lock}{}\doxysection{РљР»Р°СЃСЃ tx\+Auto\+Lock}
 \label{classtx_auto_lock}\index{txAutoLock@{txAutoLock}}
 
 
@@ -9,7 +9,7 @@
 
 {\ttfamily \#include $<$T\+X\+Lib.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{РћС‚РєСЂС‹С‚С‹Рµ С‡Р»РµРЅС‹}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtx_auto_lock_af28070ec9fc2a4466cb7dbd0868c9616}{tx\+Auto\+Lock}} (C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$cs, bool mandatory=true)
@@ -20,14 +20,14 @@
 \begin{DoxyCompactList}\small\item\em Деструктор, разблокирует секцию \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtx_auto_lock_a4c6250ede5d5b2d2ad57d8254aa7c72f}{operator bool}} () const
 \begin{DoxyCompactList}\small\item\em Позволяет проверить, заблокировалась секция или нет @usage См. в tx\+Auto\+Lock\+::\+Auto\+Lock (C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON\&, bool) \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\doxysubsection*{РћС‚РєСЂС‹С‚С‹Рµ Р°С‚СЂРёР±СѓС‚С‹}
 \begin{DoxyCompactItemize}
 \item 
 C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_auto_lock_ae7aa09749ac613c09b651a4a2e12934f}{cs\+\_\+}}
 \begin{DoxyCompactList}\small\item\em Блокируемая критическая секция \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
 Класс для автоматической блокировки и разблокировки критической секции. 
 
 \begin{DoxyVerb}     Начиная с <a href=http://progbook.ru/2008/08/03/sovremennoe-proektirovanie-na-c-andrejj.html>
@@ -41,15 +41,15 @@ C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_
 \end{DoxyVerb}
 
 
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Класс не инициализирует и не удаляет критическую секцию. Только синхронизирует. Остальное сами-\/сами \+:)
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}}, \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}}, \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+D\+I()}} 
 \end{DoxySeeAlso}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ(С‹)}
 \mbox{\Hypertarget{classtx_auto_lock_af28070ec9fc2a4466cb7dbd0868c9616}\label{classtx_auto_lock_af28070ec9fc2a4466cb7dbd0868c9616}} 
 \index{txAutoLock@{txAutoLock}!txAutoLock@{txAutoLock}}
 \index{txAutoLock@{txAutoLock}!txAutoLock@{txAutoLock}}
@@ -61,7 +61,7 @@ C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_
 Конструктор, блокирует критическую секцию 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em cs} & Критическая секция для блокировки. \\
 \hline
 {\em mandatory} & {\itshape Если {\ttfamily true}, то блокировать обязательно (Enter\+Critical\+Section). ~\newline
@@ -98,7 +98,7 @@ C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_
 Конструктор для блокировки холста T\+X\+Lib. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em mandatory} & {\itshape Если {\ttfamily true}, то блокировать {\bfseries{обязательно}}, как в \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock}} (true). ~\newline
  Если {\ttfamily false}, то только {\bfseries{пытаться}} блокировать, как в \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock}} (false). ~\newline
  Если не указано, то блокировка обязательна.} @usage 
@@ -124,7 +124,7 @@ C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_
 
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{РњРµС‚РѕРґС‹}
 \mbox{\Hypertarget{classtx_auto_lock_a4c6250ede5d5b2d2ad57d8254aa7c72f}\label{classtx_auto_lock_a4c6250ede5d5b2d2ad57d8254aa7c72f}} 
 \index{txAutoLock@{txAutoLock}!operator bool@{operator bool}}
 \index{operator bool@{operator bool}!txAutoLock@{txAutoLock}}
@@ -137,7 +137,7 @@ C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_
 
 
 
-\doxysubsection{Member Data Documentation}
+\doxysubsection{Р”Р°РЅРЅС‹Рµ РєР»Р°СЃСЃР°}
 \mbox{\Hypertarget{classtx_auto_lock_ae7aa09749ac613c09b651a4a2e12934f}\label{classtx_auto_lock_ae7aa09749ac613c09b651a4a2e12934f}} 
 \index{txAutoLock@{txAutoLock}!cs\_@{cs\_}}
 \index{cs\_@{cs\_}!txAutoLock@{txAutoLock}}
@@ -150,6 +150,6 @@ C\+R\+I\+T\+I\+C\+A\+L\+\_\+\+S\+E\+C\+T\+I\+ON $\ast$ \mbox{\hyperlink{classtx_
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+РћР±СЉСЏРІР»РµРЅРёСЏ Рё РѕРїРёСЃР°РЅРёСЏ С‡Р»РµРЅРѕРІ РєР»Р°СЃСЃР° РЅР°С…РѕРґСЏС‚СЃСЏ РІ С„Р°Р№Р»Рµ\+:\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_t_x_lib_8h}{T\+X\+Lib.\+h}}\end{DoxyCompactItemize}

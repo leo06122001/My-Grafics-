@@ -1,4 +1,4 @@
-\hypertarget{structtx_dialog}{}\doxysection{tx\+Dialog Struct Reference}
+\hypertarget{structtx_dialog}{}\doxysection{РЎС‚СЂСѓРєС‚СѓСЂР° tx\+Dialog}
 \label{structtx_dialog}\index{txDialog@{txDialog}}
 
 
@@ -9,12 +9,12 @@
 
 {\ttfamily \#include $<$T\+X\+Lib.\+h$>$}
 
-\doxysubsection*{Classes}
+\doxysubsection*{РљР»Р°СЃСЃС‹}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structtx_dialog_1_1_layout}{Layout}}
 \begin{DoxyCompactList}\small\item\em Класс для описания элемента диалогового окна (контрола) \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Types}
+\doxysubsection*{РћС‚РєСЂС‹С‚С‹Рµ С‚РёРїС‹}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}{C\+O\+N\+T\+R\+OL}} \{ \newline
@@ -31,7 +31,7 @@ enum \mbox{\hyperlink{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}{C\+O\+
 \begin{DoxyCompactList}\small\item\em Константы для задания типа контрола. \end{DoxyCompactList}\item 
 typedef \mbox{\hyperlink{structtx_dialog}{tx\+Dialog}} \mbox{\hyperlink{structtx_dialog_a1b6915fbb70258955c5b3de1a09c99e4}{this\+\_\+t}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{РћС‚РєСЂС‹С‚С‹Рµ С‡Р»РµРЅС‹}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structtx_dialog_a081a2029ed8e4ffd6726c9f39966a04c}{tx\+Dialog}} ()
@@ -48,14 +48,14 @@ intptr\+\_\+t \mbox{\hyperlink{structtx_dialog_a7b075b1d868782be0973d6eb82121b94
 \begin{DoxyCompactList}\small\item\em Запускает диалоговое окно. \end{DoxyCompactList}\item 
 intptr\+\_\+t \mbox{\hyperlink{structtx_dialog_a0601dff1e04c3f06c23fc443eb10093c}{dialog\+Box}} (W\+O\+RD resource)
 \begin{DoxyCompactList}\small\item\em Запускает диалоговое окно. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Protected Member Functions}
+\doxysubsection*{Р—Р°С‰РёС‰РµРЅРЅС‹Рµ СЃС‚Р°С‚РёС‡РµСЃРєРёРµ С‡Р»РµРЅС‹}
 \begin{DoxyCompactItemize}
 \item 
 static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224cc6dee12d46b554b3ef4de18aa6d}{Dialog\+Proc\+\_\+}} (H\+W\+ND wnd, U\+I\+NT msg, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
 \begin{DoxyCompactList}\small\item\em Настоящая диалоговая функция (не \mbox{\hyperlink{structtx_dialog_a39efe9383833aedb0839d2519173930e}{tx\+Dialog\+::dialog\+Proc()}}, т.\+к. функция окна in32 должна быть статической). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{РџРѕРґСЂРѕР±РЅРѕРµ РѕРїРёСЃР°РЅРёРµ}
 Базовый класс для диалоговых окон. 
 
 \begin{DoxyVerb}     Для создания своего диалогового окна нужно:
@@ -68,10 +68,10 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 \end{DoxyVerb}
 
 
-\begin{DoxyNote}{Note}
+\begin{DoxyNote}{Р—Р°РјРµС‚РєРё}
 Этот класс предоставляет только базовую функциональность диалоговых окон и только базовые сведения по ним. Для его полноценного использования нужно знать, как работать с диалоговыми окнами в Windows.
 \end{DoxyNote}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_a971fb450a33205168aff3a7b186e04a3}{tx\+Dialog\+::set\+Layout()}}, \mbox{\hyperlink{structtx_dialog_a39efe9383833aedb0839d2519173930e}{tx\+Dialog\+::dialog\+Proc()}}, \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}, \mbox{\hyperlink{group___misc_gaf6ea524e3c76ba5c8a0d1fa6b81d55b8}{T\+X\+\_\+\+B\+E\+G\+I\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+A\+P()}}, \mbox{\hyperlink{group___misc_ga3f4a70a0e5076cb4f4addcab0ca760cd}{T\+X\+\_\+\+E\+N\+D\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+AP}}, \mbox{\hyperlink{group___misc_ga3637c3398b6ebfa337171beec0770fe4}{T\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+AP}}
 \end{DoxySeeAlso}
 @usage 
@@ -80,7 +80,7 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 \end{DoxyCode}
  
 
-\doxysubsection{Member Typedef Documentation}
+\doxysubsection{РћРїСЂРµРґРµР»РµРЅРёСЏ С‚РёРїРѕРІ}
 \mbox{\Hypertarget{structtx_dialog_a1b6915fbb70258955c5b3de1a09c99e4}\label{structtx_dialog_a1b6915fbb70258955c5b3de1a09c99e4}} 
 \index{txDialog@{txDialog}!this\_t@{this\_t}}
 \index{this\_t@{this\_t}!txDialog@{txDialog}}
@@ -89,7 +89,7 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ(С‹)}
 \mbox{\Hypertarget{structtx_dialog_a081a2029ed8e4ffd6726c9f39966a04c}\label{structtx_dialog_a081a2029ed8e4ffd6726c9f39966a04c}} 
 \index{txDialog@{txDialog}!txDialog@{txDialog}}
 \index{txDialog@{txDialog}!txDialog@{txDialog}}
@@ -100,7 +100,7 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 
 Конструктор. 
 
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_a081a2029ed8e4ffd6726c9f39966a04c}{tx\+Dialog\+::tx\+Dialog}} (const \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}$\ast$)
 \end{DoxySeeAlso}
 @usage 
@@ -118,11 +118,11 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 Конструктор. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em layout} & Макет диалогового окна.\\
 \hline
 \end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}, \mbox{\hyperlink{structtx_dialog_a971fb450a33205168aff3a7b186e04a3}{tx\+Dialog\+::set\+Layout()}}
 \end{DoxySeeAlso}
 @usage 
@@ -141,7 +141,7 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{РњРµС‚РѕРґС‹}
 \mbox{\Hypertarget{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}\label{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}} 
 \index{txDialog@{txDialog}!dialogBox@{dialogBox}}
 \index{dialogBox@{dialogBox}!txDialog@{txDialog}}
@@ -153,18 +153,18 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 Запускает диалоговое окно. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em layout} & {\itshape Макет диалогового окна. ~\newline
  Если не указан -- используется значение, заданное \mbox{\hyperlink{structtx_dialog_a971fb450a33205168aff3a7b186e04a3}{tx\+Dialog\+::set\+Layout()}} или конструктором \mbox{\hyperlink{structtx_dialog_a081a2029ed8e4ffd6726c9f39966a04c}{tx\+Dialog\+::tx\+Dialog}} (const \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}$\ast$).} \\
 \hline
 {\em bufsize} & Размер буфера для создания шаблона диалога. Если не указан -- размер по умолчанию.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Значение, указанное в функции End\+Dialog(). ~\newline
  По умолчанию -- адрес объекта {\itshape (this),} для которого была запущена \mbox{\hyperlink{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}{tx\+Dialog\+::dialog\+Box()}}.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_a39efe9383833aedb0839d2519173930e}{tx\+Dialog\+::dialog\+Proc()}}, \mbox{\hyperlink{structtx_dialog_a971fb450a33205168aff3a7b186e04a3}{tx\+Dialog\+::set\+Layout()}}, \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}, \mbox{\hyperlink{structtx_dialog}{tx\+Dialog}}
 \end{DoxySeeAlso}
 @usage 
@@ -182,15 +182,15 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 Запускает диалоговое окно. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em resource} & Идентификатор диалогового ресурса.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Значение, указанное в функции End\+Dialog(). ~\newline
  По умолчанию -- адрес объекта {\itshape (this),} для которого была запущена \mbox{\hyperlink{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}{tx\+Dialog\+::dialog\+Box()}}.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_a39efe9383833aedb0839d2519173930e}{tx\+Dialog\+::dialog\+Proc()}}
 \end{DoxySeeAlso}
 @usage 
@@ -208,7 +208,7 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 Функция обработки сообщений диалогового окна. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em \+\_\+wnd} & Дескриптор окна. \\
 \hline
 {\em \+\_\+msg} & Номер сообщения. \\
@@ -218,13 +218,13 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 {\em \+\_\+l\+Param} & 2-\/й параметр сообщения (D\+W\+O\+RD).\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 В большинстве случаев false, детальнее см. Dialog\+Proc в \href{msdn.com}{\texttt{ M\+S\+DN}}. \begin{DoxyVerb}     Эту функцию надо переопределить для обработки событий окна, или построить ее с помощью макросов
      TX_BEGIN_MESSAGE_MAP(), TX_END_MESSAGE_MAP, TX_COMMAND_MAP.
 \end{DoxyVerb}
 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}{tx\+Dialog\+::dialog\+Box()}}, \mbox{\hyperlink{group___misc_gaf6ea524e3c76ba5c8a0d1fa6b81d55b8}{T\+X\+\_\+\+B\+E\+G\+I\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+A\+P()}}, \mbox{\hyperlink{group___misc_ga3f4a70a0e5076cb4f4addcab0ca760cd}{T\+X\+\_\+\+E\+N\+D\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+AP}}, \mbox{\hyperlink{group___misc_ga3637c3398b6ebfa337171beec0770fe4}{T\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+AP}}
 \end{DoxySeeAlso}
 @usage 
@@ -252,14 +252,14 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 Устанавливает текущий макет диалогового окна. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{РђСЂРіСѓРјРµРЅС‚С‹}
 {\em layout} & Макет диалогового окна.\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Р’РѕР·РІСЂР°С‰Р°РµС‚}
 Предыдущий макет.
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See also}
+\begin{DoxySeeAlso}{РЎРј. С‚Р°РєР¶Рµ}
 \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}, \mbox{\hyperlink{structtx_dialog_a081a2029ed8e4ffd6726c9f39966a04c}{tx\+Dialog\+::tx\+Dialog}} (const \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}$\ast$), \mbox{\hyperlink{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}{tx\+Dialog\+::dialog\+Box()}}
 \end{DoxySeeAlso}
 @usage 
@@ -268,6 +268,6 @@ static intptr\+\_\+t C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{structtx_dialog_a1224
 \end{DoxyCode}
  
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+РћР±СЉСЏРІР»РµРЅРёСЏ Рё РѕРїРёСЃР°РЅРёСЏ С‡Р»РµРЅРѕРІ СЃС‚СЂСѓРєС‚СѓСЂС‹ РЅР°С…РѕРґСЏС‚СЃСЏ РІ С„Р°Р№Р»Рµ\+:\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_t_x_lib_8h}{T\+X\+Lib.\+h}}\end{DoxyCompactItemize}

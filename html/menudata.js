@@ -23,13 +23,13 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Modules",url:"modules.html"},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"},
-{text:"Class Members",url:"functions.html",children:[
-{text:"All",url:"functions.html",children:[
+{text:"Титульная страница",url:"index.html"},
+{text:"Группы",url:"modules.html"},
+{text:"Классы",url:"annotated.html",children:[
+{text:"Классы",url:"annotated.html"},
+{text:"Алфавитный указатель классов",url:"classes.html"},
+{text:"Члены классов",url:"functions.html",children:[
+{text:"Указатель",url:"functions.html",children:[
 {text:"_",url:"functions.html#index__5F"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
@@ -45,15 +45,15 @@ var menudata={children:[
 {text:"x",url:"functions.html#index_x"},
 {text:"y",url:"functions.html#index_y"},
 {text:"~",url:"functions.html#index__7E"}]},
-{text:"Functions",url:"functions_func.html"},
-{text:"Variables",url:"functions_vars.html"},
-{text:"Typedefs",url:"functions_type.html"},
-{text:"Enumerations",url:"functions_enum.html"},
-{text:"Enumerator",url:"functions_eval.html"}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"},
-{text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html",children:[
+{text:"Функции",url:"functions_func.html"},
+{text:"Переменные",url:"functions_vars.html"},
+{text:"Определения типов",url:"functions_type.html"},
+{text:"Перечисления",url:"functions_enum.html"},
+{text:"Элементы перечислений",url:"functions_eval.html"}]}]},
+{text:"Файлы",url:"files.html",children:[
+{text:"Файлы",url:"files.html"},
+{text:"Список членов всех файлов",url:"globals.html",children:[
+{text:"Указатель",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
 {text:"a",url:"globals_a.html#index_a"},
 {text:"c",url:"globals_c.html#index_c"},
@@ -68,7 +68,7 @@ var menudata={children:[
 {text:"v",url:"globals_v.html#index_v"},
 {text:"w",url:"globals_w.html#index_w"},
 {text:"z",url:"globals_z.html#index_z"}]},
-{text:"Functions",url:"globals_func.html",children:[
+{text:"Функции",url:"globals_func.html",children:[
 {text:"_",url:"globals_func.html#index__5F"},
 {text:"c",url:"globals_func.html#index_c"},
 {text:"f",url:"globals_func.html#index_f"},
@@ -79,11 +79,11 @@ var menudata={children:[
 {text:"r",url:"globals_func.html#index_r"},
 {text:"s",url:"globals_func.html#index_s"},
 {text:"t",url:"globals_func.html#index_t"}]},
-{text:"Variables",url:"globals_vars.html",children:[
+{text:"Переменные",url:"globals_vars.html",children:[
 {text:"_",url:"globals_vars.html#index__5F"},
 {text:"c",url:"globals_vars.html#index_c"},
 {text:"t",url:"globals_vars.html#index_t"}]},
-{text:"Macros",url:"globals_defs.html",children:[
+{text:"Макросы",url:"globals_defs.html",children:[
 {text:"_",url:"globals_defs.html#index__5F"},
 {text:"a",url:"globals_defs.html#index_a"},
 {text:"c",url:"globals_defs.html#index_c"},
