@@ -49,6 +49,12 @@ int main() {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Choosing of Sort }
+ *
+ * @param      data       The data
+ * @param[in]  DATA_SIZE  The data size
+ */
 void ChoosingSort(int data[], int DATA_SIZE) {
   while (1 > 0) {
     if (GetAsyncKeyState(VK_NUMPAD4)) {
@@ -77,6 +83,9 @@ void ChoosingSort(int data[], int DATA_SIZE) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      Prints a 1.
+ */
 void Print1() {
   txSetColor(TX_WHITE);
   txSetFillColor(TX_WHITE);
@@ -97,6 +106,9 @@ void Print1() {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      Prints a 2.
+ */
 void Print2() {
   txSetColor(TX_WHITE);
   txSetFillColor(TX_WHITE);
@@ -110,6 +122,12 @@ void Print2() {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Shaker }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
 void StatSh(int data[], int Size) {
   printf("Size   Number of compares   Number of exchanges\n");
   for (int size = 10; size < Size; size += 10) {
@@ -123,6 +141,12 @@ void StatSh(int data[], int Size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Shows Shaker }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
 void GraphSh(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
     ChangeSh = 0;
@@ -146,6 +170,12 @@ void GraphSh(int data[], int Size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Shows }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
 void GraphS(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
     ChangeS = 0;
@@ -169,6 +199,12 @@ void GraphS(int data[], int Size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Shows Bubble Sort }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
 void GraphB(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
     ChangeB = 0;
@@ -192,6 +228,12 @@ void GraphB(int data[], int Size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Shows}
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
 void GraphSI(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
     ChangeSI = 0;
@@ -215,6 +257,12 @@ void GraphSI(int data[], int Size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Fills DATA }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
 void Fill(int data[], int size) {
   for (int i = 0; i < size; i++) {
     data[i] = rand();
@@ -223,6 +271,13 @@ void Fill(int data[], int size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { function_description }
+ *
+ * @param      data  The data
+ * @param[in]  a     { parameter_description }
+ * @param[in]  b     { parameter_description }
+ */
 void SwapSh(int data[], int a, int b) {
   int x = data[a];
   data[a] = data[b];
@@ -232,6 +287,12 @@ void SwapSh(int data[], int a, int b) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Shaker Sort }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
 void SortSh(int data[], int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
@@ -251,6 +312,15 @@ void SortSh(int data[], int size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      Finds a minimum s.
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ * @param[in]  pos   The position
+ *
+ * @return     { description_of_the_return_value }
+ */
 int FindMinS(int data[], const int size, int pos) {
   int minpos = pos;
   int minnum = data[pos];
@@ -266,6 +336,13 @@ int FindMinS(int data[], const int size, int pos) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      {Swap Sort}
+ *
+ * @param      data  The data
+ * @param[in]  i     { Counter }
+ * @param[in]  min   The minimum
+ */
 void SwapS(int data[], int i, int min) {
   int x = data[i];
   data[i] = data[min];
@@ -275,6 +352,12 @@ void SwapS(int data[], int i, int min) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { S Sort }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
 void SortS(int data[], const int size) {
   for (int i = 0; i < size; i++) {
     int min = FindMinS(data, size, i);
@@ -284,6 +367,13 @@ void SortS(int data[], const int size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Swaps Bubble Sort }
+ *
+ * @param      data  The data
+ * @param[in]  min   The minimum
+ * @param[in]  pos   The position
+ */
 void SwapB(int data[], int min, int pos) {
   int x = data[min];
   data[min] = data[pos];
@@ -293,6 +383,12 @@ void SwapB(int data[], int min, int pos) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { Sort Bubble }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
 void SortB(int data[], int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
@@ -306,6 +402,12 @@ void SortB(int data[], int size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { function_description }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
 void SortSI(int data[], int size) {
   Fill(data, size);
   for (int i = 0; i < size - 1; i++) {
@@ -318,6 +420,13 @@ void SortSI(int data[], int size) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      { function_description }
+ *
+ * @param      data   The data
+ * @param[in]  start  The start
+ * @param[in]  end    The end
+ */
 void RorSI(int data[], int start, int end) {
   int x = data[end];
   for (int i = 0; i <= end - start; i++) {
@@ -330,6 +439,15 @@ void RorSI(int data[], int start, int end) {
 
 ///--------------------------------------------------------
 
+/**
+ * @brief      Finds a position si.
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ * @param[in]  k     { parameter_description }
+ *
+ * @return     { description_of_the_return_value }
+ */
 int FindPosSI(int data[], int size, int k) {
   int pos = 0;
   for (int i = 0; i < size; i++) {
