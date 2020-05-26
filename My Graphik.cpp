@@ -171,7 +171,7 @@ void GraphSh(int data[], int Size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { Shows }
+ * @brief      { Shows Selections Sort }
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -229,7 +229,7 @@ void GraphB(int data[], int Size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { Shows}
+ * @brief      { Shows Simple Insertion}
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -272,7 +272,7 @@ void Fill(int data[], int size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { function_description }
+ * @brief      { Swap Shaker }
  *
  * @param      data  The data
  * @param[in]  a     { parameter_description }
@@ -337,7 +337,7 @@ int FindMinS(int data[], const int size, int pos) {
 ///--------------------------------------------------------
 
 /**
- * @brief      {Swap Sort}
+ * @brief      {Swap Selections}
  *
  * @param      data  The data
  * @param[in]  i     { Counter }
@@ -353,7 +353,7 @@ void SwapS(int data[], int i, int min) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { S Sort }
+ * @brief      { Selections Sort }
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -403,7 +403,7 @@ void SortB(int data[], int size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { function_description }
+ * @brief      { Simple Insertion Sort }
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -421,7 +421,7 @@ void SortSI(int data[], int size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { function_description }
+ * @brief      { Simple Insertion }
  *
  * @param      data   The data
  * @param[in]  start  The start
