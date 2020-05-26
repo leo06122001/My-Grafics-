@@ -1,0 +1,884 @@
+\hypertarget{_t_x_lib_8h}{}\doxysection{T\+X\+Lib.\+h File Reference}
+\label{_t_x_lib_8h}\index{TXLib.h@{TXLib.h}}
+
+
+Библиотека Тупого Художника (The Dumb Artist Library, TX Library, T\+X\+Lib).  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$io.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$process.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$windowsx.\+h$>$}\newline
+{\ttfamily \#include $<$tlhelp32.\+h$>$}\newline
+{\ttfamily \#include $<$shellapi.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$direct.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__tx__auto__func__}{\+\_\+tx\+\_\+auto\+\_\+func\+\_\+$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classtx_auto_lock}{tx\+Auto\+Lock}}
+\begin{DoxyCompactList}\small\item\em Класс для автоматической блокировки и разблокировки критической секции. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtx_dialog}{tx\+Dialog}}
+\begin{DoxyCompactList}\small\item\em Базовый класс для диалоговых окон. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtx_dialog_1_1_layout}{tx\+Dialog\+::\+Layout}}
+\begin{DoxyCompactList}\small\item\em Класс для описания элемента диалогового окна (контрола) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___technical_ga6b76c63cd895c2be63ac8e690028623b}{\+\_\+\+T\+X\+\_\+\+V\+ER}}
+\begin{DoxyCompactList}\small\item\em Текущая версия библиотеки. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_gaddc6398e255e44934e56e22f91874d19}{\+\_\+\+T\+X\+\_\+\+V\+E\+R\+S\+I\+ON}}~\+\_\+\+T\+X\+\_\+\+V\+\_\+\+F\+R\+O\+M\+\_\+\+C\+VS (\$Version\+Info\+: , T\+X\+Lib.\+h, 00173a, 166, 2020-\/05-\/15 02\+:04\+:56 +0400, \char`\"{}Ded (Ilya Dedinsky, http\+://txlib.\+ru) $<$mail@txlib.\+ru$>$\char`\"{}, \$)
+\item 
+\#define \mbox{\hyperlink{group___technical_ga23f2f255fba17496bdb8a386e9c31093}{\+\_\+\+T\+X\+\_\+\+A\+U\+T\+H\+OR}}~\+\_\+\+T\+X\+\_\+\+A\+\_\+\+F\+R\+O\+M\+\_\+\+C\+VS (\$Version\+Info\+: , T\+X\+Lib.\+h, 00173a, 166, 2020-\/05-\/15 02\+:04\+:56 +0400, \char`\"{}Ded (Ilya Dedinsky, http\+://txlib.\+ru) $<$mail@txlib.\+ru$>$\char`\"{}, \$)
+\item 
+\#define \mbox{\hyperlink{group___technical_ga43d277b4418068ebef1fd2bdbaf550f6}{\+\_\+\+T\+X\+\_\+\+M\+O\+D\+U\+LE}}
+\begin{DoxyCompactList}\small\item\em Имя модуля T\+X\+Lib. Входит в диагностические сообщения. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_gadd1c9ccd036228402b807abaea14f7ee}{\+\_\+\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Имя и версия текущего компилятора \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_ga3e287c38947fea870d01588fbd2a5fc9}{\+\_\+\+T\+X\+\_\+\+B\+U\+I\+L\+D\+M\+O\+DE}}
+\begin{DoxyCompactList}\small\item\em Имя режима сборки \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga973d717438fe468dd5a5d8d45ede5312}{\+\_\+\+\_\+\+T\+X\+\_\+\+F\+I\+L\+E\+L\+I\+N\+E\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Макрос, раскрывающийся в имя файла и номер строки файла, где он встретился. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gab170f39ac0e379c324c73495f14a1309}{\+\_\+\+\_\+\+T\+X\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gafa99ec4acc4ecb2dc3c2d05da15d0e3f}{M\+AX}}(a,  b)
+\begin{DoxyCompactList}\small\item\em Возвращает максимальное из двух чисел \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}}(a,  b)
+\begin{DoxyCompactList}\small\item\em Возвращает минимальное из двух чисел \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gacd66e8cacf954c3bc3bba81d09425a12}{R\+O\+U\+ND}}(x)
+\begin{DoxyCompactList}\small\item\em Округляет число до целого \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gade9b60c36576ef735b3e1d1f628ad9c6}{Z\+E\+RO}}(type)
+\begin{DoxyCompactList}\small\item\em Обнулитель типов, не имеющих конструкторов \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gaf6d32e17de45766eea363ad72824ecad}{T\+X\+\_\+\+A\+S\+S\+E\+RT}}(cond)
+\begin{DoxyCompactList}\small\item\em Замена стандартного макроса \mbox{\hyperlink{_t_x_lib_8h_a3153a272f18d0f805028fce7e4337b53}{assert()}}, с выдачей сообщения через \mbox{\hyperlink{group___misc_gafaa331c0100cf85c46df7d94794f0ab5}{tx\+Message\+Box()}}, консоль и Output\+Debug\+String(). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a3153a272f18d0f805028fce7e4337b53}{assert}}(cond)~\mbox{\hyperlink{group___misc_gaf6d32e17de45766eea363ad72824ecad}{T\+X\+\_\+\+A\+S\+S\+E\+RT}} (cond)
+\item 
+\#define \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}}
+\begin{DoxyCompactList}\small\item\em Выводит диагностическое сообщение в случае нулевого или ложного результата. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a66cb8e8fe20d9d05d02e73373bda7f8a}{verified}}~\mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}}
+\begin{DoxyCompactList}\small\item\em For compatibility with assert macro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga14fecb1c008314444a74c1fe7d9a113b}{verify}}
+\begin{DoxyCompactList}\small\item\em Выполняет команду (вычисляет выражение) и проверяет результат. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga3e4a82a10130528f63b6f19476a0943a}{T\+X\+\_\+\+E\+R\+R\+OR}}(...)
+\begin{DoxyCompactList}\small\item\em Выводит развернутое диагностическое сообщение. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gabe7d5b7083c7588b457f73c1e0461044}{T\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+E\+R\+R\+OR}}(...)
+\begin{DoxyCompactList}\small\item\em Выводит развернутое диагностическое сообщение в отладочном режиме. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gae1f5bb8bcc99e21ed8dc46493027b267}{tx\+Stack\+Back\+Trace}}()
+\begin{DoxyCompactList}\small\item\em Распечатывает дамп области памяти в консоли. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+G\+DI}}(command,  dc)
+\begin{DoxyCompactList}\small\item\em Вызов функции Win32 G\+DI с автоматической блокировкой и разблокировкой. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a98843b8cb7cfa460b61c04d27b97f506}{I\+D\+\_\+\+T\+E\+X\+T\+\_\+}}~101
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_af61b53becacc2eede44ad142470c22a9}{I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+}}~102
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Адаптация к компиляторам и платформам}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a561e49978345c76005041eb90c1ef637}{strncpy\+\_\+s}}(dest,  sizeof\+\_\+dest,  src,  count)~( strncpy ((dest), (src), \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}} ((count), (sizeof\+\_\+dest))) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_abf2914ccf27cf7f9de82121d213e8660}{wcsncpy\+\_\+s}}(dest,  sizeof\+\_\+dest,  src,  count)~( wcsncpy ((dest), (src), \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}} ((count), (sizeof\+\_\+dest))) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_ab6fd8af903dd852fda0a82519cf245b6}{strncat\+\_\+s}}(dest,  sizeof\+\_\+dest,  src,  count)~( strncat ((dest), (src), \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}} ((count), (sizeof\+\_\+dest))) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_afd2aaf3c60ea4daf6671ae8130eb1f3c}{strerror\+\_\+s}}(buf,  sizeof\+\_\+buf,  code)~( strncpy ((buf), strerror ((int)(code)), (sizeof\+\_\+buf)-\/1) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a7c6e0c0ae31b262c6d4402d0fdabdfe9}{strtok\+\_\+s}}( buf,  delim,  ctx)~( (void)(ctx), strtok ((buf), (delim)) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a17b8b0fc54ff96dc672c78921c04bbe8}{fopen\+\_\+s}}( file,  name,  mode)~( $\ast$(file) = fopen ((name), (mode)) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_aec959cb17e460daf76106789247ed2dc}{\+\_\+strlwr\+\_\+s}}( str,  sizeof\+\_\+str)~( \+\_\+strlwr (str) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a94373a5bdb217343574c9851bb84cd2d}{ctime\+\_\+s}}(buf,  sizeof\+\_\+buf,  time)~( strncpy ((buf), ctime (time), (sizeof\+\_\+buf)-\/1) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a97c87934df1aa33820485bb1c89ac598}{\+\_\+controlfp\+\_\+s}}(old\+Ctl,  new\+Ctl,  mask)~( \mbox{\hyperlink{_t_x_lib_8h_a3153a272f18d0f805028fce7e4337b53}{assert}} (old\+Ctl), $\ast$(old\+Ctl) = \+\_\+controlfp (new\+Ctl, mask), 0 )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_ae994dd392bda6a00605b25091938078f}{\+\_\+snprintf\+\_\+s}}~snprintf
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_aa1e3bd110cd0e3cfb4abb83c315ba5b5}{\+\_\+vsnprintf\+\_\+s}}(str,  sz,  trunc,  format,  arg)~\+\_\+vsnprintf (str, sz, format, arg)
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a8aa431c63c541b85786fb3e193eead49}{\+\_\+wsplitpath\+\_\+s}}(path,  drive,  sz\+Drive,  dir,  sz\+Dir,  name,  sz\+Name,  ext,  sz\+Ext)~\+\_\+wsplitpath ( path, drive, dir, fname, ext )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a1e5c70dbf1cdd61a60dbea116d7e3696}{getenv\+\_\+s}}(sz,  buf,  sizeof\+\_\+buf,  name)~( (void)(sz), strncpy ((buf), getenv (name), (sizeof\+\_\+buf)-\/1) )
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( warn\+\_\+unused\+\_\+result ))
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( deprecated         ))
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a9fee4b5ea05b8962522d05cea99ee546}{tx\+\_\+printfy}}(format\+Arg\+Num)~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( format (printf, (format\+Arg\+Num), (format\+Arg\+Num)+1) ))
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a0ddc24c32824badd643eaef5de642229}{tx\+\_\+scanfy}}( format\+Arg\+Num)~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( format (scanf,  (format\+Arg\+Num), (format\+Arg\+Num)+1) ))
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}{P\+R\+Id64}}~\char`\"{}I64d\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_ab8d0c29be4a0623c3de58011991e86e9}{P\+R\+Ii64}}~\char`\"{}I64i\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a792491e417d837fc693122428460bcba}{P\+R\+Io64}}~\char`\"{}I64o\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_ac582131d7a7c8ee57e73180d1714f9d5}{P\+R\+Iu64}}~\char`\"{}I64u\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_aba38357387a474f439428dee1984fc5a}{P\+R\+Ix64}}~\char`\"{}I64x\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_af56fc48030ace2ec83125c0f5f42816c}{P\+R\+I\+X64}}~\char`\"{}I64X\char`\"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___misc_ga0b75271f60823b3c49a42cdd3c196ce5}{please}}
+\begin{DoxyCompactList}\small\item\em {\itshape Ну просто {\bfseries{очень}} удобный} макрос. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gaa25e1fdabc28195f490c7a03b7c7cbfb}{meow}}~;
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___misc_gae4dfd7b0d66121016d6466d2ff10e8ba}{\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Макрос, позволяющий передать переменное число параметров в какой-\/либо другой макрос. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gaaff3c8e496327bec13a821061787878f}{T\+X\+\_\+\+C\+O\+M\+MA}}~,
+\begin{DoxyCompactList}\small\item\em Синоним макроса \+\_\+ (\mbox{\hyperlink{group___misc_gae4dfd7b0d66121016d6466d2ff10e8ba}{символ подчеркивания}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\begin{Indent}\textbf{ Внутренняя диагностика}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___technical_ga2aa2550a5302deb4d46b3759b26f4b41}{T\+X\+\_\+\+T\+R\+A\+CE}}
+\begin{DoxyCompactList}\small\item\em Включает/отключает внутреннюю трассировку исполнения кода библиотеки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Макросы для построения статической карты сообщений (Message Map)}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___misc_gaf6ea524e3c76ba5c8a0d1fa6b81d55b8}{T\+X\+\_\+\+B\+E\+G\+I\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+AP}}()
+\begin{DoxyCompactList}\small\item\em Заголовок карты сообщений (Message Map). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_gadbe2f17002d8d41056e9770066ef558b}{T\+X\+\_\+\+H\+A\+N\+D\+LE}}(id)
+\begin{DoxyCompactList}\small\item\em Заголовок обработчика сообщения (Message handler) карты сообщений. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga3637c3398b6ebfa337171beec0770fe4}{T\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+AP}}
+\begin{DoxyCompactList}\small\item\em Начало карты команд (Command map) в карте сообщений. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga3f4a70a0e5076cb4f4addcab0ca760cd}{T\+X\+\_\+\+E\+N\+D\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+AP}}
+\begin{DoxyCompactList}\small\item\em Завершитель карты сообщений. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Экспериментальные отладочные макросы}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___misc_gaaa5d2cd4ba134312dcaca4e8316bbe9e}{\+\_\+\+\_\+\+T\+X\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+A\+C\+R\+OS}}~(\char`\"{}Группа отладочных \$-\/макросов\char`\"{})
+\begin{DoxyCompactList}\small\item\em Отладочная печать переменной во время вычисления выражения или участка кода во время его выполнения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group___misc_gaa81c1c7c499d76619d5d9d3369560881}{random}} (int range) \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}
+\begin{DoxyCompactList}\small\item\em Генератор случайных чисел \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group___misc_ga33933dc1baf2a181b7f9fabd61a4163e}{random}} (double left, double right) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}} \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}
+\begin{DoxyCompactList}\small\item\em Генератор случайных чисел \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_t_x_lib_8h_ae2c3c2c08be1a5e0ea84eb5ece3a77d3}{random}} (std\+::nomeow\+\_\+t, double left, double right) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\item 
+{\footnotesize template$<$typename Tx , typename Ta , typename Tb $>$ }\\bool \mbox{\hyperlink{group___misc_ga1298dbfaaff41786f77c7cd302d73c31}{In}} (Tx x, Ta a, Tb b) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}} \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}
+\begin{DoxyCompactList}\small\item\em Проверка, находится ли параметр х внутри замкнутого интервала \mbox{[}a; b\mbox{]}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Tx , typename Ta , typename Tb $>$ }\\bool \mbox{\hyperlink{_t_x_lib_8h_a103314e92b676ac59ad94c394a32ad5e}{In}} (std\+::nomeow\+\_\+t, Tx x, Ta a, Tb b) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}} \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}
+\item 
+void \mbox{\hyperlink{group___misc_ga5de732de72c46b992ac2feeac2de7e42}{tx\+\_\+fpreset}} ()
+\begin{DoxyCompactList}\small\item\em Переинициализирует математический сопроцессор \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group___misc_ga74ff1048e0d6bc458c9904fbbe0a6026}{tx\+Sqr}} (double x)
+\begin{DoxyCompactList}\small\item\em {\itshape Очень удобное} возведение числа в квадрат. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___misc_gad942f797bce07af74cd11c88d50ddd3e}{tx\+Reg\+Query}} (const char $\ast$key\+Name, const char $\ast$value\+Name, void $\ast$value, size\+\_\+t sz\+Value)
+\begin{DoxyCompactList}\small\item\em Читает информацию из реестра Windows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_t_x_lib_8h_a6122d52806d23ff6bd480a0f07b75f2b}{tx\+Set\+Locale}} (int codepage=\mbox{\hyperlink{group___misc_gaf40cd03b465387a736443214b7b44c32}{\+\_\+\+T\+X\+\_\+\+C\+O\+D\+E\+P\+A\+GE}}, const char locale\mbox{[}$\,$\mbox{]}=\mbox{\hyperlink{_t_x_lib_8h_ad81a593db054eb2302a9e8efdf5ae4c0}{\+\_\+\+T\+X\+\_\+\+L\+O\+C\+A\+LE}}, const wchar\+\_\+t w\+Locale\mbox{[}$\,$\mbox{]}=\mbox{\hyperlink{_t_x_lib_8h_a0dcae39a749b537ae84f6cba721719c7}{\+\_\+\+T\+X\+\_\+\+W\+L\+O\+C\+A\+LE}})
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Инициализация библиотеки}\par
+{\em Анонимное пространство имен для защиты от конфликтов при сборке многофайлового проекта. }\begin{DoxyCompactItemize}
+\item 
+H\+W\+ND \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window}} (double sizeX, double sizeY, bool centered=true)
+\begin{DoxyCompactList}\small\item\em Создание окна рисования \end{DoxyCompactList}\item 
+H\+DC \& \mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает холст (дескриптор контекста рисования, H\+DC) окна рисования T\+X\+Lib. \end{DoxyCompactList}\item 
+R\+G\+B\+Q\+U\+AD $\ast$ \mbox{\hyperlink{group___drawing_ga3a8ec79acc0dcbcc04bff3aecc235b4e}{tx\+Video\+Memory}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает буфер памяти, связанный с холстом (H\+DC) T\+X\+Lib. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaa72c4849ac0c9bf6f95893f4265b9843}{tx\+Set\+Defaults}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Установка параметров рисования по умолчанию. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga3291ffa23a348c25985d780ab8f7088b}{tx\+OK}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Проверка правильности работы библиотеки \end{DoxyCompactList}\item 
+P\+O\+I\+NT \mbox{\hyperlink{group___drawing_ga11074386e81c0c8677f36c0a16ac0aa1}{tx\+Get\+Extent}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает размер окна, картинки или холста в виде структуры P\+O\+I\+NT. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_gab79782d80f6c61587d02f0633aa2f198}{tx\+Get\+ExtentX}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает ширину окна или холста. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_gaa9bb7fd84e0b9f59c96be89d70c74321}{tx\+Get\+ExtentY}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает высоту окна или холста. \end{DoxyCompactList}\item 
+H\+W\+ND \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает дескриптор окна рисования \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{group___drawing_gaf382eed71ecf8229882fe544035d66dc}{tx\+Version}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает строку с информацией о текущей версии библиотеки. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___drawing_gab2c5f0eff263a7297997281c3d451b91}{tx\+Version\+Number}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает номер версии библиотеки. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{group___drawing_ga12ffceef73c1a081c073f4d7c2914618}{tx\+Get\+Module\+File\+Name}} (bool file\+Name\+Only=true) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает имя исполняемого файла или изначальный заголовок окна T\+X\+Lib. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Рисование фигур}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group___drawing_ga78e83baeb6a02d5fa33dd8b062e513d9}{tx\+Clear}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Стирает холст текущим цветом заполнения. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gafafd861ab7dc599b2e68b258b6727c85}{tx\+Set\+Pixel}} (double x, double y, C\+O\+L\+O\+R\+R\+EF color, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует пиксель (точку на экране). \end{DoxyCompactList}\item 
+C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga90daedc95ac28938003edb5b50479542}{tx\+Get\+Pixel}} (double x, double y, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает текущий цвет точки (пикселя) на экране. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaaee38df6f38b6f1729b9db1c4ac23e65}{tx\+Line}} (double x0, double y0, double x1, double y1, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует линию. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga18a0418f3c06463e958077cddf2a4864}{tx\+Rectangle}} (double x0, double y0, double x1, double y1, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует прямоугольник. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gacbbb638439ad7ba88804178516019fb1}{tx\+Polygon}} (const P\+O\+I\+NT points\mbox{[}$\,$\mbox{]}, int num\+Points, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует ломаную линию или многоугольник. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaaf82e7c5a0fd06548f42c757f73d3dae}{tx\+Ellipse}} (double x0, double y0, double x1, double y1, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует эллипс. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaa14e9c2a46cf713efaa1f850074d8adc}{tx\+Circle}} (double x, double y, double r)
+\begin{DoxyCompactList}\small\item\em Рисует окружность или круг. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga5e1e4cc39cc18962bb480c4adfa1344d}{tx\+Arc}} (double x0, double y0, double x1, double y1, double start\+Angle, double total\+Angle, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует дугу эллипса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga8e06e3abcb6b3724d332feb8aa83a8df}{tx\+Pie}} (double x0, double y0, double x1, double y1, double start\+Angle, double total\+Angle, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует сектор эллипса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga59468ca0fd4c182ac0a03573267eb3e9}{tx\+Chord}} (double x0, double y0, double x1, double y1, double start\+Angle, double total\+Angle, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует хорду эллипса. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga8adde0a20efa7597d8653653817353b2}{tx\+Flood\+Fill}} (double x, double y, C\+O\+L\+O\+R\+R\+EF color=\mbox{\hyperlink{group___drawing_ga5d70fde53b10abdb4e9511268b9e1ee9}{T\+X\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}}, D\+W\+O\+RD mode=F\+L\+O\+O\+D\+F\+I\+L\+L\+S\+U\+R\+F\+A\+CE, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Заливает произвольный контур текущим цветом заполнения. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaf5f3dec18e058830a6eb85ca127472df}{tx\+Triangle}} (double x1, double y1, double x2, double y2, double x3, double y3)
+\begin{DoxyCompactList}\small\item\em Функция, которая {\itshape должна бы} рисовать треугольник. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___drawing_gac76227ff55076802ea267be18b4d7a8d}{tx\+Draw\+Man}} (int x, int y, int sizeX, int sizeY, C\+O\+L\+O\+R\+R\+EF color, double handL, double handR, double twist, double head, double eyes, double wink, double crazy, double smile, double hair, double wind)
+\begin{DoxyCompactList}\small\item\em Рисует человечка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Работа с текстом}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group___drawing_ga52e119361961d9eee33c176a3084e55d}{tx\+Text\+Out}} (double x, double y, const char text\mbox{[}$\,$\mbox{]}, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует текст. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaf6a9b31e58b6a0523ce1636a97053606}{tx\+Draw\+Text}} (double x0, double y0, double x1, double y1, const char text\mbox{[}$\,$\mbox{]}, unsigned format=D\+T\+\_\+\+C\+E\+N\+T\+ER$\vert$D\+T\+\_\+\+V\+C\+E\+N\+T\+ER$\vert$D\+T\+\_\+\+W\+O\+R\+D\+B\+R\+E\+AK$\vert$D\+T\+\_\+\+W\+O\+R\+D\+\_\+\+E\+L\+L\+I\+P\+S\+IS, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Рисует текст, размещенный в прямоугольной области. \end{DoxyCompactList}\item 
+H\+F\+O\+NT \mbox{\hyperlink{group___drawing_ga6689b9a89add9c5eb5cf54a8c86539a4}{tx\+Select\+Font}} (const char name\mbox{[}$\,$\mbox{]}, double sizeY, double sizeX=-\/1, int bold=F\+W\+\_\+\+D\+O\+N\+T\+C\+A\+RE, bool italic=false, bool underline=false, bool strikeout=false, double angle=0, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Выбирает текущий шрифт, его размер и другие атрибуты. \end{DoxyCompactList}\item 
+S\+I\+ZE \mbox{\hyperlink{group___drawing_ga64af5f87cd652548278ff98d26f58148}{tx\+Get\+Text\+Extent}} (const char text\mbox{[}$\,$\mbox{]}, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Вычисляет размеры текстовой надписи. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_gad5483eacac697420a84f66733e45ed02}{tx\+Get\+Text\+ExtentX}} (const char text\mbox{[}$\,$\mbox{]}, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Вычисляет ширину текстовой надписи. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_gac021e9984ef217a7a8c14094e3d684c9}{tx\+Get\+Text\+ExtentY}} (const char text\mbox{[}$\,$\mbox{]}, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Вычисляет высоту текстовой надписи. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___drawing_ga09938df8859ae8b62638a3af76ee6735}{tx\+Set\+Text\+Align}} (unsigned align=T\+A\+\_\+\+C\+E\+N\+T\+ER$\vert$T\+A\+\_\+\+B\+A\+S\+E\+L\+I\+NE, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Устанавливает текущее выравнивание текста (влево/вправо/по центру). \end{DoxyCompactList}\item 
+L\+O\+G\+F\+O\+NT $\ast$ \mbox{\hyperlink{group___drawing_ga794901725b6c4a96f585742b70c0ea05}{tx\+Font\+Exist}} (const char name\mbox{[}$\,$\mbox{]}) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Ищет шрифт по его названию. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Рисование в памяти (на \char`\"{}виртуальном холсте\char`\"{}) и загрузка изображений}\par
+\begin{DoxyCompactItemize}
+\item 
+H\+DC \mbox{\hyperlink{group___drawing_ga1008da052f2fbe9ec0f70c2f6b4f0700}{tx\+Create\+Compatible\+DC}} (double sizeX, double sizeY, H\+B\+I\+T\+M\+AP bitmap=N\+U\+LL) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Создает дополнительный холст (контекст рисования, Device Context, DC) в памяти. \end{DoxyCompactList}\item 
+H\+DC \mbox{\hyperlink{group___drawing_ga7535f88c0fd15b4b49195060d38f2603}{tx\+Create\+D\+I\+B\+Section}} (double sizeX, double sizeY, R\+G\+B\+Q\+U\+AD $\ast$$\ast$pixels=N\+U\+LL) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Создает аппаратно-\/независимый дополнительный холст (контекст рисования, Device Context, DC) в памяти с возможностью прямого доступа к нему как к массиву. \end{DoxyCompactList}\item 
+H\+DC \mbox{\hyperlink{group___drawing_gaec4970aac125bcf0d8a0b10a118222f7}{tx\+Load\+Image}} (const char filename\mbox{[}$\,$\mbox{]}, unsigned image\+Flags=I\+M\+A\+G\+E\+\_\+\+B\+I\+T\+M\+AP, unsigned load\+Flags=L\+R\+\_\+\+L\+O\+A\+D\+F\+R\+O\+M\+F\+I\+LE) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Загружает из файла изображение в формате B\+MP. Делает это довольно медленно. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga505f212582bf9b2bf95a4ef15f84af42}{tx\+Delete\+DC}} (H\+DC dc)
+\begin{DoxyCompactList}\small\item\em Уничтожает холст (контекст рисования, DC) в памяти. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga6dfb121b4a1116f987baeb515713cbbf}{tx\+Bit\+Blt}} (H\+DC dest\+Image, double x\+Dest, double y\+Dest, double width, double height, H\+DC source\+Image, double x\+Source=0, double y\+Source=0, unsigned operation=S\+R\+C\+C\+O\+PY)
+\begin{DoxyCompactList}\small\item\em Копирует изображение с одного холста (контекста рисования, DC) на другой. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga3cb3f1af2aed93b9df7b7e9730e2cb89}{tx\+Bit\+Blt}} (double x\+Dest, double y\+Dest, H\+DC source\+Image, double x\+Source=0, double y\+Source=0)
+\begin{DoxyCompactList}\small\item\em Копирует изображение на экран. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga54f48f0bcb9453add294e0a9f8b1fb1d}{tx\+Transparent\+Blt}} (H\+DC dest\+Image, double x\+Dest, double y\+Dest, double width, double height, H\+DC source\+Image, double x\+Source=0, double y\+Source=0, C\+O\+L\+O\+R\+R\+EF trans\+Color=\mbox{\hyperlink{group___drawing_gacc1ae8a3821354abc2d3f8f42ee75706}{T\+X\+\_\+\+B\+L\+A\+CK}})
+\begin{DoxyCompactList}\small\item\em Копирует изображение с одного холста (контекста рисования, DC) на другой с учетом прозрачности. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga6e5105284a1d93aff19fc29d14a8a532}{tx\+Transparent\+Blt}} (double x\+Dest, double y\+Dest, H\+DC source\+Image, C\+O\+L\+O\+R\+R\+EF trans\+Color=\mbox{\hyperlink{group___drawing_gacc1ae8a3821354abc2d3f8f42ee75706}{T\+X\+\_\+\+B\+L\+A\+CK}}, double x\+Source=0, double y\+Source=0)
+\begin{DoxyCompactList}\small\item\em Копирует изображение на экран с учетом прозрачности. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{tx\+Alpha\+Blend}} (H\+DC dest\+Image, double x\+Dest, double y\+Dest, double width, double height, H\+DC source\+Image, double x\+Source=0, double y\+Source=0, double alpha=1.\+0)
+\begin{DoxyCompactList}\small\item\em Копирует изображение с одного холста (контекста рисования, DC) на другой с учетом полупрозрачности. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaa0af478a9b959bb096a8a686d2e685b5}{tx\+Alpha\+Blend}} (double x\+Dest, double y\+Dest, H\+DC source\+Image, double x\+Source=0, double y\+Source=0, double alpha=1.\+0)
+\begin{DoxyCompactList}\small\item\em Копирует изображение на экран с учетом полупрозрачности. \end{DoxyCompactList}\item 
+H\+DC \mbox{\hyperlink{group___drawing_ga6280d640bb3b08dc82c8dd29caf5ff47}{tx\+Use\+Alpha}} (H\+DC image)
+\begin{DoxyCompactList}\small\item\em Пересчитывает цвета пикселей с учетом прозрачности (переводит цвета в формат Premultiplied Alpha). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga45389db909311454bbdfed3898d760d1}{tx\+Save\+Image}} (const char filename\mbox{[}$\,$\mbox{]}, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Сохраняет в файл изображение в формате B\+MP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Вспомогательные функции}\par
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{tx\+Sleep}} (double time=0)
+\begin{DoxyCompactList}\small\item\em Задерживает выполнение программы на определенное время. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em Блокирует обновление изображения окна, во избежание мигания. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_ga809dc04afd5348247846ee01ce9a06e6}{tx\+End}} ()
+\begin{DoxyCompactList}\small\item\em Разблокирует обновление окна, заблокированное функцией \mbox{\hyperlink{group___drawing_gae92e621aaed81f90e4d142356e38762a}{tx\+Begin()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___drawing_gadc7fd9cdc8c007693db7b6d7de794709}{tx\+Redraw\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Обновляет изображение в окне T\+X\+Lib вручную. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___drawing_gaff3d9c60900531f438a19216485bdd41}{tx\+Update\+Window}} (int update=true)
+\begin{DoxyCompactList}\small\item\em Разрешает или запрещает автоматическое обновление изображения в окне. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gabc64e03f4ca966e76bc714bbe8173761}{tx\+Select\+Object}} (H\+G\+D\+I\+O\+BJ obj, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Устанавливает текущий активный объект G\+DI. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga93cecf6b117fc403c0488f388b78a6d1}{tx\+I\+Dont\+Want\+To\+Have\+A\+Pause\+After\+My\+Program\+Before\+The\+Window\+Will\+Close\+\_\+\+And\+I\+Will\+Not\+Be\+Asking\+Where\+Is\+My\+Picture}} ()
+\begin{DoxyCompactList}\small\item\em Делает нечто иногда удобное. См. название функции. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga0a3cf3a018cea9d5889d2626e9a37136}{tx\+Destroy\+Window}} (H\+W\+ND wnd=\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window}}())
+\begin{DoxyCompactList}\small\item\em Уничтожает окно. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group___drawing_ga49983bddca35d531c521cf04c6c2449f}{tx\+Query\+Performance}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Оценивает скорость работы компьютера. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{group___drawing_ga1aca71127c9986f995b2372903d65964}{tx\+Get\+F\+PS}} (int min\+Frames=tx\+Frames\+To\+Average) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Выдает количество кадров (вызовов этой функции) в секунду. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Работа с Мышью!}\par
+\begin{DoxyCompactItemize}
+\item 
+P\+O\+I\+NT \mbox{\hyperlink{group___mouse_ga44606f3b7f5f345d15bb20d46fcf78b6}{tx\+Mouse\+Pos}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает позицию Мыши! \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___mouse_ga2e6de35bffaf8217d577ed21a9ea6150}{tx\+MouseX}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает X-\/Координату Мыши! \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___mouse_ga47faa907390ccd05b350112bcb9fc79a}{tx\+MouseY}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает Y-\/Координату Мыши! \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___mouse_ga3317e38b22d8e6f116c29503144c2cc2}{tx\+Mouse\+Buttons}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает состояние Кнопок Мыши! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Функции консоли}\par
+{\em Ловит Мышь!
+
+
+\begin{DoxyParams}{Parameters}
+{\em should\+Eat} & To eat, or not to eat\+: that is the question.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Пойманная Мышь!
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Эту функцию можно применять, только если Вы -- Кот. \href{http://sisinmaru.com}{\texttt{ {\ttfamily  =$^\wedge$..$^\wedge$= }}} ~\newline
+ Поэтому в текущей версии она не реализована \+:)
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group___mouse_ga2e6de35bffaf8217d577ed21a9ea6150}{tx\+Mouse\+X()}}, \mbox{\hyperlink{group___mouse_ga47faa907390ccd05b350112bcb9fc79a}{tx\+Mouse\+Y()}}, \mbox{\hyperlink{group___mouse_ga44606f3b7f5f345d15bb20d46fcf78b6}{tx\+Mouse\+Pos()}}, \mbox{\hyperlink{group___mouse_ga3317e38b22d8e6f116c29503144c2cc2}{tx\+Mouse\+Buttons()}}
+\end{DoxySeeAlso}
+@usage 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} CatsLife()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{try}}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{            Mouse mouse = txCatchMouse();}
+\DoxyCodeLine{            Eat (mouse);}
+\DoxyCodeLine{            \mbox{\hyperlink{group___drawing_ga6c293f0b0f71efebdeeb0b56a97ba50c}{txSleep}}();}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{catch} (Mouse\& mouse)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{        Eat (mouse);  \textcolor{comment}{// Just do eat (R). Anyway}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\end{DoxyCode}
+ }\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{tx\+Set\+Console\+Attr}} (unsigned colors=0x07)
+\begin{DoxyCompactList}\small\item\em Устанавливает цветовые атрибуты консоли. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{tx\+Get\+Console\+Attr}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает текущие цветовые атрибуты консоли. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_ga2cb63c12d9206e9ed2b2c83c9a08f68e}{tx\+Clear\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Стирает текст консоли. \end{DoxyCompactList}\item 
+P\+O\+I\+NT \mbox{\hyperlink{group___drawing_gaee548f7b5672cbcbb99246e0291d7336}{tx\+Set\+Console\+Cursor\+Pos}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Устанавливает позицию мигающего курсора консоли. \end{DoxyCompactList}\item 
+P\+O\+I\+NT \mbox{\hyperlink{group___drawing_ga3227242c57eef33049cdaee655f4faee}{tx\+Get\+Console\+Cursor\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает позицию мигающего курсора консоли. \end{DoxyCompactList}\item 
+P\+O\+I\+NT \mbox{\hyperlink{group___drawing_gade3dc928a81efd7054c61fa6cb4ddc06}{tx\+Get\+Console\+Extent}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает размер консоли. \end{DoxyCompactList}\item 
+P\+O\+I\+NT \mbox{\hyperlink{group___drawing_ga250455abeab8c99a51153ef8f4ec0396}{tx\+Get\+Console\+Font\+Size}} () \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает размеры шрифта консоли. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___drawing_gaa148d2040d20ed74cf46ab186c35f9ed}{tx\+Text\+Cursor}} (bool blink=true)
+\begin{DoxyCompactList}\small\item\em Запрещает или разрешает рисование мигающего курсора в окне. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group___misc_gadfae620e55d8798711d4a0c72f6af99e}{In}} (const P\+O\+I\+NT \&pt, const R\+E\+CT \&rect) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}} \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}
+\begin{DoxyCompactList}\small\item\em Проверка, находится ли точка pt внутри прямоугольника rect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___misc_ga5f6ca2eaa2ff152301239bcefbda5dfe}{In}} (const C\+O\+O\+RD \&pt, const S\+M\+A\+L\+L\+\_\+\+R\+E\+CT \&rect) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}} \mbox{\hyperlink{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}{tx\+\_\+deprecated}}
+\end{DoxyCompactItemize}
+
+\begin{Indent}\textbf{ Очень служебные функции}\par
+\begin{DoxyCompactItemize}
+\item 
+W\+N\+D\+P\+R\+OC \mbox{\hyperlink{group___misc_ga30fb1a6913174dfcea5079391f655be2}{tx\+Set\+Windows\+Hook}} (W\+N\+D\+P\+R\+OC wnd\+Proc=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Устанавливает альтернативную функцию обработки оконных сообщений Windows (оконную функцию) для окна T\+X\+Lib. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock}} (bool wait=true)
+\begin{DoxyCompactList}\small\item\em Блокировка холста (контекста рисования). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock}} ()
+\begin{DoxyCompactList}\small\item\em Разблокировка холста \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Пример использования класса диалога\+: функция tx\+Input\+Box()}\par
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{group___dialogs_gaf1f2c033b7edc26174a28771a708ee7c}{tx\+Input\+Box}} (const char $\ast$text=N\+U\+LL, const char $\ast$caption=N\+U\+LL, const char $\ast$input=N\+U\+LL) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Ввод строки в отдельном окне. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{group___misc_gaf59817ad656dcbb3f9baebeb4d7f82f7}{tx\+PI}}
+\begin{DoxyCompactList}\small\item\em Число Пи \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{group___misc_gaf40cd03b465387a736443214b7b44c32}{\+\_\+\+T\+X\+\_\+\+C\+O\+D\+E\+P\+A\+GE}} = 1251
+\begin{DoxyCompactList}\small\item\em Смена кодовой страницы консоли и локали стандартной библиотеки С++. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{_t_x_lib_8h_ad81a593db054eb2302a9e8efdf5ae4c0}{\+\_\+\+T\+X\+\_\+\+L\+O\+C\+A\+LE}} \mbox{[}$\,$\mbox{]} = \char`\"{}Russian\char`\"{}
+\item 
+const wchar\+\_\+t \mbox{\hyperlink{_t_x_lib_8h_a0dcae39a749b537ae84f6cba721719c7}{\+\_\+\+T\+X\+\_\+\+W\+L\+O\+C\+A\+LE}} \mbox{[}$\,$\mbox{]} = L\char`\"{}Russian\+\_\+\+Russia.\+A\+CP\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Установка цветов и режимов рисования}
+\begin{DoxyCompactItemize}
+\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gacc1ae8a3821354abc2d3f8f42ee75706}{T\+X\+\_\+\+B\+L\+A\+CK}}
+\begin{DoxyCompactList}\small\item\em Названия предопределенных цветов. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gaa281a54954945bb0e96314fb4cfad7b9}{T\+X\+\_\+\+B\+L\+UE}} = R\+GB ( 0, 0, 128)
+\begin{DoxyCompactList}\small\item\em Темно-\/синий цвет. {\itshape Плохо виден.} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga32abcdee1b6897c768f21bf9264fe3eb}{T\+X\+\_\+\+G\+R\+E\+EN}} = R\+GB ( 0, 128, 0)
+\begin{DoxyCompactList}\small\item\em Зеленый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga59169dd9d9168dcbd3d4fa30d3e94f22}{T\+X\+\_\+\+C\+Y\+AN}} = R\+GB ( 0, 128, 128)
+\begin{DoxyCompactList}\small\item\em Бирюзовый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga93e1976dd8ae8d5e1b3932a4e5bfd158}{T\+X\+\_\+\+R\+ED}} = R\+GB (128, 0, 0)
+\begin{DoxyCompactList}\small\item\em Темно-\/красный цвет. {\itshape Слишком темный.} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gaf022ca75f4a59aa0a2cf18529e0a9861}{T\+X\+\_\+\+M\+A\+G\+E\+N\+TA}} = R\+GB (128, 0, 128)
+\begin{DoxyCompactList}\small\item\em Темно-\/малиновый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga941df978c121666ee6092034ec47701c}{T\+X\+\_\+\+B\+R\+O\+WN}} = R\+GB (128, 128, 0)
+\begin{DoxyCompactList}\small\item\em Коричневый цвет. {\itshape Некрасивый. Do it yourself with R\+G\+B().} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gae7c2564209f7b1f2bdb5cbbee77b49b4}{T\+X\+\_\+\+O\+R\+A\+N\+GE}} = R\+GB (255, 128, 0)
+\begin{DoxyCompactList}\small\item\em Оранжевый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gac47f8583faaa8d391a6c120c8b576733}{T\+X\+\_\+\+G\+R\+AY}} = R\+GB (160, 160, 160)
+\begin{DoxyCompactList}\small\item\em Серый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga16ef56f4dfb0cf5f8422bab9663eb7a9}{T\+X\+\_\+\+D\+A\+R\+K\+G\+R\+AY}} = R\+GB (128, 128, 128)
+\begin{DoxyCompactList}\small\item\em Темно-\/серый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga6625deb7ac8953a7e516285ac81c0b34}{T\+X\+\_\+\+L\+I\+G\+H\+T\+G\+R\+AY}} = R\+GB (192, 192, 192)
+\begin{DoxyCompactList}\small\item\em Светло-\/серый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga39fc3e530244cd74a18b58b2554cf686}{T\+X\+\_\+\+L\+I\+G\+H\+T\+B\+L\+UE}} = R\+GB ( 0, 0, 255)
+\begin{DoxyCompactList}\small\item\em Светло-\/синий цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga2b069ef0d81d1b217e8a4f019140ee92}{T\+X\+\_\+\+L\+I\+G\+H\+T\+G\+R\+E\+EN}} = R\+GB ( 0, 255, 128)
+\begin{DoxyCompactList}\small\item\em Светло-\/зеленый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gab5cd3833edf57a1fe3a3facf3e3086ac}{T\+X\+\_\+\+L\+I\+G\+H\+T\+C\+Y\+AN}} = R\+GB ( 0, 255, 255)
+\begin{DoxyCompactList}\small\item\em Светло-\/бирюзовый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga9be3f6a68afe0bf3013fc4c7fbebd057}{T\+X\+\_\+\+L\+I\+G\+H\+T\+R\+ED}} = R\+GB (255, 0, 128)
+\begin{DoxyCompactList}\small\item\em Светло-\/красный цвет. {\itshape Не самого лучшего оттенка.} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gaa8db9fe1edc90be50c3fb8a94fd09275}{T\+X\+\_\+\+L\+I\+G\+H\+T\+M\+A\+G\+E\+N\+TA}} = R\+GB (255, 0, 255)
+\begin{DoxyCompactList}\small\item\em Светло-\/малиновый цвет. {\itshape Еще менее лучшего оттенка.} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga6d082544499056d96ebda68defe0be54}{T\+X\+\_\+\+P\+I\+NK}} = R\+GB (255, 128, 255)
+\begin{DoxyCompactList}\small\item\em Розовый гламурный \+:) \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga6388bef316887789b735b7fbbc04ec4d}{T\+X\+\_\+\+Y\+E\+L\+L\+OW}} = R\+GB (255, 255, 128)
+\begin{DoxyCompactList}\small\item\em Желтый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga90c5bf9144d5eed4926fb92ba854eca9}{T\+X\+\_\+\+W\+H\+I\+TE}} = R\+GB (255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Белый цвет. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga5d70fde53b10abdb4e9511268b9e1ee9}{T\+X\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}} = 0x\+F\+F\+F\+F\+F\+F\+FF
+\begin{DoxyCompactList}\small\item\em Прозрачный цвет. {\itshape Отключает рисование.} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gad737ddf597e37fe699dc87c3f7f2a748}{T\+X\+\_\+\+N\+U\+LL}} = \mbox{\hyperlink{group___drawing_ga5d70fde53b10abdb4e9511268b9e1ee9}{T\+X\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}}
+\begin{DoxyCompactList}\small\item\em Прозрачный цвет. {\itshape Отключает рисование.} \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gaa5cab2d4aa67ea50390c30f094a77862}{T\+X\+\_\+\+H\+UE}} = 0x04000000
+\begin{DoxyCompactList}\small\item\em Цветовой тон цвета в модели H\+SL. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga4395ad7eeeda9d2163a89996ca91133e}{T\+X\+\_\+\+S\+A\+T\+U\+R\+A\+T\+I\+ON}} = 0x05000000
+\begin{DoxyCompactList}\small\item\em Насыщенность цвета в модели H\+SL. \end{DoxyCompactList}\item 
+const C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga03a8558c6bf26c0d6f59f85fc458c1a8}{T\+X\+\_\+\+L\+I\+G\+H\+T\+N\+E\+SS}} = 0x06000000
+\begin{DoxyCompactList}\small\item\em Светлота цвета в модели H\+SL. \end{DoxyCompactList}\item 
+H\+P\+EN \mbox{\hyperlink{group___drawing_ga66facc5848748507d3ea48c75b33ba23}{tx\+Set\+Color}} (C\+O\+L\+O\+R\+R\+EF color, double thickness=1, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Создает (смешивает) цвет из трех базовых цветов (компонент). \end{DoxyCompactList}\item 
+C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_gab6462db4dbcca4915d460036c6c8896d}{tx\+Get\+Color}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает текущий цвет линий и текста. \end{DoxyCompactList}\item 
+H\+B\+R\+U\+SH \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{tx\+Set\+Fill\+Color}} (C\+O\+L\+O\+R\+R\+EF color, H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}())
+\begin{DoxyCompactList}\small\item\em Устанавливает текущий цвет заполнения фигур. \end{DoxyCompactList}\item 
+C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga4d83b7e2d67f422cf703e15f2d7c4dfa}{tx\+Get\+Fill\+Color}} (H\+DC dc=\mbox{\hyperlink{group___drawing_ga6e641bf88bafb9bc5297354adb3aeb56}{tx\+DC}}()) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Возвращает текущий цвет заполнения фигур. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___drawing_gac2b196b6826392229fa209e01817f941}{tx\+Extract\+Color}} (C\+O\+L\+O\+R\+R\+EF color, C\+O\+L\+O\+R\+R\+EF component) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Извлекает цветовую компоненту (цветовой канал) из смешанного цвета. \end{DoxyCompactList}\item 
+C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga1350174ec2a2c83182437f04c88c2d95}{tx\+R\+G\+B2\+H\+SL}} (C\+O\+L\+O\+R\+R\+EF rgb\+Color) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Преобразует цвет из формата R\+GB в формат H\+SL. \end{DoxyCompactList}\item 
+C\+O\+L\+O\+R\+R\+EF \mbox{\hyperlink{group___drawing_ga6d5e95c1f234d32b8859826859127244}{tx\+H\+S\+L2\+R\+GB}} (C\+O\+L\+O\+R\+R\+EF hsl\+Color) \mbox{\hyperlink{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}{tx\+\_\+nodiscard}}
+\begin{DoxyCompactList}\small\item\em Преобразует цвет из формата H\+SL в формат R\+GB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Другие полезные функции, не связанные с рисованием}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___misc_ga799c47c1a2a151647cd765e1fa4b27b5}{sizearr}}(arr)
+\begin{DoxyCompactList}\small\item\em Добрый дядюшка Принтф. Теперь шаболонный. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga3379d227f91f891ac97d068ab90ee871}{S\+I\+Z\+E\+A\+RR}}(arr)~( sizeof (arr) / sizeof ((arr)\mbox{[}0\mbox{]}) )
+\item 
+bool \mbox{\hyperlink{group___misc_ga177f8bcb7544821ea4b5bd0571fe7196}{tx\+Play\+Sound}} (const char filename\mbox{[}$\,$\mbox{]}=N\+U\+LL, D\+W\+O\+RD mode=S\+N\+D\+\_\+\+A\+S\+Y\+NC)
+\begin{DoxyCompactList}\small\item\em Воспроизводит звуковой файл. \end{DoxyCompactList}\item 
+intptr\+\_\+t \mbox{\hyperlink{group___misc_ga3d4731dd56b60635c80bc662c295c821}{tx\+Play\+Video}} (int x, int y, int width, int height, const char file\+Name\mbox{[}$\,$\mbox{]}, double zoom=0, double gain=1, H\+W\+ND wnd=\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window}}())
+\begin{DoxyCompactList}\small\item\em Проигрывает видео. \end{DoxyCompactList}\item 
+intptr\+\_\+t \mbox{\hyperlink{group___misc_gaf5a6626fa2606a7f374fcc077fc92363}{tx\+Play\+Video}} (const char file\+Name\mbox{[}$\,$\mbox{]}, double zoom=0, double gain=1, H\+W\+ND wnd=\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{tx\+Window}}())
+\begin{DoxyCompactList}\small\item\em Проигрывает видео. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___misc_gad6db0ee1b36288c7eb3f2196077971f9}{tx\+Speak}} (const char $\ast$text,...) \mbox{\hyperlink{_t_x_lib_8h_a9fee4b5ea05b8962522d05cea99ee546}{tx\+\_\+printfy}}(1)
+\begin{DoxyCompactList}\small\item\em Читает @strike мысли @endstrike текст вслух. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___misc_gafaa331c0100cf85c46df7d94794f0ab5}{tx\+Message\+Box}} (const char text\mbox{[}$\,$\mbox{]}=\char`\"{}Муаххаха! \+:)\char`\"{}, const char header\mbox{[}$\,$\mbox{]}=\char`\"{}T\+X\+Lib сообщает\char`\"{}, unsigned flags=M\+B\+\_\+\+I\+C\+O\+N\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON$\vert$M\+B\+\_\+\+O\+K\+C\+A\+N\+C\+EL)
+\begin{DoxyCompactList}\small\item\em Выводит сообщение в окне с помощью функции Message\+Box. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___misc_ga782025393f08a0efb645b9d2e30f2586}{tx\+Get\+Async\+Key\+State}} (int key)
+\begin{DoxyCompactList}\small\item\em Проверяет, нажата ли указанная клавиша. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___misc_ga372c7e43cc383da3f8e8e00fc60be91f}{tx\+Output\+Debug\+Printf}} (const char format\mbox{[}$\,$\mbox{]},...) \mbox{\hyperlink{_t_x_lib_8h_a9fee4b5ea05b8962522d05cea99ee546}{tx\+\_\+printfy}}(1)
+\begin{DoxyCompactList}\small\item\em Выводит всплывающее сообщение в системном трее. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___misc_gab0307cd0525c34547a286f7dc34993b7}{tx\+\_\+auto\+\_\+func}}( func)
+\begin{DoxyCompactList}\small\item\em Автоматический вызов функции при завершении другой функции (аналог {\ttfamily \+\_\+\+\_\+finally}) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___misc_ga71e20c6118464420ecbee808b89bc449}{\+\_\+tx\+\_\+auto\+\_\+fun1}}(n,  func)~\mbox{\hyperlink{group___misc_ga24aee9d2bd2409fa01c32742380c2612}{\+\_\+tx\+\_\+auto\+\_\+fun2}} ( n,        func )
+\item 
+\#define \mbox{\hyperlink{group___misc_ga24aee9d2bd2409fa01c32742380c2612}{\+\_\+tx\+\_\+auto\+\_\+fun2}}(n,  func)~auto \mbox{\hyperlink{struct__tx__auto__func__}{\+\_\+tx\+\_\+auto\+\_\+func\+\_\+}}\#\#n = \mbox{\hyperlink{group___misc_ga02598f3908bcc003b19ece88e7a78815}{\+\_\+tx\+\_\+auto\+\_\+func}} (\mbox{[}\&\mbox{]}() \{ func; \})
+\item 
+\#define \mbox{\hyperlink{group___misc_gaab77850c89f56995dca40b02d9c44218}{tx\+\_\+finally}}(...)~\mbox{\hyperlink{group___misc_gab0307cd0525c34547a286f7dc34993b7}{tx\+\_\+auto\+\_\+func}} (\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct__tx__auto__func__}{\+\_\+tx\+\_\+auto\+\_\+func\+\_\+}}$<$ T $>$ \mbox{\hyperlink{group___misc_ga02598f3908bcc003b19ece88e7a78815}{\+\_\+tx\+\_\+auto\+\_\+func}} (T func)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_t_x_lib_8h_a9e6a6833faba49b1cc27a361341b2cd3}{tx\+Typename}}(value)~\mbox{\hyperlink{_t_x_lib_8h_af42d611991d9f31a4fa1229dfb45e630}{tx\+Demangle}} (typeid (value) .name()) .c\+\_\+str()
+\item 
+std\+::string \mbox{\hyperlink{group___misc_gafbd4278ff893fc1c1e28b086197adebe}{tx\+Demangle}} (const char $\ast$mangled\+Name)
+\begin{DoxyCompactList}\small\item\em Преобразует декорированное имя С++ в название типа. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{_t_x_lib_8h_af42d611991d9f31a4fa1229dfb45e630}{tx\+Demangle}} (const char $\ast$mangled\+Name, std\+::nomeow\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Настроечные константы и переменные}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___technical_gaab281ee20ea6be5eae34d0e15bf03dcf}{\+\_\+\+T\+X\+\_\+\+N\+O\+I\+N\+IT}}
+\begin{DoxyCompactList}\small\item\em Запрет ранней инициализации T\+X\+Lib. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_ga15dc1a04b8701e2db400b005b7a17ced}{\+\_\+\+T\+X\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+S\+\_\+\+L\+I\+M\+IT}}~16
+\begin{DoxyCompactList}\small\item\em Максимальное количество исключений в программе. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_gaf274c058737ec7e680437d2a1cdcd7b6}{\+\_\+\+T\+X\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+S\+\_\+\+L\+I\+M\+IT}}~16
+\begin{DoxyCompactList}\small\item\em Максимальное количество фатальных исключений. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_ga2c0a4fe0612f109c5c88d6d55a061db5}{\+\_\+\+T\+X\+\_\+\+W\+A\+I\+T\+A\+B\+L\+E\+\_\+\+P\+A\+R\+E\+N\+TS}}
+\begin{DoxyCompactList}\small\item\em Если определено, не исключать адреса без отладочной информации из трассировок стека. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___technical_ga9a495d013c6f08cd50220aca99ca56c2}{\+\_\+\+T\+X\+\_\+\+A\+L\+L\+O\+W\+\_\+\+K\+I\+L\+L\+\_\+\+P\+A\+R\+E\+NT}}~true
+\begin{DoxyCompactList}\small\item\em Разрешать принудительное завершение вызывающих программ, ждущих нажатия клавиш после завершения T\+X\+Lib. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{group___technical_ga6a2db5c9af56bfbab367902179189895}{\+\_\+tx\+Log\+Name}} \mbox{[}M\+A\+X\+\_\+\+P\+A\+TH\mbox{]} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя лог-\/файла T\+X\+Lib. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___technical_ga8a148ac2f04e1f9c7414af69362e0668}{\+\_\+tx\+Console\+Mode}} = S\+W\+\_\+\+H\+I\+DE
+\begin{DoxyCompactList}\small\item\em Режим отображения консольного окна. Допустимы любые флаги функции Show\+Window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___technical_ga4ddb32d7a8a676537014da7aea7bf273}{\+\_\+tx\+Window\+Style}} = W\+S\+\_\+\+P\+O\+P\+UP $\vert$ W\+S\+\_\+\+B\+O\+R\+D\+ER $\vert$ W\+S\+\_\+\+C\+A\+P\+T\+I\+ON $\vert$ W\+S\+\_\+\+S\+Y\+S\+M\+E\+NU
+\begin{DoxyCompactList}\small\item\em Стиль графического окна библиотеки. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{group___technical_ga61836072e0c3887ed70841ff2d12c0d9}{\+\_\+tx\+Console\+Font}} = \char`\"{}Lucida Console\char`\"{}
+\begin{DoxyCompactList}\small\item\em Шрифт консоли \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___technical_gacc95bfbcf7a0f9124e8cd5e80d0b3cd3}{\+\_\+tx\+Cursor\+Blink\+Interval}} = 500
+\begin{DoxyCompactList}\small\item\em Интервал мигания курсора консоли (мс) \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{group___technical_gaf2070fcdbd473d328f17f130623db80a}{\+\_\+tx\+Window\+Update\+Interval}} = 25
+\begin{DoxyCompactList}\small\item\em Интервал обновления холста (мс) \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{group___technical_ga7859e95fc4faec435abe372989f4f8ac}{\+\_\+\+T\+X\+\_\+\+T\+I\+M\+E\+O\+UT}} = 1000
+\begin{DoxyCompactList}\small\item\em Макрос, разрешающий использовать T\+X\+Lib вместе с графической библиотекой \href{http://sfml-dev.org}{\texttt{ S\+F\+ML}} \end{DoxyCompactList}\item 
+bool($\ast$ \mbox{\hyperlink{group___technical_gac4a38ba2226a94b0db0f53b382360927}{\+\_\+tx\+Swap\+Buffers}} )(H\+DC dest, int x\+Dest, int y\+Dest, int w\+Dest, int h\+Dest, H\+DC src, int x\+Src, int y\+Src, int w\+Src, int h\+Src, D\+W\+O\+RD r\+Op) = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Указатель на функцию, выводящую изображение непосредственно в окно T\+X\+Lib во время обработки W\+M\+\_\+\+P\+A\+I\+NT. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{group___technical_ga352331b32407c4e95bc4f7a5e39fad25}{\+\_\+\+T\+X\+\_\+\+B\+U\+F\+S\+I\+ZE}} = 1024
+\begin{DoxyCompactList}\small\item\em Размеры внутренних статических строковых буферов T\+X\+Lib. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{group___technical_gaa7273b2f613970c283053c5d9136addd}{\+\_\+\+T\+X\+\_\+\+B\+I\+G\+B\+U\+F\+S\+I\+ZE}} = \mbox{\hyperlink{group___technical_ga352331b32407c4e95bc4f7a5e39fad25}{\+\_\+\+T\+X\+\_\+\+B\+U\+F\+S\+I\+ZE}} $\ast$ 2
+\begin{DoxyCompactList}\small\item\em Размеры больших статических буферов. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{group___technical_ga9982623aefbe28deab03b1252777ec2a}{\+\_\+\+T\+X\+\_\+\+H\+U\+G\+E\+B\+U\+F\+S\+I\+ZE}} = \mbox{\hyperlink{group___technical_ga352331b32407c4e95bc4f7a5e39fad25}{\+\_\+\+T\+X\+\_\+\+B\+U\+F\+S\+I\+ZE}} $\ast$ 20
+\begin{DoxyCompactList}\small\item\em Размеры очень больших статических буферов. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{group___technical_ga7b8b43782557dd87528da77b083364ec}{\+\_\+\+T\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}} = 64 $\ast$ 1024
+\begin{DoxyCompactList}\small\item\em Минимальный размер стека для потоков программы. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___technical_ga181143543b3883cf8570f80da3ad7fcc}{\+\_\+tx\+Watchdog\+Timeout}} = 10$\ast$\mbox{\hyperlink{group___technical_ga7859e95fc4faec435abe372989f4f8ac}{\+\_\+\+T\+X\+\_\+\+T\+I\+M\+E\+O\+UT}}
+\begin{DoxyCompactList}\small\item\em Лимит времени на завершение программы, начиная от завершения функции \mbox{\hyperlink{_my_01_graphik_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} или от вызова exit(), в мс. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Библиотека Тупого Художника (The Dumb Artist Library, TX Library, T\+X\+Lib). 
+
+\begin{DoxyVerb}     $Version: 00173a, Revision: 166 $
+     $Copyright: (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru> $
+     $Date: 2020-05-15 02:04:56 +0400 $
+
+     TX Library -- компактная библиотека двумерной графики для MS Windows на С++.
+     Это небольшая "песочница" для начинающих реализована с целью помочь им в изучении
+     простейших принципов программирования. Документация на русском языке.
+     Философия TX Library -- облегчить первые шаги в программировании и подтолкнуть
+     к творчеству и самостоятельности.
+
+     TX Library is a tiny 2D graphics library for MS Windows written in C++. This is a small
+     sandbox for the very beginners to help them to learn basic programming principles.
+     The documentation is currently in Russian.
+
+     Официальный сайт библиотеки: <a href=http://txlib.ru>txlib.ru.</a>
+
+     См. также <a href=http://sourceforge.net/p/txlib>страницу проекта на SourceForge.</a>
+     Короткая ссылка на онлайн-документацию: <a href=http://gg.gg/TXLib>gg.gg/TXLib.</a>
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Установка библиотеки}
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Библиотека T\+X\+Lib состоит из единственного файла и не требует никаких настроек в среде программирования, чтобы облегчить ее установку и работу для начинающих.
+\end{DoxyNote}
+
+\begin{DoxyEnumerate}
+\item \href{https://sourceforge.net/projects/txlib/files/latest/download}{\texttt{ Скачайте}} программу установки, загрузка по ссылке начнется автоматически. Ее имя имеет вид {\ttfamily T\+X\+Lib-\/v0173a.\+rar.\+exe.} Цифры могут отличаться (это номер версии), расширение {\ttfamily }.exe может не отображаться, в зависимости от настроек Windows.
+\item Запустите скачанную программу установки. Программа установки -- это саморазархивирующийся архив, она не требует особых прав для запуска.
+\item На рабочем столе появится \char`\"{}Ярлык для T\+X\char`\"{}. Откройте его и запустите систему помощи {\ttfamily T\+X\+Lib Help,} изучите ее. Простейший пример см. \href{http://storage.ded32.net.ru/Lib/TX/TXUpdate/Doc/HTML.ru/a00001.htm}{\texttt{ http\+://storage.\+ded32.\+net.\+ru/\+Lib/\+T\+X/\+T\+X\+Update/\+Doc/\+H\+T\+M\+L.\+ru/a00001.\+htm}} здесь. Другие примеры см. \href{http://storage.ded32.net.ru/Lib/TX/TXUpdate/Doc/HTML.ru/dirs.htm}{\texttt{ в папке Examples,}} в папке Examples/\+Demo.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Если при установке происходят ошибки или запуск программы установки невозможен, откройте файл библиотеки {\ttfamily \mbox{\hyperlink{_t_x_lib_8h}{T\+X\+Lib.\+h}}} \href{http://storage.ded32.net.ru/Lib/TX/TXUpdate/TXLib.h}{\texttt{ отсюда}}, сохраните (Ctrl+S) его в свою рабочую папку, где вы сохраняете свои программы. Пользуйтесь \href{http://storage.ded32.net.ru/Lib/TX/TXUpdate/Doc/HTML.ru/index.htm}{\texttt{ системой помощи онлайн.}}
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Для полной обработки ошибок библиотеке требуются модули, которые желательно установить (скопировать) в папку Windows. Устанавливать эти библиотеки не обязательно. Программы, использующие T\+X\+Lib, запускаются и без них.
+\begin{DoxyEnumerate}
+\item Модули библиотеки Microsoft D\+B\+G\+H\+E\+LP для доступа к отладочным символам Microsoft\+:
+\begin{DoxyItemize}
+\item {\ttfamily dbghelp32.\+dll} или dbghe32.\+dll -\/ для 32-\/разрядных программ (либо {\ttfamily dbghelp.\+dll}, 32-\/разрядная версия),
+\item {\ttfamily dbghelp64.\+dll} или dbghe64.\+dll -\/ для 64-\/разрядных программ (либо {\ttfamily dbghelp.\+dll}, 64-\/разрядная версия),
+\end{DoxyItemize}
+\item Модули библиотеки \href{https://github.com/jrfonseca/drmingw/releases}{\texttt{ Dr\+Min\+GW}} для доступа к отладочным символам Min\+GW компилятора G\+CC {\ttfamily g++}\+:
+\begin{DoxyItemize}
+\item {\ttfamily mgwhelp32.\+dll} или mgwhe32.\+dll -\/ для 32-\/разрядных программ (либо {\ttfamily mgwhelp.\+dll}, 32-\/разрядная версия),
+\item {\ttfamily mgwhelp64.\+dll} или mgwhe64.\+dll -\/ для 64-\/разрядных программ (либо {\ttfamily mgwhelp.\+dll}, 64-\/разрядная версия).
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+Суффиксы {\ttfamily 32} и {\ttfamily 64} помогают отличить 32-\/разрядную и 64-\/разрядную версии D\+L\+L-\/файлов библиотек. Например, {\ttfamily dbghelp32.\+dll} -- это просто переименованная 32-\/разрядная версия файла {\ttfamily dbghelp.\+dll}.
+
+{\bfseries{Cамораспаковывающийся архив с этими библиотеками можно скачать \href{http://storage.ded32.net.ru/Lib/TX/TXLib-SupportDLLs.rar.exe}{\texttt{ здесь.}}}}
+
+Для наиболее полной диагностики ошибок полностью отключайте оптимизацию при компиляции. Например, для компилятора G\+CC {\ttfamily g++} -- с помощью ключа командной строки {\ttfamily -\/O0}. Разные среды программирования позволяют задать эти ключи по-\/разному, например, в Code\+Blocks через Главное меню -- Settings -- Compiler -- (Global Compiler Settings) -- (Compiler Settings) -- Other Options.
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+Кодовая страница в редакторе среды разработки должна быть установлена как Windows C\+P1251, проверьте это. В разных средах разработки она устанавливается по-\/разному, например, в Code\+Blocks через Главное меню -- Settings -- Editor -- (General Settings) -- Other Settings -- Encoding. Иначе русские буквы в сообщениях T\+X\+Lib будут отображаться неправильно.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+{\bfseries{Это альфа-\/версия. Для использования библиотеки требуется согласование с ее автором.}} @nn \href{http://www.ded32.ru/index/0-6}{\texttt{ Правила использования материалов библиотеки и сайта}} см. на \href{http://txlib.ru}{\texttt{ официальном сайте T\+X\+Lib.}}
+\end{DoxyWarning}
+\begin{DoxyParagraph}{Баг-\/трекер на Git\+Hub\+:}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/ded32/TXLib/issues/new}{\texttt{ {\bfseries{Сообщить об ошибке}}}} 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_t_x_lib_8h_a97c87934df1aa33820485bb1c89ac598}\label{_t_x_lib_8h_a97c87934df1aa33820485bb1c89ac598}} 
+\index{TXLib.h@{TXLib.h}!\_controlfp\_s@{\_controlfp\_s}}
+\index{\_controlfp\_s@{\_controlfp\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_controlfp\_s}{\_controlfp\_s}}
+{\footnotesize\ttfamily \#define \+\_\+controlfp\+\_\+s(\begin{DoxyParamCaption}\item[{}]{old\+Ctl,  }\item[{}]{new\+Ctl,  }\item[{}]{mask }\end{DoxyParamCaption})~( \mbox{\hyperlink{_t_x_lib_8h_a3153a272f18d0f805028fce7e4337b53}{assert}} (old\+Ctl), $\ast$(old\+Ctl) = \+\_\+controlfp (new\+Ctl, mask), 0 )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ae994dd392bda6a00605b25091938078f}\label{_t_x_lib_8h_ae994dd392bda6a00605b25091938078f}} 
+\index{TXLib.h@{TXLib.h}!\_snprintf\_s@{\_snprintf\_s}}
+\index{\_snprintf\_s@{\_snprintf\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_snprintf\_s}{\_snprintf\_s}}
+{\footnotesize\ttfamily \#define \+\_\+snprintf\+\_\+s~snprintf}
+
+\mbox{\Hypertarget{_t_x_lib_8h_aec959cb17e460daf76106789247ed2dc}\label{_t_x_lib_8h_aec959cb17e460daf76106789247ed2dc}} 
+\index{TXLib.h@{TXLib.h}!\_strlwr\_s@{\_strlwr\_s}}
+\index{\_strlwr\_s@{\_strlwr\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_strlwr\_s}{\_strlwr\_s}}
+{\footnotesize\ttfamily \#define \+\_\+strlwr\+\_\+s(\begin{DoxyParamCaption}\item[{}]{str,  }\item[{}]{sizeof\+\_\+str }\end{DoxyParamCaption})~( \+\_\+strlwr (str) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_aa1e3bd110cd0e3cfb4abb83c315ba5b5}\label{_t_x_lib_8h_aa1e3bd110cd0e3cfb4abb83c315ba5b5}} 
+\index{TXLib.h@{TXLib.h}!\_vsnprintf\_s@{\_vsnprintf\_s}}
+\index{\_vsnprintf\_s@{\_vsnprintf\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_vsnprintf\_s}{\_vsnprintf\_s}}
+{\footnotesize\ttfamily \#define \+\_\+vsnprintf\+\_\+s(\begin{DoxyParamCaption}\item[{}]{str,  }\item[{}]{sz,  }\item[{}]{trunc,  }\item[{}]{format,  }\item[{}]{arg }\end{DoxyParamCaption})~\+\_\+vsnprintf (str, sz, format, arg)}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a8aa431c63c541b85786fb3e193eead49}\label{_t_x_lib_8h_a8aa431c63c541b85786fb3e193eead49}} 
+\index{TXLib.h@{TXLib.h}!\_wsplitpath\_s@{\_wsplitpath\_s}}
+\index{\_wsplitpath\_s@{\_wsplitpath\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_wsplitpath\_s}{\_wsplitpath\_s}}
+{\footnotesize\ttfamily \#define \+\_\+wsplitpath\+\_\+s(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{drive,  }\item[{}]{sz\+Drive,  }\item[{}]{dir,  }\item[{}]{sz\+Dir,  }\item[{}]{name,  }\item[{}]{sz\+Name,  }\item[{}]{ext,  }\item[{}]{sz\+Ext }\end{DoxyParamCaption})~\+\_\+wsplitpath ( path, drive, dir, fname, ext )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a3153a272f18d0f805028fce7e4337b53}\label{_t_x_lib_8h_a3153a272f18d0f805028fce7e4337b53}} 
+\index{TXLib.h@{TXLib.h}!assert@{assert}}
+\index{assert@{assert}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{assert}{assert}}
+{\footnotesize\ttfamily \#define assert(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~\mbox{\hyperlink{group___misc_gaf6d32e17de45766eea363ad72824ecad}{T\+X\+\_\+\+A\+S\+S\+E\+RT}} (cond)}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a94373a5bdb217343574c9851bb84cd2d}\label{_t_x_lib_8h_a94373a5bdb217343574c9851bb84cd2d}} 
+\index{TXLib.h@{TXLib.h}!ctime\_s@{ctime\_s}}
+\index{ctime\_s@{ctime\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{ctime\_s}{ctime\_s}}
+{\footnotesize\ttfamily \#define ctime\+\_\+s(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{sizeof\+\_\+buf,  }\item[{}]{time }\end{DoxyParamCaption})~( strncpy ((buf), ctime (time), (sizeof\+\_\+buf)-\/1) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a17b8b0fc54ff96dc672c78921c04bbe8}\label{_t_x_lib_8h_a17b8b0fc54ff96dc672c78921c04bbe8}} 
+\index{TXLib.h@{TXLib.h}!fopen\_s@{fopen\_s}}
+\index{fopen\_s@{fopen\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{fopen\_s}{fopen\_s}}
+{\footnotesize\ttfamily \#define fopen\+\_\+s(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{name,  }\item[{}]{mode }\end{DoxyParamCaption})~( $\ast$(file) = fopen ((name), (mode)) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a1e5c70dbf1cdd61a60dbea116d7e3696}\label{_t_x_lib_8h_a1e5c70dbf1cdd61a60dbea116d7e3696}} 
+\index{TXLib.h@{TXLib.h}!getenv\_s@{getenv\_s}}
+\index{getenv\_s@{getenv\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{getenv\_s}{getenv\_s}}
+{\footnotesize\ttfamily \#define getenv\+\_\+s(\begin{DoxyParamCaption}\item[{}]{sz,  }\item[{}]{buf,  }\item[{}]{sizeof\+\_\+buf,  }\item[{}]{name }\end{DoxyParamCaption})~( (void)(sz), strncpy ((buf), getenv (name), (sizeof\+\_\+buf)-\/1) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_af61b53becacc2eede44ad142470c22a9}\label{_t_x_lib_8h_af61b53becacc2eede44ad142470c22a9}} 
+\index{TXLib.h@{TXLib.h}!ID\_INPUT\_@{ID\_INPUT\_}}
+\index{ID\_INPUT\_@{ID\_INPUT\_}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{ID\_INPUT\_}{ID\_INPUT\_}}
+{\footnotesize\ttfamily \#define I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+~102}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a98843b8cb7cfa460b61c04d27b97f506}\label{_t_x_lib_8h_a98843b8cb7cfa460b61c04d27b97f506}} 
+\index{TXLib.h@{TXLib.h}!ID\_TEXT\_@{ID\_TEXT\_}}
+\index{ID\_TEXT\_@{ID\_TEXT\_}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{ID\_TEXT\_}{ID\_TEXT\_}}
+{\footnotesize\ttfamily \#define I\+D\+\_\+\+T\+E\+X\+T\+\_\+~101}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}\label{_t_x_lib_8h_ae372e90b62c1e8b51dc5d95bf7f5ba48}} 
+\index{TXLib.h@{TXLib.h}!PRId64@{PRId64}}
+\index{PRId64@{PRId64}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{PRId64}{PRId64}}
+{\footnotesize\ttfamily \#define P\+R\+Id64~\char`\"{}I64d\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ab8d0c29be4a0623c3de58011991e86e9}\label{_t_x_lib_8h_ab8d0c29be4a0623c3de58011991e86e9}} 
+\index{TXLib.h@{TXLib.h}!PRIi64@{PRIi64}}
+\index{PRIi64@{PRIi64}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{PRIi64}{PRIi64}}
+{\footnotesize\ttfamily \#define P\+R\+Ii64~\char`\"{}I64i\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a792491e417d837fc693122428460bcba}\label{_t_x_lib_8h_a792491e417d837fc693122428460bcba}} 
+\index{TXLib.h@{TXLib.h}!PRIo64@{PRIo64}}
+\index{PRIo64@{PRIo64}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{PRIo64}{PRIo64}}
+{\footnotesize\ttfamily \#define P\+R\+Io64~\char`\"{}I64o\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ac582131d7a7c8ee57e73180d1714f9d5}\label{_t_x_lib_8h_ac582131d7a7c8ee57e73180d1714f9d5}} 
+\index{TXLib.h@{TXLib.h}!PRIu64@{PRIu64}}
+\index{PRIu64@{PRIu64}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{PRIu64}{PRIu64}}
+{\footnotesize\ttfamily \#define P\+R\+Iu64~\char`\"{}I64u\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_aba38357387a474f439428dee1984fc5a}\label{_t_x_lib_8h_aba38357387a474f439428dee1984fc5a}} 
+\index{TXLib.h@{TXLib.h}!PRIx64@{PRIx64}}
+\index{PRIx64@{PRIx64}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{PRIx64}{PRIx64}}
+{\footnotesize\ttfamily \#define P\+R\+Ix64~\char`\"{}I64x\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_af56fc48030ace2ec83125c0f5f42816c}\label{_t_x_lib_8h_af56fc48030ace2ec83125c0f5f42816c}} 
+\index{TXLib.h@{TXLib.h}!PRIX64@{PRIX64}}
+\index{PRIX64@{PRIX64}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{PRIX64}{PRIX64}}
+{\footnotesize\ttfamily \#define P\+R\+I\+X64~\char`\"{}I64X\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_afd2aaf3c60ea4daf6671ae8130eb1f3c}\label{_t_x_lib_8h_afd2aaf3c60ea4daf6671ae8130eb1f3c}} 
+\index{TXLib.h@{TXLib.h}!strerror\_s@{strerror\_s}}
+\index{strerror\_s@{strerror\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{strerror\_s}{strerror\_s}}
+{\footnotesize\ttfamily \#define strerror\+\_\+s(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{sizeof\+\_\+buf,  }\item[{}]{code }\end{DoxyParamCaption})~( strncpy ((buf), strerror ((int)(code)), (sizeof\+\_\+buf)-\/1) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ab6fd8af903dd852fda0a82519cf245b6}\label{_t_x_lib_8h_ab6fd8af903dd852fda0a82519cf245b6}} 
+\index{TXLib.h@{TXLib.h}!strncat\_s@{strncat\_s}}
+\index{strncat\_s@{strncat\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{strncat\_s}{strncat\_s}}
+{\footnotesize\ttfamily \#define strncat\+\_\+s(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{sizeof\+\_\+dest,  }\item[{}]{src,  }\item[{}]{count }\end{DoxyParamCaption})~( strncat ((dest), (src), \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}} ((count), (sizeof\+\_\+dest))) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a561e49978345c76005041eb90c1ef637}\label{_t_x_lib_8h_a561e49978345c76005041eb90c1ef637}} 
+\index{TXLib.h@{TXLib.h}!strncpy\_s@{strncpy\_s}}
+\index{strncpy\_s@{strncpy\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{strncpy\_s}{strncpy\_s}}
+{\footnotesize\ttfamily \#define strncpy\+\_\+s(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{sizeof\+\_\+dest,  }\item[{}]{src,  }\item[{}]{count }\end{DoxyParamCaption})~( strncpy ((dest), (src), \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}} ((count), (sizeof\+\_\+dest))) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a7c6e0c0ae31b262c6d4402d0fdabdfe9}\label{_t_x_lib_8h_a7c6e0c0ae31b262c6d4402d0fdabdfe9}} 
+\index{TXLib.h@{TXLib.h}!strtok\_s@{strtok\_s}}
+\index{strtok\_s@{strtok\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{strtok\_s}{strtok\_s}}
+{\footnotesize\ttfamily \#define strtok\+\_\+s(\begin{DoxyParamCaption}\item[{}]{buf,  }\item[{}]{delim,  }\item[{}]{ctx }\end{DoxyParamCaption})~( (void)(ctx), strtok ((buf), (delim)) )}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}\label{_t_x_lib_8h_a70d8c7f5526122dbea63688b3eb60bff}} 
+\index{TXLib.h@{TXLib.h}!tx\_deprecated@{tx\_deprecated}}
+\index{tx\_deprecated@{tx\_deprecated}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{tx\_deprecated}{tx\_deprecated}}
+{\footnotesize\ttfamily \#define tx\+\_\+deprecated~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( deprecated         ))}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}\label{_t_x_lib_8h_ac5e70ad9fc460939339d32af7604accc}} 
+\index{TXLib.h@{TXLib.h}!tx\_nodiscard@{tx\_nodiscard}}
+\index{tx\_nodiscard@{tx\_nodiscard}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{tx\_nodiscard}{tx\_nodiscard}}
+{\footnotesize\ttfamily \#define tx\+\_\+nodiscard~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( warn\+\_\+unused\+\_\+result ))}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a9fee4b5ea05b8962522d05cea99ee546}\label{_t_x_lib_8h_a9fee4b5ea05b8962522d05cea99ee546}} 
+\index{TXLib.h@{TXLib.h}!tx\_printfy@{tx\_printfy}}
+\index{tx\_printfy@{tx\_printfy}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{tx\_printfy}{tx\_printfy}}
+{\footnotesize\ttfamily \#define tx\+\_\+printfy(\begin{DoxyParamCaption}\item[{}]{format\+Arg\+Num }\end{DoxyParamCaption})~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( format (printf, (format\+Arg\+Num), (format\+Arg\+Num)+1) ))}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a0ddc24c32824badd643eaef5de642229}\label{_t_x_lib_8h_a0ddc24c32824badd643eaef5de642229}} 
+\index{TXLib.h@{TXLib.h}!tx\_scanfy@{tx\_scanfy}}
+\index{tx\_scanfy@{tx\_scanfy}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{tx\_scanfy}{tx\_scanfy}}
+{\footnotesize\ttfamily \#define tx\+\_\+scanfy(\begin{DoxyParamCaption}\item[{}]{format\+Arg\+Num }\end{DoxyParamCaption})~\+\_\+\+\_\+attribute\+\_\+\+\_\+ (( format (scanf,  (format\+Arg\+Num), (format\+Arg\+Num)+1) ))}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a9e6a6833faba49b1cc27a361341b2cd3}\label{_t_x_lib_8h_a9e6a6833faba49b1cc27a361341b2cd3}} 
+\index{TXLib.h@{TXLib.h}!txTypename@{txTypename}}
+\index{txTypename@{txTypename}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{txTypename}{txTypename}}
+{\footnotesize\ttfamily \#define tx\+Typename(\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})~\mbox{\hyperlink{_t_x_lib_8h_af42d611991d9f31a4fa1229dfb45e630}{tx\+Demangle}} (typeid (value) .name()) .c\+\_\+str()}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a66cb8e8fe20d9d05d02e73373bda7f8a}\label{_t_x_lib_8h_a66cb8e8fe20d9d05d02e73373bda7f8a}} 
+\index{TXLib.h@{TXLib.h}!verified@{verified}}
+\index{verified@{verified}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{verified}{verified}}
+{\footnotesize\ttfamily \#define verified~\mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}}}
+
+
+
+For compatibility with assert macro. 
+
+\mbox{\Hypertarget{_t_x_lib_8h_abf2914ccf27cf7f9de82121d213e8660}\label{_t_x_lib_8h_abf2914ccf27cf7f9de82121d213e8660}} 
+\index{TXLib.h@{TXLib.h}!wcsncpy\_s@{wcsncpy\_s}}
+\index{wcsncpy\_s@{wcsncpy\_s}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{wcsncpy\_s}{wcsncpy\_s}}
+{\footnotesize\ttfamily \#define wcsncpy\+\_\+s(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{sizeof\+\_\+dest,  }\item[{}]{src,  }\item[{}]{count }\end{DoxyParamCaption})~( wcsncpy ((dest), (src), \mbox{\hyperlink{group___misc_ga3acffbd305ee72dcd4593c0d8af64a4f}{M\+IN}} ((count), (sizeof\+\_\+dest))) )}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_t_x_lib_8h_a103314e92b676ac59ad94c394a32ad5e}\label{_t_x_lib_8h_a103314e92b676ac59ad94c394a32ad5e}} 
+\index{TXLib.h@{TXLib.h}!In@{In}}
+\index{In@{In}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{In()}{In()}}
+{\footnotesize\ttfamily template$<$typename Tx , typename Ta , typename Tb $>$ \\
+bool In (\begin{DoxyParamCaption}\item[{std\+::nomeow\+\_\+t}]{,  }\item[{Tx}]{x,  }\item[{Ta}]{a,  }\item[{Tb}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_ae2c3c2c08be1a5e0ea84eb5ece3a77d3}\label{_t_x_lib_8h_ae2c3c2c08be1a5e0ea84eb5ece3a77d3}} 
+\index{TXLib.h@{TXLib.h}!random@{random}}
+\index{random@{random}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{random()}{random()}}
+{\footnotesize\ttfamily double random (\begin{DoxyParamCaption}\item[{std\+::nomeow\+\_\+t}]{,  }\item[{double}]{left,  }\item[{double}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_af42d611991d9f31a4fa1229dfb45e630}\label{_t_x_lib_8h_af42d611991d9f31a4fa1229dfb45e630}} 
+\index{TXLib.h@{TXLib.h}!txDemangle@{txDemangle}}
+\index{txDemangle@{txDemangle}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{txDemangle()}{txDemangle()}}
+{\footnotesize\ttfamily char$\ast$ tx\+Demangle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{mangled\+Name,  }\item[{std\+::nomeow\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a6122d52806d23ff6bd480a0f07b75f2b}\label{_t_x_lib_8h_a6122d52806d23ff6bd480a0f07b75f2b}} 
+\index{TXLib.h@{TXLib.h}!txSetLocale@{txSetLocale}}
+\index{txSetLocale@{txSetLocale}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{txSetLocale()}{txSetLocale()}}
+{\footnotesize\ttfamily int tx\+Set\+Locale (\begin{DoxyParamCaption}\item[{int}]{codepage = {\ttfamily \mbox{\hyperlink{group___misc_gaf40cd03b465387a736443214b7b44c32}{\+\_\+\+T\+X\+\_\+\+C\+O\+D\+E\+P\+A\+GE}}},  }\item[{const char}]{locale\mbox{[}$\,$\mbox{]} = {\ttfamily \mbox{\hyperlink{_t_x_lib_8h_ad81a593db054eb2302a9e8efdf5ae4c0}{\+\_\+\+T\+X\+\_\+\+L\+O\+C\+A\+LE}}},  }\item[{const wchar\+\_\+t}]{w\+Locale\mbox{[}$\,$\mbox{]} = {\ttfamily \mbox{\hyperlink{_t_x_lib_8h_a0dcae39a749b537ae84f6cba721719c7}{\+\_\+\+T\+X\+\_\+\+W\+L\+O\+C\+A\+LE}}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_t_x_lib_8h_ad81a593db054eb2302a9e8efdf5ae4c0}\label{_t_x_lib_8h_ad81a593db054eb2302a9e8efdf5ae4c0}} 
+\index{TXLib.h@{TXLib.h}!\_TX\_LOCALE@{\_TX\_LOCALE}}
+\index{\_TX\_LOCALE@{\_TX\_LOCALE}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_TX\_LOCALE}{\_TX\_LOCALE}}
+{\footnotesize\ttfamily const char \+\_\+\+T\+X\+\_\+\+L\+O\+C\+A\+LE\mbox{[}$\,$\mbox{]} = \char`\"{}Russian\char`\"{}}
+
+\mbox{\Hypertarget{_t_x_lib_8h_a0dcae39a749b537ae84f6cba721719c7}\label{_t_x_lib_8h_a0dcae39a749b537ae84f6cba721719c7}} 
+\index{TXLib.h@{TXLib.h}!\_TX\_WLOCALE@{\_TX\_WLOCALE}}
+\index{\_TX\_WLOCALE@{\_TX\_WLOCALE}!TXLib.h@{TXLib.h}}
+\doxysubsubsection{\texorpdfstring{\_TX\_WLOCALE}{\_TX\_WLOCALE}}
+{\footnotesize\ttfamily const wchar\+\_\+t \+\_\+\+T\+X\+\_\+\+W\+L\+O\+C\+A\+LE\mbox{[}$\,$\mbox{]} = L\char`\"{}Russian\+\_\+\+Russia.\+A\+CP\char`\"{}}
+
