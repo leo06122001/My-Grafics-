@@ -4,7 +4,7 @@
     \version 1.0
     \date Май 2020 года
 */
-#include <TXlib.h>
+#include "TXLib.h"
 
 void Fill(int data[], int size);
 
