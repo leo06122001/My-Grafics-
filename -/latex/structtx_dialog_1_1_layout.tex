@@ -1,0 +1,208 @@
+\hypertarget{structtx_dialog_1_1_layout}{}\doxysection{tx\+Dialog\+::Layout Struct Reference}
+\label{structtx_dialog_1_1_layout}\index{txDialog::Layout@{txDialog::Layout}}
+
+
+Класс для описания элемента диалогового окна (контрола)  
+
+
+
+
+{\ttfamily \#include $<$T\+X\+Lib.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}{C\+O\+N\+T\+R\+OL}} \mbox{\hyperlink{structtx_dialog_1_1_layout_a2591914a85c05cce0fc862df1a569064}{wndclass}}
+\begin{DoxyCompactList}\small\item\em Тип контрола \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{structtx_dialog_1_1_layout_a92bbfc790a6ba7c937e9e26491a46209}{caption}}
+\begin{DoxyCompactList}\small\item\em Название или текст \end{DoxyCompactList}\item 
+W\+O\+RD \mbox{\hyperlink{structtx_dialog_1_1_layout_aa1a483bb785e2564e3a478f9c2e248da}{id}}
+\begin{DoxyCompactList}\small\item\em Идентификатор контрола \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{structtx_dialog_1_1_layout_a6291f513b3eeb124b0c431c4823a2293}{x}}
+\begin{DoxyCompactList}\small\item\em Координата верхнего левого угла \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{structtx_dialog_1_1_layout_a21d57dc612006b3b3ee8a513ab35cdbb}{y}}
+\begin{DoxyCompactList}\small\item\em Координата нижнего правого угла \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{structtx_dialog_1_1_layout_a16c20d9825dc75ca91ce750b6b547d6a}{sx}}
+\begin{DoxyCompactList}\small\item\em Размер по X. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{structtx_dialog_1_1_layout_ab54d04b7a9c3df4cd9596af74246da47}{sy}}
+\begin{DoxyCompactList}\small\item\em Размер по Y. \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{structtx_dialog_1_1_layout_a9b6528a0f3cd2b08cf78f947ad5bafab}{style}}
+\begin{DoxyCompactList}\small\item\em Стиль контрола \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{structtx_dialog_1_1_layout_a2fe7acf9e635627242825e58b2ff83ec}{font}}
+\begin{DoxyCompactList}\small\item\em Шрифт диалогового окна \end{DoxyCompactList}\item 
+W\+O\+RD \mbox{\hyperlink{structtx_dialog_1_1_layout_ac78c2a12a9ca921adff890b03b867ff0}{fontsize}}
+\begin{DoxyCompactList}\small\item\em Размер шрифта диалогового окна \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для описания элемента диалогового окна (контрола) 
+
+\begin{DoxyVerb}     Массив таких структур задает описание макета диалогового окна. Это описание похоже на задание диалога
+     в ресурсном скрипте (.rc):
+
+      - Нулевой элемент описывает диалоговое окно в целом
+      - Остальные элементы описывают контролы (порядок задания параметров контрола похож на порядок
+        параметров в ресурсном скрипте)
+      - Последний элемент -- txDialog::END или {NULL}
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structtx_dialog_a971fb450a33205168aff3a7b186e04a3}{tx\+Dialog\+::set\+Layout()}}, \mbox{\hyperlink{structtx_dialog_a7b075b1d868782be0973d6eb82121b94}{tx\+Dialog\+::dialog\+Box()}}, \mbox{\hyperlink{structtx_dialog_a39efe9383833aedb0839d2519173930e}{tx\+Dialog\+::dialog\+Proc()}}
+\end{DoxySeeAlso}
+@usage 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Cм. реализацию функции \mbox{\hyperlink{group___dialogs_gaf1f2c033b7edc26174a28771a708ee7c}{txInputBox}}().}
+\end{DoxyCode}
+ 
+
+Definition at line 6103 of file T\+X\+Lib.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a92bbfc790a6ba7c937e9e26491a46209}\label{structtx_dialog_1_1_layout_a92bbfc790a6ba7c937e9e26491a46209}} 
+\index{txDialog::Layout@{txDialog::Layout}!caption@{caption}}
+\index{caption@{caption}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{caption}{caption}}
+{\footnotesize\ttfamily const char$\ast$ tx\+Dialog\+::\+Layout\+::caption}
+
+
+
+Название или текст 
+
+
+
+Definition at line 6106 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a2fe7acf9e635627242825e58b2ff83ec}\label{structtx_dialog_1_1_layout_a2fe7acf9e635627242825e58b2ff83ec}} 
+\index{txDialog::Layout@{txDialog::Layout}!font@{font}}
+\index{font@{font}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily const char$\ast$ tx\+Dialog\+::\+Layout\+::font}
+
+
+
+Шрифт диалогового окна 
+
+
+
+Definition at line 6114 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_ac78c2a12a9ca921adff890b03b867ff0}\label{structtx_dialog_1_1_layout_ac78c2a12a9ca921adff890b03b867ff0}} 
+\index{txDialog::Layout@{txDialog::Layout}!fontsize@{fontsize}}
+\index{fontsize@{fontsize}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{fontsize}{fontsize}}
+{\footnotesize\ttfamily W\+O\+RD tx\+Dialog\+::\+Layout\+::fontsize}
+
+
+
+Размер шрифта диалогового окна 
+
+
+
+Definition at line 6115 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_aa1a483bb785e2564e3a478f9c2e248da}\label{structtx_dialog_1_1_layout_aa1a483bb785e2564e3a478f9c2e248da}} 
+\index{txDialog::Layout@{txDialog::Layout}!id@{id}}
+\index{id@{id}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily W\+O\+RD tx\+Dialog\+::\+Layout\+::id}
+
+
+
+Идентификатор контрола 
+
+
+
+Definition at line 6107 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a9b6528a0f3cd2b08cf78f947ad5bafab}\label{structtx_dialog_1_1_layout_a9b6528a0f3cd2b08cf78f947ad5bafab}} 
+\index{txDialog::Layout@{txDialog::Layout}!style@{style}}
+\index{style@{style}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{style}{style}}
+{\footnotesize\ttfamily D\+W\+O\+RD tx\+Dialog\+::\+Layout\+::style}
+
+
+
+Стиль контрола 
+
+
+
+Definition at line 6112 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a16c20d9825dc75ca91ce750b6b547d6a}\label{structtx_dialog_1_1_layout_a16c20d9825dc75ca91ce750b6b547d6a}} 
+\index{txDialog::Layout@{txDialog::Layout}!sx@{sx}}
+\index{sx@{sx}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{sx}{sx}}
+{\footnotesize\ttfamily short tx\+Dialog\+::\+Layout\+::sx}
+
+
+
+Размер по X. 
+
+
+
+Definition at line 6110 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_ab54d04b7a9c3df4cd9596af74246da47}\label{structtx_dialog_1_1_layout_ab54d04b7a9c3df4cd9596af74246da47}} 
+\index{txDialog::Layout@{txDialog::Layout}!sy@{sy}}
+\index{sy@{sy}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{sy}{sy}}
+{\footnotesize\ttfamily short tx\+Dialog\+::\+Layout\+::sy}
+
+
+
+Размер по Y. 
+
+
+
+Definition at line 6111 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a2591914a85c05cce0fc862df1a569064}\label{structtx_dialog_1_1_layout_a2591914a85c05cce0fc862df1a569064}} 
+\index{txDialog::Layout@{txDialog::Layout}!wndclass@{wndclass}}
+\index{wndclass@{wndclass}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{wndclass}{wndclass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___dialogs_ga5b47575087d696b5fddf972ce4d83657}{C\+O\+N\+T\+R\+OL}} tx\+Dialog\+::\+Layout\+::wndclass}
+
+
+
+Тип контрола 
+
+
+
+Definition at line 6105 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a6291f513b3eeb124b0c431c4823a2293}\label{structtx_dialog_1_1_layout_a6291f513b3eeb124b0c431c4823a2293}} 
+\index{txDialog::Layout@{txDialog::Layout}!x@{x}}
+\index{x@{x}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily short tx\+Dialog\+::\+Layout\+::x}
+
+
+
+Координата верхнего левого угла 
+
+
+
+Definition at line 6108 of file T\+X\+Lib.\+h.
+
+\mbox{\Hypertarget{structtx_dialog_1_1_layout_a21d57dc612006b3b3ee8a513ab35cdbb}\label{structtx_dialog_1_1_layout_a21d57dc612006b3b3ee8a513ab35cdbb}} 
+\index{txDialog::Layout@{txDialog::Layout}!y@{y}}
+\index{y@{y}!txDialog::Layout@{txDialog::Layout}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily short tx\+Dialog\+::\+Layout\+::y}
+
+
+
+Координата нижнего правого угла 
+
+
+
+Definition at line 6109 of file T\+X\+Lib.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_t_x_lib_8h}{T\+X\+Lib.\+h}}\end{DoxyCompactItemize}

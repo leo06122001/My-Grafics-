@@ -757,7 +757,7 @@ void RorSI(int data[], int start, int end) {
  *
  * @param      data  The data
  * @param[in]  size  The size
- * @param[in]  k     { parameter_description }
+ * @param[in]  k     The element from the data
  *
  * @return     { description_of_the_return_value }
  */
