@@ -562,7 +562,7 @@ void SortSI(int data[], int size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { Simple Insertion }
+ * @brief      { Changes SI }
  *
  * @param      data   The data
  * @param[in]  start  The start
@@ -581,7 +581,7 @@ void RorSI(int data[], int start, int end) {
 ///--------------------------------------------------------
 
 /**
- * @brief      Finds a position si.
+ * @brief      From which position we hould start Ror.
  *
  * @param      data  The data
  * @param[in]  size  The size
