@@ -16,6 +16,8 @@ void GraphSh(int data[], int Size);
 void GraphS(int data[], int Size);
 void GraphB(int data[], int Size);
 void GraphSI(int data[], int Size);
+void GraphGn(int data[], int Size);
+void GraphQ(int data[], int Size);
 
 void SwapSh(int data[], int a, int b); // Shaker
 void SortSh(int data[], int size);
@@ -32,6 +34,10 @@ void SortSI(int data[], int size);
 int FindPosSI(int data[], int size, int i); // Simple Insertion
 void RorSI(int data[], int start, int end);
 
+void SortGn(int data[], int size); // Gnom
+
+void SortQ(int data[], int r, int l); // Quick Sort
+
 int ComparaisonSh = 0;
 int ChangeSh = 0;
 
@@ -44,8 +50,14 @@ int ChangeB = 0;
 int ComparaisonSI = 0;
 int ChangeSI = 0;
 
+int ComparaisonGn = 0;
+int ChangeGn = 0;
+
+int ComparaisonQ = 0;
+int ChangeQ = 0;
+
 int main() {
-  txCreateWindow(450, 800);
+  txCreateWindow(450, 814);
   const int DATA_SIZE = 900;
   int data[DATA_SIZE] = {};
   Print1();
@@ -63,6 +75,12 @@ int main() {
  */
 void ChoosingSort(int data[], int DATA_SIZE) {
   while (1 > 0) {
+    if (GetAsyncKeyState(VK_NUMPAD5)) {
+      GraphGn(data, DATA_SIZE);
+    }
+    if (GetAsyncKeyState(VK_NUMPAD6)) {
+      GraphQ(data, DATA_SIZE);
+    }
     if (GetAsyncKeyState(VK_NUMPAD4)) {
       GraphSI(data, DATA_SIZE);
     }
@@ -103,8 +121,10 @@ void Print1() {
   txTextOut(100, 718, "2 - Bubble Sort           - pink");
   txTextOut(100, 732, "3 - Shaker Sort           - yellow");
   txTextOut(100, 746, "4 - Simple Insertion Sort - green");
-  txTextOut(220, 760, "Press 0 to clear all");
-  txTextOut(220, 774, "Press Esc to finish");
+  txTextOut(100, 760, "5 - Gnom Sort - lightgreen");
+  txTextOut(100, 774, "6 - Quick Sort - red");
+  txTextOut(220, 788, "Press 0 to clear all");
+  txTextOut(220, 802, "Press Esc to finish");
 
   HDC cat = txLoadImage("kotik\\kotik.bmp");
   txBitBlt(txDC(), 40, 10, 219, 167, cat, 0, 0);
@@ -170,6 +190,64 @@ void GraphSh(int data[], int Size) {
 
     txSetColor(TX_YELLOW);
     txSetFillColor(TX_YELLOW);
+    txCircle(20 + x, 660 - y2, 3);
+  }
+}
+
+///--------------------------------------------------------
+
+/**
+ * @brief      { Shows Quick }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
+void GraphQ(int data[], int Size) {
+  for (int size = 10; size < Size; size++) {
+    ChangeQ = 0;
+    ComparaisonQ = 0;
+    Fill(data, size);
+    SortQ(data, size, 0);
+
+    int x = size;
+    int y1 = 0.01 * ComparaisonQ;
+    int y2 = 0.01 * ChangeQ;
+
+    txSetColor(TX_RED);
+    txSetFillColor(TX_RED);
+    txCircle(20 + x, 660 - y1, 3);
+
+    txSetColor(TX_ORANGE);
+    txSetFillColor(TX_ORANGE);
+    txCircle(20 + x, 660 - y2, 3);
+  }
+}
+
+///--------------------------------------------------------
+
+/**
+ * @brief      { Shows Shaker }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
+void GraphGn(int data[], int Size) {
+  for (int size = 10; size < Size; size++) {
+    ChangeGn = 0;
+    ComparaisonGn = 0;
+    Fill(data, size);
+    SortGn(data, size);
+
+    int x = size;
+    int y1 = 0.01 * ComparaisonGn;
+    int y2 = 0.01 * ChangeGn;
+
+    txSetColor(TX_LIGHTGREEN);
+    txSetFillColor(TX_LIGHTGREEN);
+    txCircle(20 + x, 660 - y1, 3);
+
+    txSetColor(TX_GREEN);
+    txSetFillColor(TX_GREEN);
     txCircle(20 + x, 660 - y2, 3);
   }
 }
@@ -387,6 +465,31 @@ void SwapB(int data[], int min, int pos) {
   ChangeB++;
 }
 
+/**
+ * @brief      { Gnom bro }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
+void SortGn(int data[], int size) {
+  int i = 0;
+  while (i < size) {
+    if (i == 0) {
+      ++ComparaisonGn;
+      ++i;
+    } else {
+      if (data[i - 1] <= data[i]) {
+        ++ComparaisonGn;
+        ++i;
+      } else {
+        std::swap(data[i - 1], data[i]);
+              ++ChangeGn;
+              --i;
+      }
+    }
+  }
+}
+
 ///--------------------------------------------------------
 
 /**
@@ -404,6 +507,40 @@ void SortB(int data[], int size) {
       ComparaisonB++;
     }
   }
+}
+
+///----------------------------------------------------------
+
+void SortQ(int data[], int r, int l) {
+    ChangeQ = 0;
+    ComparaisonQ = 0;
+    if (r - l <= 1) {
+        return;
+    }
+    int z = data[l + (r - l) / 2];
+    int ll = l, rr = r - 1;
+    while (ll <= rr) {
+        while (data[ll] < z) {
+            ++ComparaisonQ;
+            ++ll;
+        }
+        while (data[rr] > z) {
+            ++ComparaisonQ;
+            --rr;
+        }
+        if (ll <= rr) {
+            std::swap(data[ll], data[rr]);
+            ++ChangeQ;
+            ++ll;
+            --rr;
+        }
+    }
+    if (l < rr) {
+        SortQ(data, rr + 1, l);
+    }
+    if (ll < r) {
+        SortQ(data, r, ll);
+    }
 }
 
 ///--------------------------------------------------------
