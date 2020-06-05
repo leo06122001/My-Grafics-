@@ -18,6 +18,8 @@ void GraphB(int data[], int Size);
 void GraphSI(int data[], int Size);
 void GraphGn(int data[], int Size);
 void GraphQ(int data[], int Size);
+void GraphCo(int data[], int Size);
+void GraphM(int data[], int Size);
 
 void SwapSh(int data[], int a, int b); // Shaker
 void SortSh(int data[], int size);
@@ -38,6 +40,10 @@ void SortGn(int data[], int size); // Gnom
 
 void SortQ(int data[], int r, int l); // Quick Sort
 
+void SortCo(int data[], int size); // Comb Sort
+
+void SortM(int data[], int size); // Merge Sort
+
 int ComparaisonSh = 0;
 int ChangeSh = 0;
 
@@ -56,8 +62,14 @@ int ChangeGn = 0;
 int ComparaisonQ = 0;
 int ChangeQ = 0;
 
+int ComparaisonCo = 0;
+int ChangeCo = 0;
+
+int ComparaisonM = 0;
+int ChangeM = 0;
+
 int main() {
-  txCreateWindow(450, 814);
+  txCreateWindow(450, 850);
   const int DATA_SIZE = 900;
   int data[DATA_SIZE] = {};
   Print1();
@@ -77,6 +89,12 @@ void ChoosingSort(int data[], int DATA_SIZE) {
   while (1 > 0) {
     if (GetAsyncKeyState(VK_NUMPAD5)) {
       GraphGn(data, DATA_SIZE);
+    }
+    if (GetAsyncKeyState(VK_NUMPAD8)) {
+      GraphM(data, DATA_SIZE);
+    }
+    if (GetAsyncKeyState(VK_NUMPAD7)) {
+      GraphCo(data, DATA_SIZE);
     }
     if (GetAsyncKeyState(VK_NUMPAD6)) {
       GraphQ(data, DATA_SIZE);
@@ -123,8 +141,10 @@ void Print1() {
   txTextOut(100, 746, "4 - Simple Insertion Sort - green");
   txTextOut(100, 760, "5 - Gnom Sort - lightgreen");
   txTextOut(100, 774, "6 - Quick Sort - red");
-  txTextOut(220, 788, "Press 0 to clear all");
-  txTextOut(220, 802, "Press Esc to finish");
+  txTextOut(100, 788, "7 - Comb Sort - white");
+  txTextOut(100, 802, "8 - Merge Sort - red");
+  txTextOut(220, 816, "Press 0 to clear all");
+  txTextOut(220, 830, "Press Esc to finish");
 
   HDC cat = txLoadImage("kotik\\kotik.bmp");
   txBitBlt(txDC(), 40, 10, 219, 167, cat, 0, 0);
@@ -197,6 +217,35 @@ void GraphSh(int data[], int Size) {
 ///--------------------------------------------------------
 
 /**
+ * @brief      { Shows Comb }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
+void GraphCo(int data[], int Size) {
+  for (int size = 10; size < Size; size++) {
+    ChangeCo = 0;
+    ComparaisonCo = 0;
+    Fill(data, size);
+    SortCo(data, size);
+
+    int x = size;
+    int y1 = 0.01 * ComparaisonCo;
+    int y2 = 0.01 * ChangeCo;
+
+    txSetColor(TX_WHITE);
+    txSetFillColor(TX_WHITE);
+    txCircle(20 + x, 660 - y1, 3);
+
+    txSetColor(TX_WHITE);
+    txSetFillColor(TX_WHITE);
+    txCircle(20 + x, 660 - y2, 3);
+  }
+}
+
+///--------------------------------------------------------
+
+/**
  * @brief      { Shows Quick }
  *
  * @param      data  The data
@@ -248,6 +297,35 @@ void GraphGn(int data[], int Size) {
 
     txSetColor(TX_GREEN);
     txSetFillColor(TX_GREEN);
+    txCircle(20 + x, 660 - y2, 3);
+  }
+}
+
+///--------------------------------------------------------
+
+/**
+ * @brief      { Shows Shaker }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
+void GraphM(int data[], int Size) {
+  for (int size = 10; size < Size; size++) {
+    ChangeM = 0;
+    ComparaisonM = 0;
+    Fill(data, size);
+    SortM(data, size);
+
+    int x = size;
+    int y1 = 0.01 * ComparaisonM;
+    int y2 = 0.01 * ChangeM;
+
+    txSetColor(TX_BLUE);
+    txSetFillColor(TX_BLUE);
+    txCircle(20 + x, 660 - y1, 3);
+
+    txSetColor(TX_BLUE);
+    txSetFillColor(TX_BLUE);
     txCircle(20 + x, 660 - y2, 3);
   }
 }
@@ -538,6 +616,100 @@ void SortQ(int data[], int r, int l) {
     }
     if (ll < r) {
         SortQ(data, r, ll);
+    }
+}
+
+/**
+ * @brief      { Comb Sort }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
+void SortCo(int data[], int size) {
+  if (size <= 1) {
+        return;
+    }
+  double k = 1.2473309;
+  int step = size - 1;
+  while (step > 1) {
+    for (int i = 0; i + step < size; i++) {
+            ++ComparaisonCo;
+      if (data[i] > data[i + step]) {
+                std::swap(data[i], data[i + step]);
+                ++ChangeCo;
+            }
+    }
+    step /= k;
+  }
+  bool b = true;
+  while (b) {
+    b = false;
+    for (int i = 0; i + 1 < size; i++) {
+            ++ComparaisonCo;
+      if (data[i] > data[i + 1]) {
+        std::swap(data[i], data[i + 1]);
+                ++ChangeCo;
+        b = true;
+      }
+    }
+  }
+}
+
+
+/**
+ * @brief      { Merge Sort }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
+void SortM(int data[], int size) {
+    int mid = size / 2;
+    if (size % 2 == 1) {
+        mid++;
+    }
+    int h = 1;
+    //int *c = (int*)malloc(size * sizeof(int));
+    int c[900] = {};
+    //std::vector<int> c (size);
+    int step;
+    while (h < size) {
+        step = h;
+        int i = 0;
+        int j = mid;
+        int k = 0;
+        while (step <= mid) {
+            while ((i < step) && (j < size) && (j < (mid + step))) {
+                ++ComparaisonM;
+                if (data[i] < data[j]) {
+                    c[k] = data[i];
+                    ++ChangeM;
+                    ++i; 
+                    ++k;
+                } else {
+                    c[k] = data[j];
+                    ++ChangeM;
+                    ++j; 
+                    ++k;
+                }
+            }
+            while (i < step) {
+                c[k] = data[i];
+                ++ChangeM;
+                ++i; 
+                ++k;
+            }
+            while ((j < (mid + step)) && (j<size)) {
+                c[k] = data[j];
+                ++ChangeM;
+                ++j; 
+                ++k;
+            }
+            step = step + h;
+        }
+        h = h * 2;
+        for (i = 0; i < size; i++) {
+            data[i] = c[i];
+        }
     }
 }
 
