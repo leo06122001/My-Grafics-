@@ -512,8 +512,6 @@ void SortB(int data[], int size) {
 ///----------------------------------------------------------
 
 void SortQ(int data[], int r, int l) {
-    ChangeQ = 0;
-    ComparaisonQ = 0;
     if (r - l <= 1) {
         return;
     }
