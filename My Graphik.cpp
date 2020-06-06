@@ -87,6 +87,7 @@ int main() {
 
 /**
  * @brief      { Choosing of Sort }
+ * вызывает функцию построения графика сортировки, соответствующую нажатой клавише или зачищает график если нажат 0
  *
  * @param      data       The data
  * @param[in]  DATA_SIZE  The data size
@@ -136,6 +137,7 @@ void ChoosingSort(int data[], int DATA_SIZE) {
 
 /**
  * @brief      Prints a 1.
+ * функция выводит на экран меню и подсказки
  */
 void Print1() {
   txSetColor(TX_WHITE);
@@ -164,6 +166,7 @@ void Print1() {
 
 /**
  * @brief      Prints a 2.
+ * функция выводит на экран оси графика с подписями
  */
 void Print2() {
   txSetColor(TX_WHITE);
@@ -199,6 +202,8 @@ void StatSh(int data[], int Size) {
 
 /**
  * @brief      { Shows Shaker }
+ * многократно запукает Shaker Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeSh, ComparaisonSh, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -228,6 +233,8 @@ void GraphSh(int data[], int Size) {
 
 /**
  * @brief      { Shows Pyramid }
+ * многократно запукает Pyramid Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangePyr, ComparaisonPyr, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -257,6 +264,8 @@ void GraphPyr(int data[], int Size) {
 
 /**
  * @brief      { Shows Comb }
+ * многократно запукает Comb Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeCo, ComparaisonCo, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -286,6 +295,8 @@ void GraphCo(int data[], int Size) {
 
 /**
  * @brief      { Shows Quick }
+ * многократно запукает Quick Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeQ, ComparaisonQ, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -315,6 +326,8 @@ void GraphQ(int data[], int Size) {
 
 /**
  * @brief      { Shows Shaker }
+ * многократно запукает Gnome Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeGn, ComparaisonGn, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -344,6 +357,8 @@ void GraphGn(int data[], int Size) {
 
 /**
  * @brief      { Shows Shaker }
+ * многократно запукает Merge Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeM, ComparaisonM, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -373,6 +388,8 @@ void GraphM(int data[], int Size) {
 
 /**
  * @brief      { Shows Selections Sort }
+ * многократно запукает Selections Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeS, ComparaisonS, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -402,6 +419,8 @@ void GraphS(int data[], int Size) {
 
 /**
  * @brief      { Shows Bubble Sort }
+ * многократно запукает Bubble Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeB, ComparaisonB, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -431,6 +450,8 @@ void GraphB(int data[], int Size) {
 
 /**
  * @brief      { Shows Simple Insertion}
+ * многократно запукает Simple Insertion Sort на ростущем количестве данных, строит и выводит график сортировки и информацию о нём
+ * в ходе работы изменяет глобальные переменные ChangeSI, ComparaisonSI, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  Size  The size
@@ -460,6 +481,7 @@ void GraphSI(int data[], int Size) {
 
 /**
  * @brief      { Fills DATA }
+ * заполняет массив DATA указанным количеством случайных чисел
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -490,6 +512,8 @@ void SwapSh(int data[], int a, int b) {
 
 /**
  * @brief      { Shaker Sort }
+ * сортирует массив DATA указанного размера с помощью Shaker Sort
+ * изменяет глобальные переменные ChangeSh, ComparaisonSh, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -515,6 +539,7 @@ void SortSh(int data[], int size) {
 
 /**
  * @brief      Finds a minimum s.
+ * функция поиска минимума для Selections Sort 
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -555,6 +580,8 @@ void SwapS(int data[], int i, int min) {
 
 /**
  * @brief      { Selections Sort }
+ * сортирует массив DATA указанного размера с помощью Selections Sort
+ * изменяет глобальные переменные ChangeS, ComparaisonS, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -584,6 +611,8 @@ void SwapB(int data[], int min, int pos) {
 
 /**
  * @brief      { Gnom bro }
+ * сортирует массив DATA указанного размера с помощью Gnom Sort
+ * изменяет глобальные переменные ChangeG, ComparaisonG, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -611,6 +640,8 @@ void SortGn(int data[], int size) {
 
 /**
  * @brief      { Sort Bubble }
+ * сортирует массив DATA указанного размера с помощью Bubble Sort
+ * изменяет глобальные переменные ChangeB, ComparaisonB, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -628,6 +659,15 @@ void SortB(int data[], int size) {
 
 ///----------------------------------------------------------
 
+/**
+ * @brief      { function_description }
+ * сортирует массив DATA указанного размера с помощью Quick Sort
+ * изменяет глобальные переменные ChangeQ, ComparaisonQ, отвечающие за подсчёт операций перестанови и сравнения элементов массива
+ *
+ * @param      data  The data
+ * @param[in]  r     The right pointer
+ * @param[in]  l     The left pointer
+ */
 void SortQ(int data[], int r, int l) {
     if (r - l <= 1) {
         return;
@@ -660,6 +700,8 @@ void SortQ(int data[], int r, int l) {
 
 /**
  * @brief      { Comb Sort }
+ * сортирует массив DATA указанного размера с помощью Comb Sort
+ * изменяет глобальные переменные ChangeCo, ComparaisonCo, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -697,6 +739,10 @@ void SortCo(int data[], int size) {
 
 /**
  * @brief      This class describes a heap.
+ * реализация структуры Heap на векторе
+ * операция вставки Insert(x) где x - число типа int
+ * операция извлечения Extract() возвращает число типа int и удаляет его из Heap
+ * изменяет глобальные переменные ChangePyr, ComparaisonPyr, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  */
 class Heap {
 private:
@@ -756,6 +802,7 @@ public:
 
 /**
  * @brief      { function_description }
+ * сортирует массив DATA указанного размера с помощью Pyramid Sort
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -774,6 +821,8 @@ void SortPyr(int data[], int size) {
 
 /**
  * @brief      { Merge Sort }
+ * сортирует массив DATA указанного размера с помощью Merge Sort
+ * изменяет глобальные переменные ChangeM, ComparaisonM, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -833,6 +882,8 @@ void SortM(int data[], int size) {
 
 /**
  * @brief      { Simple Insertion Sort }
+ * сортирует массив DATA указанного размера с помощью Simple Insertion Sort
+ * изменяет глобальные переменные ChangeSI, ComparaisonSI, отвечающие за подсчёт операций перестанови и сравнения элементов массива
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -851,6 +902,7 @@ void SortSI(int data[], int size) {
 
 /**
  * @brief      { Changes SI }
+ * функция подсчитывает операции перестановки элементов в массиве в Simple Insertion Sort и изменяет глобальную переменную ChangeSI
  *
  * @param      data   The data
  * @param[in]  start  The start
@@ -870,6 +922,7 @@ void RorSI(int data[], int start, int end) {
 
 /**
  * @brief      From which position we hould start Ror.
+ * функция подсчитывает операции сравнения элементов в массиве в Simple Insertion Sort и изменяет глобальную переменную ComparaisonSI
  *
  * @param      data  The data
  * @param[in]  size  The size
