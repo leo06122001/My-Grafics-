@@ -20,6 +20,7 @@ void GraphGn(int data[], int Size);
 void GraphQ(int data[], int Size);
 void GraphCo(int data[], int Size);
 void GraphM(int data[], int Size);
+void GraphPyr(int data[], int Size);
 
 void SwapSh(int data[], int a, int b); // Shaker
 void SortSh(int data[], int size);
@@ -43,6 +44,8 @@ void SortQ(int data[], int r, int l); // Quick Sort
 void SortCo(int data[], int size); // Comb Sort
 
 void SortM(int data[], int size); // Merge Sort
+
+void SortPyr(int data[], int size); // Pyramid Sort
 
 int ComparaisonSh = 0;
 int ChangeSh = 0;
@@ -68,8 +71,11 @@ int ChangeCo = 0;
 int ComparaisonM = 0;
 int ChangeM = 0;
 
+int ChangePyr = 0;
+int ComparaisonPyr = 0;
+
 int main() {
-  txCreateWindow(450, 850);
+  txCreateWindow(450, 824);
   const int DATA_SIZE = 900;
   int data[DATA_SIZE] = {};
   Print1();
@@ -89,6 +95,9 @@ void ChoosingSort(int data[], int DATA_SIZE) {
   while (1 > 0) {
     if (GetAsyncKeyState(VK_NUMPAD5)) {
       GraphGn(data, DATA_SIZE);
+    }
+    if (GetAsyncKeyState(VK_NUMPAD9)) {
+      GraphPyr(data, DATA_SIZE);
     }
     if (GetAsyncKeyState(VK_NUMPAD8)) {
       GraphM(data, DATA_SIZE);
@@ -143,8 +152,9 @@ void Print1() {
   txTextOut(100, 774, "6 - Quick Sort - red");
   txTextOut(100, 788, "7 - Comb Sort - white");
   txTextOut(100, 802, "8 - Merge Sort - red");
-  txTextOut(220, 816, "Press 0 to clear all");
-  txTextOut(220, 830, "Press Esc to finish");
+  txTextOut(100, 816, "9 - Pyramid Sort - grey");
+  txTextOut(220, 50, "Press 0 to clear all");
+  txTextOut(220, 64, "Press Esc to finish");
 
   HDC cat = txLoadImage("kotik\\kotik.bmp");
   txBitBlt(txDC(), 40, 10, 219, 167, cat, 0, 0);
@@ -210,6 +220,35 @@ void GraphSh(int data[], int Size) {
 
     txSetColor(TX_YELLOW);
     txSetFillColor(TX_YELLOW);
+    txCircle(20 + x, 660 - y2, 3);
+  }
+}
+
+///--------------------------------------------------------
+
+/**
+ * @brief      { Shows Pyramid }
+ *
+ * @param      data  The data
+ * @param[in]  Size  The size
+ */
+void GraphPyr(int data[], int Size) {
+  for (int size = 10; size < Size; size++) {
+    ChangePyr = 0;
+    ComparaisonPyr = 0;
+    Fill(data, size);
+    SortPyr(data, size);
+
+    int x = size;
+    int y1 = 0.01 * ComparaisonPyr;
+    int y2 = 0.01 * ChangePyr;
+
+    txSetColor(TX_GREY);
+    txSetFillColor(TX_GREY);
+    txCircle(20 + x, 660 - y1, 3);
+
+    txSetColor(TX_GREY);
+    txSetFillColor(TX_GREY);
     txCircle(20 + x, 660 - y2, 3);
   }
 }
@@ -657,6 +696,83 @@ void SortCo(int data[], int size) {
 
 
 /**
+ * @brief      This class describes a heap.
+ */
+class Heap {
+private:
+    std::vector<int> heap;
+
+public:
+    void Insert(int x) {
+        heap.push_back(x);
+        int child = heap.size() - 1;
+        int parent = (child - 1) / 2;
+        while (child > 0 && parent >= 0) {
+            ++ComparaisonPyr;
+            if (heap[child] > heap[parent]) {
+                std::swap(heap[child], heap[parent]);
+                ++ChangePyr;
+            }
+            child = parent;
+            parent = (child - 1) / 2;
+        }
+    }
+
+    void heapify(int parent) {
+        int left = parent * 2 + 1;
+        int right = parent * 2 + 2;
+        int max = parent;
+        if (left < heap.size()) {
+            ++ComparaisonPyr;
+            if (heap[parent] < heap[left]) {
+                max = left;
+            }
+        }
+        if (right < heap.size()) {
+            ++ComparaisonPyr;
+            if (heap[parent] < heap[right]) {
+                ++ComparaisonPyr;
+                if (heap[right] > heap[left]) {
+                    max = right;
+                }
+            }
+        }
+        if (max != parent) {
+            std::swap(heap[max], heap[parent]);
+            ++ChangePyr;
+            heapify(max);
+        }
+    }
+
+    int Extract() {
+        int x = heap[0];
+        std::swap(heap[0], heap[heap.size() - 1]);
+        ++ChangePyr;
+        heap.pop_back();
+        heapify(0);
+        return x;
+    }
+};
+
+/**
+ * @brief      { function_description }
+ *
+ * @param      data  The data
+ * @param[in]  size  The size
+ */
+void SortPyr(int data[], int size) {
+    Heap heap;
+    for (int i = 0; i < size; ++i) {
+        heap.Insert(data[i]);
+    }
+    int i = 0;
+    for (int i = size - 1; i >= 0; --i) {
+        data[i] = heap.Extract();
+    }
+}
+
+
+/**
  * @brief      { Merge Sort }
  *
  * @param      data  The data
@@ -683,25 +799,25 @@ void SortM(int data[], int size) {
                 if (data[i] < data[j]) {
                     c[k] = data[i];
                     ++ChangeM;
-                    ++i; 
+                    ++i;
                     ++k;
                 } else {
                     c[k] = data[j];
                     ++ChangeM;
-                    ++j; 
+                    ++j;
                     ++k;
                 }
             }
             while (i < step) {
                 c[k] = data[i];
                 ++ChangeM;
-                ++i; 
+                ++i;
                 ++k;
             }
             while ((j < (mid + step)) && (j<size)) {
                 c[k] = data[j];
                 ++ChangeM;
-                ++j; 
+                ++j;
                 ++k;
             }
             step = step + h;
