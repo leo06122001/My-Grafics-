@@ -801,7 +801,7 @@ public:
 };
 
 /**
- * @brief      { function_description }
+ * @brief      { Pyramid Sort }
  * сортирует массив DATA указанного размера с помощью Pyramid Sort
  *
  * @param      data  The data
