@@ -530,14 +530,12 @@ void SortSh(std::vector<numbers> & data, int size) {
         std::swap(data[i], data[i + 1]);
         Change++;
       }
-      Comparaison++;
     }
     for (int i = size - pos; i > pos + 1; i--) {
       if (data[i] > data[i + 1]) {
         std::swap(data[i], data[i + 1]);
         Change++;
       }
-      Comparaison++;
     }
   }
 }
@@ -561,9 +559,7 @@ int FindMinS(std::vector<numbers> & data, const int size, int pos) {
     if (data[i] < minnum) {
       minpos = i;
       minnum = data[i].num;
-    }
-    Comparaison++;
-  }
+    }  }
   return minpos;
 }
 ///--------------------------------------------------------
@@ -599,7 +595,6 @@ void SortGn(std::vector<numbers> & data, int size) {
       ++i;
     } else {
       if (data[i - 1] <= data[i]) {
-        ++Comparaison;
         ++i;
       } else {
         std::swap(data[i - 1], data[i]);
@@ -627,7 +622,6 @@ void SortB(std::vector<numbers> & data, int size) {
         std::swap(data[i], data[i + 1]);
         Change++;
       }
-      Comparaison++;
     }
   }
 }
@@ -651,11 +645,9 @@ void SortQ(std::vector<numbers> & data, int r, int l) {
     int ll = l, rr = r - 1;
     while (ll <= rr) {
         while (data[ll] < z) {
-            ++Comparaison;
             ++ll;
         }
         while (data[rr] > z) {
-            ++Comparaison;
             --rr;
         }
         if (ll <= rr) {
@@ -689,7 +681,6 @@ void SortCo(std::vector<numbers> & data, int size) {
   int step = size - 1;
   while (step > 1) {
     for (int i = 0; i + step < size; i++) {
-            ++Comparaison;
       if (data[i] > data[i + step]) {
                 std::swap(data[i], data[i + step]);
                 ++Change;
@@ -701,7 +692,6 @@ void SortCo(std::vector<numbers> & data, int size) {
   while (b) {
     b = false;
     for (int i = 0; i + 1 < size; i++) {
-            ++Comparaison;
       if (data[i] > data[i + 1]) {
         std::swap(data[i], data[i + 1]);
                 ++Change;
@@ -819,7 +809,6 @@ void SortM(std::vector<numbers> & data, int size) {
         int k = 0;
         while (step <= mid) {
             while ((i < step) && (j < size) && (j < (mid + step))) {
-                ++Comparaison;
                 if (data[i] < data[j]) {
                     c[k] = data[i].num;
                     ++Change;
@@ -911,7 +900,6 @@ int FindPosSI(std::vector<numbers> & data, int size, int k) {
     if (k >= data[i]) {
       pos++;
     }
-    Comparaison++;
   }
   return pos;
 }
