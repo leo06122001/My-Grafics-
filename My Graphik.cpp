@@ -47,32 +47,8 @@ void SortM(int data[], int size); // Merge Sort
 
 void SortPyr(int data[], int size); // Pyramid Sort
 
-int ComparaisonSh = 0;
-int ChangeSh = 0;
-
-int ComparaisonS = 0;
-int ChangeS = 0;
-
-int ComparaisonB = 0;
-int ChangeB = 0;
-
-int ComparaisonSI = 0;
-int ChangeSI = 0;
-
-int ComparaisonGn = 0;
-int ChangeGn = 0;
-
-int ComparaisonQ = 0;
-int ChangeQ = 0;
-
-int ComparaisonCo = 0;
-int ChangeCo = 0;
-
-int ComparaisonM = 0;
-int ChangeM = 0;
-
-int ChangePyr = 0;
-int ComparaisonPyr = 0;
+int Comparaison = 0;
+int Change = 0;
 
 int main() {
   txCreateWindow(450, 824);
@@ -190,11 +166,11 @@ void Print2() {
 void StatSh(int data[], int Size) {
   printf("Size   Number of compares   Number of exchanges\n");
   for (int size = 10; size < Size; size += 10) {
-    ChangeSh = 0;
-    ComparaisonSh = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortSh(data, size);
-    printf("%4d %20d %21d\n", size, ComparaisonSh, ChangeSh);
+    printf("%4d %20d %21d\n", size, Comparaison, Change);
   }
 }
 
@@ -210,14 +186,14 @@ void StatSh(int data[], int Size) {
  */
 void GraphSh(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeSh = 0;
-    ComparaisonSh = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortSh(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonSh;
-    int y2 = 0.01 * ChangeSh;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_ORANGE);
     txSetFillColor(TX_ORANGE);
@@ -241,14 +217,14 @@ void GraphSh(int data[], int Size) {
  */
 void GraphPyr(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangePyr = 0;
-    ComparaisonPyr = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortPyr(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonPyr;
-    int y2 = 0.01 * ChangePyr;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_GREY);
     txSetFillColor(TX_GREY);
@@ -272,14 +248,14 @@ void GraphPyr(int data[], int Size) {
  */
 void GraphCo(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeCo = 0;
-    ComparaisonCo = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortCo(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonCo;
-    int y2 = 0.01 * ChangeCo;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_WHITE);
     txSetFillColor(TX_WHITE);
@@ -303,14 +279,14 @@ void GraphCo(int data[], int Size) {
  */
 void GraphQ(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeQ = 0;
-    ComparaisonQ = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortQ(data, size, 0);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonQ;
-    int y2 = 0.01 * ChangeQ;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_RED);
     txSetFillColor(TX_RED);
@@ -334,14 +310,14 @@ void GraphQ(int data[], int Size) {
  */
 void GraphGn(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeGn = 0;
-    ComparaisonGn = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortGn(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonGn;
-    int y2 = 0.01 * ChangeGn;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_LIGHTGREEN);
     txSetFillColor(TX_LIGHTGREEN);
@@ -365,14 +341,14 @@ void GraphGn(int data[], int Size) {
  */
 void GraphM(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeM = 0;
-    ComparaisonM = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortM(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonM;
-    int y2 = 0.01 * ChangeM;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_BLUE);
     txSetFillColor(TX_BLUE);
@@ -396,14 +372,14 @@ void GraphM(int data[], int Size) {
  */
 void GraphS(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeS = 0;
-    ComparaisonS = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortS(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonS;
-    int y2 = 0.01 * ChangeS;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_LIGHTCYAN);
     txSetFillColor(TX_LIGHTCYAN);
@@ -427,14 +403,14 @@ void GraphS(int data[], int Size) {
  */
 void GraphB(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeB = 0;
-    ComparaisonB = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortB(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonB;
-    int y2 = 0.01 * ChangeB;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_MAGENTA);
     txSetFillColor(TX_MAGENTA);
@@ -458,14 +434,14 @@ void GraphB(int data[], int Size) {
  */
 void GraphSI(int data[], int Size) {
   for (int size = 10; size < Size; size++) {
-    ChangeSI = 0;
-    ComparaisonSI = 0;
+    Change = 0;
+    Comparaison = 0;
     Fill(data, size);
     SortSI(data, size);
 
     int x = size;
-    int y1 = 0.01 * ComparaisonSI;
-    int y2 = 0.01 * ChangeSI;
+    int y1 = 0.01 * Comparaison;
+    int y2 = 0.01 * Change;
 
     txSetColor(TX_GREEN);
     txSetFillColor(TX_GREEN);
@@ -495,22 +471,6 @@ void Fill(int data[], int size) {
 ///--------------------------------------------------------
 
 /**
- * @brief      { Swap Shaker }
- *
- * @param      data  The data
- * @param[in]  a     { parameter_description }
- * @param[in]  b     { parameter_description }
- */
-void SwapSh(int data[], int a, int b) {
-  int x = data[a];
-  data[a] = data[b];
-  data[b] = x;
-  ChangeSh++;
-}
-
-///--------------------------------------------------------
-
-/**
  * @brief      { Shaker Sort }
  * сортирует массив DATA указанного размера с помощью Shaker Sort
  * изменяет глобальные переменные ChangeSh, ComparaisonSh, отвечающие за подсчёт операций перестанови и сравнения элементов массива
@@ -522,15 +482,17 @@ void SortSh(int data[], int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
       if (data[i + 1] < data[i]) {
-        SwapSh(data, i, i + 1);
+        std::swap(data[i], data[i + 1]);
+        Change++;
       }
-      ComparaisonSh++;
+      Comparaison++;
     }
     for (int i = size - pos; i > pos + 1; i--) {
       if (data[i] > data[i + 1]) {
-        SwapSh(data, i, i + 1);
+        std::swap(data[i], data[i + 1]);
+        Change++;
       }
-      ComparaisonSh++;
+      Comparaison++;
     }
   }
 }
@@ -539,7 +501,7 @@ void SortSh(int data[], int size) {
 
 /**
  * @brief      Finds a minimum s.
- * функция поиска минимума для Selections Sort 
+ * функция поиска минимума для Selections Sort
  *
  * @param      data  The data
  * @param[in]  size  The size
@@ -555,27 +517,10 @@ int FindMinS(int data[], const int size, int pos) {
       minpos = i;
       minnum = data[i];
     }
-    ComparaisonS++;
+    Comparaison++;
   }
   return minpos;
 }
-
-///--------------------------------------------------------
-
-/**
- * @brief      {Swap Selections}
- *
- * @param      data  The data
- * @param[in]  i     { Counter }
- * @param[in]  min   The minimum
- */
-void SwapS(int data[], int i, int min) {
-  int x = data[i];
-  data[i] = data[min];
-  data[min] = x;
-  ChangeS++;
-}
-
 ///--------------------------------------------------------
 
 /**
@@ -589,24 +534,9 @@ void SwapS(int data[], int i, int min) {
 void SortS(int data[], const int size) {
   for (int i = 0; i < size; i++) {
     int min = FindMinS(data, size, i);
-    SwapS(data, i, min);
+    std::swap(data[i], data[min]);
+    Change++;
   }
-}
-
-///--------------------------------------------------------
-
-/**
- * @brief      { Swaps Bubble Sort }
- *
- * @param      data  The data
- * @param[in]  min   The minimum
- * @param[in]  pos   The position
- */
-void SwapB(int data[], int min, int pos) {
-  int x = data[min];
-  data[min] = data[pos];
-  data[pos] = x;
-  ChangeB++;
 }
 
 /**
@@ -621,15 +551,14 @@ void SortGn(int data[], int size) {
   int i = 0;
   while (i < size) {
     if (i == 0) {
-      ++ComparaisonGn;
       ++i;
     } else {
       if (data[i - 1] <= data[i]) {
-        ++ComparaisonGn;
+        ++Comparaison;
         ++i;
       } else {
         std::swap(data[i - 1], data[i]);
-              ++ChangeGn;
+              ++Change;
               --i;
       }
     }
@@ -650,9 +579,10 @@ void SortB(int data[], int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
       if (data[i + 1] < data[i]) {
-        SwapB(data, i, i + 1);
+        std::swap(data[i], data[i + 1]);
+        Change++;
       }
-      ComparaisonB++;
+      Comparaison++;
     }
   }
 }
@@ -676,16 +606,16 @@ void SortQ(int data[], int r, int l) {
     int ll = l, rr = r - 1;
     while (ll <= rr) {
         while (data[ll] < z) {
-            ++ComparaisonQ;
+            ++Comparaison;
             ++ll;
         }
         while (data[rr] > z) {
-            ++ComparaisonQ;
+            ++Comparaison;
             --rr;
         }
         if (ll <= rr) {
             std::swap(data[ll], data[rr]);
-            ++ChangeQ;
+            ++Change;
             ++ll;
             --rr;
         }
@@ -714,10 +644,10 @@ void SortCo(int data[], int size) {
   int step = size - 1;
   while (step > 1) {
     for (int i = 0; i + step < size; i++) {
-            ++ComparaisonCo;
+            ++Comparaison;
       if (data[i] > data[i + step]) {
                 std::swap(data[i], data[i + step]);
-                ++ChangeCo;
+                ++Change;
             }
     }
     step /= k;
@@ -726,10 +656,10 @@ void SortCo(int data[], int size) {
   while (b) {
     b = false;
     for (int i = 0; i + 1 < size; i++) {
-            ++ComparaisonCo;
+            ++Comparaison;
       if (data[i] > data[i + 1]) {
         std::swap(data[i], data[i + 1]);
-                ++ChangeCo;
+                ++Change;
         b = true;
       }
     }
@@ -754,10 +684,10 @@ public:
         int child = heap.size() - 1;
         int parent = (child - 1) / 2;
         while (child > 0 && parent >= 0) {
-            ++ComparaisonPyr;
+            ++Comparaison;
             if (heap[child] > heap[parent]) {
                 std::swap(heap[child], heap[parent]);
-                ++ChangePyr;
+                ++Change;
             }
             child = parent;
             parent = (child - 1) / 2;
@@ -769,15 +699,15 @@ public:
         int right = parent * 2 + 2;
         int max = parent;
         if (left < heap.size()) {
-            ++ComparaisonPyr;
+            ++Comparaison;
             if (heap[parent] < heap[left]) {
                 max = left;
             }
         }
         if (right < heap.size()) {
-            ++ComparaisonPyr;
+            ++Comparaison;
             if (heap[parent] < heap[right]) {
-                ++ComparaisonPyr;
+                ++Comparaison;
                 if (heap[right] > heap[left]) {
                     max = right;
                 }
@@ -785,7 +715,7 @@ public:
         }
         if (max != parent) {
             std::swap(heap[max], heap[parent]);
-            ++ChangePyr;
+            ++Change;
             heapify(max);
         }
     }
@@ -793,7 +723,7 @@ public:
     int Extract() {
         int x = heap[0];
         std::swap(heap[0], heap[heap.size() - 1]);
-        ++ChangePyr;
+        ++Change;
         heap.pop_back();
         heapify(0);
         return x;
@@ -844,28 +774,28 @@ void SortM(int data[], int size) {
         int k = 0;
         while (step <= mid) {
             while ((i < step) && (j < size) && (j < (mid + step))) {
-                ++ComparaisonM;
+                ++Comparaison;
                 if (data[i] < data[j]) {
                     c[k] = data[i];
-                    ++ChangeM;
+                    ++Change;
                     ++i;
                     ++k;
                 } else {
                     c[k] = data[j];
-                    ++ChangeM;
+                    ++Change;
                     ++j;
                     ++k;
                 }
             }
             while (i < step) {
                 c[k] = data[i];
-                ++ChangeM;
+                ++Change;
                 ++i;
                 ++k;
             }
             while ((j < (mid + step)) && (j<size)) {
                 c[k] = data[j];
-                ++ChangeM;
+                ++Change;
                 ++j;
                 ++k;
             }
@@ -912,10 +842,10 @@ void RorSI(int data[], int start, int end) {
   int x = data[end];
   for (int i = 0; i <= end - start; i++) {
     data[end - i] = data[end - i - 1];
-    ChangeSI++;
+    Change++;
   }
   data[start] = x;
-  ChangeSI++;
+  Change++;
 }
 
 ///--------------------------------------------------------
@@ -936,7 +866,7 @@ int FindPosSI(int data[], int size, int k) {
     if (k >= data[i]) {
       pos++;
     }
-    ComparaisonSI++;
+    Comparaison++;
   }
   return pos;
 }
