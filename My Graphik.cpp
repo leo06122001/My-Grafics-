@@ -5,52 +5,100 @@
     \date Май 2020 года
 */
 #include "TXLib.h"
-
-void Fill(int data[], int size);
-
-void Print1();
-void Print2();
-void ChoosingSort(int data[], int DATA_SIZE);
-
-void GraphSh(int data[], int Size);
-void GraphS(int data[], int Size);
-void GraphB(int data[], int Size);
-void GraphSI(int data[], int Size);
-void GraphGn(int data[], int Size);
-void GraphQ(int data[], int Size);
-void GraphCo(int data[], int Size);
-void GraphM(int data[], int Size);
-void GraphPyr(int data[], int Size);
-
-void SortSh(int data[], int size);
-void StatSh(int data[], int Size);
-
-void SortS(int data[], int size);
-int FindMinS(int data[], const int size, int i);
-
-void SortB(int data[], int size); // Bubble
-
-void SortSI(int data[], int size);
-int FindPosSI(int data[], int size, int i); // Simple Insertion
-void RorSI(int data[], int start, int end);
-
-void SortGn(int data[], int size); // Gnom
-
-void SortQ(int data[], int r, int l); // Quick Sort
-
-void SortCo(int data[], int size); // Comb Sort
-
-void SortM(int data[], int size); // Merge Sort
-
-void SortPyr(int data[], int size); // Pyramid Sort
+#include <vector>
 
 int Comparaison = 0;
 int Change = 0;
 
+class numbers{
+    public:
+    int num;
+    public:numbers(int num = 0): num(num) {
+    }
+    friend bool operator== (numbers a, numbers b);
+    friend bool operator!= (numbers a, numbers b);
+    friend bool operator< (numbers a, numbers b);
+    friend bool operator> (numbers a, numbers b);
+    friend bool operator<= (numbers a, numbers b);
+    friend bool operator>= (numbers a, numbers b);
+    numbers operator=(const numbers &b) {
+        num = b.num;
+        return *this;
+    }
+};
+
+bool operator== (numbers a, numbers b) {
+    ++Comparaison;
+    return (a.num == b.num);
+}
+
+bool operator!= (numbers a, numbers b) {
+    ++Comparaison;
+    return (a.num != b.num);
+}
+
+bool operator< (numbers a, numbers b) {
+    ++Comparaison;
+    return (a.num < b.num);
+}
+
+bool operator> (numbers a, numbers b) {
+    ++Comparaison;
+    return (a.num > b.num);
+}
+
+bool operator<= (numbers a, numbers b) {
+    ++Comparaison;
+    return (a.num <= b.num);
+}
+
+bool operator>= (numbers a, numbers b) {
+    ++Comparaison;
+    return (a.num >= b.num);
+}
+
+void Fill(std::vector<numbers> & data, int size);
+
+void Print1();
+void Print2();
+void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE);
+
+void GraphSh(std::vector<numbers> & data, int Size);
+void GraphS(std::vector<numbers> & data, int Size);
+void GraphB(std::vector<numbers> & data, int Size);
+void GraphSI(std::vector<numbers> & data, int Size);
+void GraphGn(std::vector<numbers> & data, int Size);
+void GraphQ(std::vector<numbers> & data, int Size);
+void GraphCo(std::vector<numbers> & data, int Size);
+void GraphM(std::vector<numbers> & data, int Size);
+void GraphPyr(std::vector<numbers> & data, int Size);
+
+void SortSh(std::vector<numbers> & data, int size);
+void StatSh(std::vector<numbers> & data, int Size);
+
+void SortS(std::vector<numbers> & data, int size);
+int FindMinS(std::vector<numbers> & data, const int size, int i);
+
+void SortB(std::vector<numbers> & data, int size); // Bubble
+
+void SortSI(std::vector<numbers> & data, int size);
+int FindPosSI(std::vector<numbers> & data, int size, int i); // Simple Insertion
+void RorSI(std::vector<numbers> & data, int start, int end);
+
+void SortGn(std::vector<numbers> & data, int size); // Gnom
+
+void SortQ(std::vector<numbers> & data, int r, int l); // Quick Sort
+
+void SortCo(std::vector<numbers> & data, int size); // Comb Sort
+
+void SortM(std::vector<numbers> & data, int size); // Merge Sort
+
+void SortPyr(std::vector<numbers> & data, int size); // Pyramid Sort
+
 int main() {
   txCreateWindow(450, 824);
   const int DATA_SIZE = 900;
-  int data[DATA_SIZE] = {};
+  std::vector<numbers> data(DATA_SIZE);
   Print1();
   Print2();
   ChoosingSort(data, DATA_SIZE);
@@ -65,7 +113,7 @@ int main() {
  * @param      data       The data
  * @param[in]  DATA_SIZE  The data size
  */
-void ChoosingSort(int data[], int DATA_SIZE) {
+void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE) {
   while (1 > 0) {
     if (GetAsyncKeyState(VK_NUMPAD5)) {
       GraphGn(data, DATA_SIZE);
@@ -160,7 +208,7 @@ void Print2() {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void StatSh(int data[], int Size) {
+void StatSh(std::vector<numbers> & data, int Size) {
   printf("Size   Number of compares   Number of exchanges\n");
   for (int size = 10; size < Size; size += 10) {
     Change = 0;
@@ -181,7 +229,7 @@ void StatSh(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphSh(int data[], int Size) {
+void GraphSh(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -212,7 +260,7 @@ void GraphSh(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphPyr(int data[], int Size) {
+void GraphPyr(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -243,7 +291,7 @@ void GraphPyr(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphCo(int data[], int Size) {
+void GraphCo(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -274,7 +322,7 @@ void GraphCo(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphQ(int data[], int Size) {
+void GraphQ(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -305,7 +353,7 @@ void GraphQ(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphGn(int data[], int Size) {
+void GraphGn(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -336,7 +384,7 @@ void GraphGn(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphM(int data[], int Size) {
+void GraphM(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -367,7 +415,7 @@ void GraphM(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphS(int data[], int Size) {
+void GraphS(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -398,7 +446,7 @@ void GraphS(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphB(int data[], int Size) {
+void GraphB(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -429,7 +477,7 @@ void GraphB(int data[], int Size) {
  * @param      data  The data
  * @param[in]  Size  The size
  */
-void GraphSI(int data[], int Size) {
+void GraphSI(std::vector<numbers> & data, int Size) {
   for (int size = 10; size < Size; size++) {
     Change = 0;
     Comparaison = 0;
@@ -459,7 +507,7 @@ void GraphSI(int data[], int Size) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void Fill(int data[], int size) {
+void Fill(std::vector<numbers> & data, int size) {
   for (int i = 0; i < size; i++) {
     data[i] = rand();
   }
@@ -475,7 +523,7 @@ void Fill(int data[], int size) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortSh(int data[], int size) {
+void SortSh(std::vector<numbers> & data, int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
       if (data[i + 1] < data[i]) {
@@ -506,13 +554,13 @@ void SortSh(int data[], int size) {
  *
  * @return     { description_of_the_return_value }
  */
-int FindMinS(int data[], const int size, int pos) {
+int FindMinS(std::vector<numbers> & data, const int size, int pos) {
   int minpos = pos;
-  int minnum = data[pos];
+  int minnum = data[pos].num;
   for (int i = minpos; i < size; i++) {
     if (data[i] < minnum) {
       minpos = i;
-      minnum = data[i];
+      minnum = data[i].num;
     }
     Comparaison++;
   }
@@ -528,7 +576,7 @@ int FindMinS(int data[], const int size, int pos) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortS(int data[], const int size) {
+void SortS(std::vector<numbers> & data, const int size) {
   for (int i = 0; i < size; i++) {
     int min = FindMinS(data, size, i);
     std::swap(data[i], data[min]);
@@ -544,7 +592,7 @@ void SortS(int data[], const int size) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortGn(int data[], int size) {
+void SortGn(std::vector<numbers> & data, int size) {
   int i = 0;
   while (i < size) {
     if (i == 0) {
@@ -572,7 +620,7 @@ void SortGn(int data[], int size) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortB(int data[], int size) {
+void SortB(std::vector<numbers> & data, int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
       if (data[i + 1] < data[i]) {
@@ -595,11 +643,11 @@ void SortB(int data[], int size) {
  * @param[in]  r     The right pointer
  * @param[in]  l     The left pointer
  */
-void SortQ(int data[], int r, int l) {
+void SortQ(std::vector<numbers> & data, int r, int l) {
     if (r - l <= 1) {
         return;
     }
-    int z = data[l + (r - l) / 2];
+    int z = data[l + (r - l) / 2].num;
     int ll = l, rr = r - 1;
     while (ll <= rr) {
         while (data[ll] < z) {
@@ -633,7 +681,7 @@ void SortQ(int data[], int r, int l) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortCo(int data[], int size) {
+void SortCo(std::vector<numbers> & data, int size) {
   if (size <= 1) {
         return;
     }
@@ -734,14 +782,14 @@ public:
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortPyr(int data[], int size) {
+void SortPyr(std::vector<numbers> & data, int size) {
     Heap heap;
     for (int i = 0; i < size; ++i) {
-        heap.Insert(data[i]);
+        heap.Insert(data[i].num);
     }
     int i = 0;
     for (int i = size - 1; i >= 0; --i) {
-        data[i] = heap.Extract();
+        data[i].num = heap.Extract();
     }
 }
 
@@ -754,7 +802,7 @@ void SortPyr(int data[], int size) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortM(int data[], int size) {
+void SortM(std::vector<numbers> & data, int size) {
     int mid = size / 2;
     if (size % 2 == 1) {
         mid++;
@@ -773,25 +821,25 @@ void SortM(int data[], int size) {
             while ((i < step) && (j < size) && (j < (mid + step))) {
                 ++Comparaison;
                 if (data[i] < data[j]) {
-                    c[k] = data[i];
+                    c[k] = data[i].num;
                     ++Change;
                     ++i;
                     ++k;
                 } else {
-                    c[k] = data[j];
+                    c[k] = data[j].num;
                     ++Change;
                     ++j;
                     ++k;
                 }
             }
             while (i < step) {
-                c[k] = data[i];
+                c[k] = data[i].num;
                 ++Change;
                 ++i;
                 ++k;
             }
             while ((j < (mid + step)) && (j<size)) {
-                c[k] = data[j];
+                c[k] = data[j].num;
                 ++Change;
                 ++j;
                 ++k;
@@ -815,13 +863,13 @@ void SortM(int data[], int size) {
  * @param      data  The data
  * @param[in]  size  The size
  */
-void SortSI(int data[], int size) {
+void SortSI(std::vector<numbers> & data, int size) {
   Fill(data, size);
   for (int i = 0; i < size - 1; i++) {
-    int pos = FindPosSI(data, i, data[i + 1]);
+    int pos = FindPosSI(data, i, data[i + 1].num);
     RorSI(data, pos, i + 1);
   }
-  int pos = FindPosSI(data, size, data[size - 1]);
+  int pos = FindPosSI(data, size, data[size - 1].num);
   RorSI(data, pos, size - 1);
 }
 
@@ -835,9 +883,9 @@ void SortSI(int data[], int size) {
  * @param[in]  start  The start
  * @param[in]  end    The end
  */
-void RorSI(int data[], int start, int end) {
-  int x = data[end];
-  for (int i = 0; i <= end - start; i++) {
+void RorSI(std::vector<numbers> & data, int start, int end) {
+  int x = data[end].num;
+  for (int i = 0; i < end - start; i++) {
     data[end - i] = data[end - i - 1];
     Change++;
   }
@@ -857,7 +905,7 @@ void RorSI(int data[], int start, int end) {
  *
  * @return     { description_of_the_return_value }
  */
-int FindPosSI(int data[], int size, int k) {
+int FindPosSI(std::vector<numbers> & data, int size, int k) {
   int pos = 0;
   for (int i = 0; i < size; i++) {
     if (k >= data[i]) {
