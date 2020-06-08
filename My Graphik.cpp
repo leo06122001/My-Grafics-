@@ -97,7 +97,7 @@ void SortPyr(std::vector<numbers> & data, int size); // Pyramid Sort
 
 int main() {
   txCreateWindow(450, 824);
-  const int DATA_SIZE = 900;
+  const int DATA_SIZE = 350;
   std::vector<numbers> data(DATA_SIZE);
   Print1();
   Print2();
