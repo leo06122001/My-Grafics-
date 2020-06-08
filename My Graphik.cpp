@@ -22,16 +22,13 @@ void GraphCo(int data[], int Size);
 void GraphM(int data[], int Size);
 void GraphPyr(int data[], int Size);
 
-void SwapSh(int data[], int a, int b); // Shaker
 void SortSh(int data[], int size);
 void StatSh(int data[], int Size);
 
-void SwapS(int data[], int a, int b); // Selection
 void SortS(int data[], int size);
 int FindMinS(int data[], const int size, int i);
 
 void SortB(int data[], int size); // Bubble
-void SwapB(int data[], int min, int pos);
 
 void SortSI(int data[], int size);
 int FindPosSI(int data[], int size, int i); // Simple Insertion
