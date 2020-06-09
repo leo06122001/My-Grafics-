@@ -31,31 +31,31 @@ int main() {
 void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE) {
   while (1 > 0) {
     if (GetAsyncKeyState(VK_NUMPAD5)) {
-      GraphGn(data, DATA_SIZE);
+      GraphGn(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD9)) {
-      GraphPyr(data, DATA_SIZE);
+      GraphPyr(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD8)) {
-      GraphM(data, DATA_SIZE);
+      GraphM(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD7)) {
-      GraphCo(data, DATA_SIZE);
+      GraphCo(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD6)) {
-      GraphQ(data, DATA_SIZE);
+      GraphQ(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD4)) {
-      GraphSI(data, DATA_SIZE);
+      GraphSI(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD3)) {
-      GraphSh(data, DATA_SIZE);
+      GraphSh(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD2)) {
-      GraphB(data, DATA_SIZE);
+      GraphB(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD1)) {
-      GraphS(data, DATA_SIZE);
+      GraphS(data, data.size());
     }
     if (GetAsyncKeyState(VK_NUMPAD0)) {
       txSetFillColor(TX_BLACK);
