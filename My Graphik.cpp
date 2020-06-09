@@ -6,6 +6,7 @@
 */
 #include "TXLib.h"
 #include <vector>
+#include "lib.hpp"
 
 int Comparaison = 0;
 int Change = 0;
@@ -55,6 +56,15 @@ bool operator<= (numbers a, numbers b) {
 bool operator>= (numbers a, numbers b) {
     ++Comparaison;
     return (a.num >= b.num);
+}
+
+template <class T>
+void swap(T& a, T& b)
+{
+    T tmp = a;
+    a = b;
+    b = tmp;
+    ++Change;
 }
 
 void Fill(std::vector<numbers> & data, int size);
@@ -240,8 +250,8 @@ void GraphSh(std::vector<numbers> & data, int Size) {
     int y1 = 0.01 * Comparaison;
     int y2 = 0.01 * Change;
 
-    txSetColor(TX_ORANGE);
-    txSetFillColor(TX_ORANGE);
+    txSetColor(TX_YELLOW);
+    txSetFillColor(TX_YELLOW);
     txCircle(20 + x, 660 - y1, 3);
 
     txSetColor(TX_YELLOW);
@@ -364,12 +374,12 @@ void GraphGn(std::vector<numbers> & data, int Size) {
     int y1 = 0.01 * Comparaison;
     int y2 = 0.01 * Change;
 
-    txSetColor(TX_LIGHTGREEN);
-    txSetFillColor(TX_LIGHTGREEN);
+    txSetColor(TX_ORANGE);
+    txSetFillColor(TX_ORANGE);
     txCircle(20 + x, 660 - y1, 3);
 
-    txSetColor(TX_GREEN);
-    txSetFillColor(TX_GREEN);
+    txSetColor(TX_ORANGE);
+    txSetFillColor(TX_ORANGE);
     txCircle(20 + x, 660 - y2, 3);
   }
 }
@@ -527,14 +537,12 @@ void SortSh(std::vector<numbers> & data, int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
       if (data[i + 1] < data[i]) {
-        std::swap(data[i], data[i + 1]);
-        Change++;
+        swap(data[i], data[i + 1]);
       }
     }
     for (int i = size - pos; i > pos + 1; i--) {
       if (data[i] > data[i + 1]) {
-        std::swap(data[i], data[i + 1]);
-        Change++;
+        swap(data[i], data[i + 1]);
       }
     }
   }
@@ -575,8 +583,7 @@ int FindMinS(std::vector<numbers> & data, const int size, int pos) {
 void SortS(std::vector<numbers> & data, const int size) {
   for (int i = 0; i < size; i++) {
     int min = FindMinS(data, size, i);
-    std::swap(data[i], data[min]);
-    Change++;
+    swap(data[i], data[min]);
   }
 }
 
@@ -597,9 +604,8 @@ void SortGn(std::vector<numbers> & data, int size) {
       if (data[i - 1] <= data[i]) {
         ++i;
       } else {
-        std::swap(data[i - 1], data[i]);
-              ++Change;
-              --i;
+        swap(data[i - 1], data[i]);
+        --i;
       }
     }
   }
@@ -619,8 +625,7 @@ void SortB(std::vector<numbers> & data, int size) {
   for (int pos = 1; pos < size - 1; pos++) {
     for (int i = 0; i < size - pos; i++) {
       if (data[i + 1] < data[i]) {
-        std::swap(data[i], data[i + 1]);
-        Change++;
+        swap(data[i], data[i + 1]);
       }
     }
   }
@@ -651,8 +656,7 @@ void SortQ(std::vector<numbers> & data, int r, int l) {
             --rr;
         }
         if (ll <= rr) {
-            std::swap(data[ll], data[rr]);
-            ++Change;
+            swap(data[ll], data[rr]);
             ++ll;
             --rr;
         }
@@ -682,8 +686,7 @@ void SortCo(std::vector<numbers> & data, int size) {
   while (step > 1) {
     for (int i = 0; i + step < size; i++) {
       if (data[i] > data[i + step]) {
-                std::swap(data[i], data[i + step]);
-                ++Change;
+                swap(data[i], data[i + step]);
             }
     }
     step /= k;
@@ -693,8 +696,7 @@ void SortCo(std::vector<numbers> & data, int size) {
     b = false;
     for (int i = 0; i + 1 < size; i++) {
       if (data[i] > data[i + 1]) {
-        std::swap(data[i], data[i + 1]);
-                ++Change;
+        swap(data[i], data[i + 1]);
         b = true;
       }
     }
@@ -721,8 +723,7 @@ public:
         while (child > 0 && parent >= 0) {
             ++Comparaison;
             if (heap[child] > heap[parent]) {
-                std::swap(heap[child], heap[parent]);
-                ++Change;
+                swap(heap[child], heap[parent]);
             }
             child = parent;
             parent = (child - 1) / 2;
@@ -749,16 +750,14 @@ public:
             }
         }
         if (max != parent) {
-            std::swap(heap[max], heap[parent]);
-            ++Change;
+            swap(heap[max], heap[parent]);
             heapify(max);
         }
     }
 
     int Extract() {
         int x = heap[0];
-        std::swap(heap[0], heap[heap.size() - 1]);
-        ++Change;
+        swap(heap[0], heap[heap.size() - 1]);
         heap.pop_back();
         heapify(0);
         return x;
