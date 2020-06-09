@@ -6,7 +6,7 @@
 */
 #include "TXLib.h"
 #include <vector>
-#include "functions.cpp"
+#include "functions.hpp"
 
 int Comparaison = 0;
 int Change = 0;
