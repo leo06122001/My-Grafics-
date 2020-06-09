@@ -347,8 +347,8 @@ void GraphQ(std::vector<numbers> & data, int Size) {
     txSetFillColor(TX_RED);
     txCircle(20 + x, 660 - y1, 3);
 
-    txSetColor(TX_ORANGE);
-    txSetFillColor(TX_ORANGE);
+    txSetColor(TX_RED);
+    txSetFillColor(TX_RED);
     txCircle(20 + x, 660 - y2, 3);
   }
 }
