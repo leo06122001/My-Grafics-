@@ -1,8 +1,11 @@
 #pragma once
+#include <vector>
 
 
-int Comparaison = 0;
-int Change = 0;
+
+
+extern int Comparaison;
+extern int Change;
 class numbers{
     public:
     int num;
@@ -20,32 +23,32 @@ class numbers{
     }
 };
 
-bool operator== (numbers a, numbers b) {
+inline bool operator== (numbers a, numbers b) {
     ++Comparaison;
     return (a.num == b.num);
 }
 
-bool operator!= (numbers a, numbers b) {
+inline bool operator!= (numbers a, numbers b) {
     ++Comparaison;
     return (a.num != b.num);
 }
 
-bool operator< (numbers a, numbers b) {
+inline bool operator< (numbers a, numbers b) {
     ++Comparaison;
     return (a.num < b.num);
 }
 
-bool operator> (numbers a, numbers b) {
+inline bool operator> (numbers a, numbers b) {
     ++Comparaison;
     return (a.num > b.num);
 }
 
-bool operator<= (numbers a, numbers b) {
+inline bool operator<= (numbers a, numbers b) {
     ++Comparaison;
     return (a.num <= b.num);
 }
 
-bool operator>= (numbers a, numbers b) {
+inline bool operator>= (numbers a, numbers b) {
     ++Comparaison;
     return (a.num >= b.num);
 }
@@ -61,9 +64,9 @@ void swap(T& a, T& b)
 
 void Fill(std::vector<numbers> & data, int size);
 
-void Print1();
-void Print2();
-void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE);
+extern void Print1();
+extern void Print2();
+extern void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE);
 
 void GraphSh(std::vector<numbers> & data, int Size);
 void GraphS(std::vector<numbers> & data, int Size);

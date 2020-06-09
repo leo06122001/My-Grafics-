@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8) # Проверка версии CMake.
 
-project(My Graphik)
+project(MyGraphik)
 set(SOURCE_EXE MyGraphik.cpp)
 set(SOURCE_LIB TXlib.h)
 add_library(TXlib.h STATIC ${SOURCE_LIB})
