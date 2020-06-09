@@ -8,8 +8,6 @@
 #include <vector>
 #include "functions.hpp"
 
-int Comparaison = 0;
-int Change = 0;
 
 int main() {
   txCreateWindow(450, 824);
