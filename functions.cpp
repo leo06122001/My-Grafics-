@@ -1,15 +1,6 @@
 #include "functions.hpp"
 
 
-template <class T>
-void swap(T& a, T& b)
-{
-    T tmp = a;
-    a = b;
-    b = tmp;
-    ++Change;
-}
-
 ///--------------------------------------------------------
 
 /**

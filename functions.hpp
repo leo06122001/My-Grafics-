@@ -50,44 +50,50 @@ bool operator>= (numbers a, numbers b) {
     return (a.num >= b.num);
 }
 
-extern template <class T>
-void swap(T& a, T& b);
+template <class T>
+void swap(T& a, T& b)
+{
+    T tmp = a;
+    a = b;
+    b = tmp;
+    ++Change;
+}
 
-extern void Fill(std::vector<numbers> & data, int size);
+void Fill(std::vector<numbers> & data, int size);
 
-extern void Print1();
-extern void Print2();
-extern void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE);
+void Print1();
+void Print2();
+void ChoosingSort(std::vector<numbers> & data, int DATA_SIZE);
 
-extern void GraphSh(std::vector<numbers> & data, int Size);
-extern void GraphS(std::vector<numbers> & data, int Size);
-extern void GraphB(std::vector<numbers> & data, int Size);
-extern void GraphSI(std::vector<numbers> & data, int Size);
-extern void GraphGn(std::vector<numbers> & data, int Size);
-extern void GraphQ(std::vector<numbers> & data, int Size);
-extern void GraphCo(std::vector<numbers> & data, int Size);
-extern void GraphM(std::vector<numbers> & data, int Size);
-extern void GraphPyr(std::vector<numbers> & data, int Size);
+void GraphSh(std::vector<numbers> & data, int Size);
+void GraphS(std::vector<numbers> & data, int Size);
+void GraphB(std::vector<numbers> & data, int Size);
+void GraphSI(std::vector<numbers> & data, int Size);
+void GraphGn(std::vector<numbers> & data, int Size);
+void GraphQ(std::vector<numbers> & data, int Size);
+void GraphCo(std::vector<numbers> & data, int Size);
+void GraphM(std::vector<numbers> & data, int Size);
+void GraphPyr(std::vector<numbers> & data, int Size);
 
-extern void SortSh(std::vector<numbers> & data, int size);
-extern void StatSh(std::vector<numbers> & data, int Size);
+void SortSh(std::vector<numbers> & data, int size);
+void StatSh(std::vector<numbers> & data, int Size);
 
-extern void SortS(std::vector<numbers> & data, int size);
+void SortS(std::vector<numbers> & data, int size);
 extern int FindMinS(std::vector<numbers> & data, const int size, int i);
 
-extern void SortB(std::vector<numbers> & data, int size); // Bubble
+void SortB(std::vector<numbers> & data, int size); // Bubble
 
-extern void SortSI(std::vector<numbers> & data, int size);
+void SortSI(std::vector<numbers> & data, int size);
 extern int FindPosSI(std::vector<numbers> & data, int size, int i); // Simple Insertion
-extern void RorSI(std::vector<numbers> & data, int start, int end);
+void RorSI(std::vector<numbers> & data, int start, int end);
 
-extern void SortGn(std::vector<numbers> & data, int size); // Gnom
+void SortGn(std::vector<numbers> & data, int size); // Gnom
 
-extern void SortQ(std::vector<numbers> & data, int r, int l); // Quick Sort
+void SortQ(std::vector<numbers> & data, int r, int l); // Quick Sort
 
-extern void SortCo(std::vector<numbers> & data, int size); // Comb Sort
+void SortCo(std::vector<numbers> & data, int size); // Comb Sort
 
-extern void SortM(std::vector<numbers> & data, int size); // Merge Sort
+void SortM(std::vector<numbers> & data, int size); // Merge Sort
 
-extern void SortPyr(std::vector<numbers> & data, int size); // Pyramid Sort
+void SortPyr(std::vector<numbers> & data, int size); // Pyramid Sort
 
